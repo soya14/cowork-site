@@ -1,41 +1,530 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cathay Site</title>
-  <meta name="description" content="A simple site ready for GitHub Pages deployment.">
+  <title>MVP AI Scrum Team 活動規劃</title>
+  <meta
+    name="description"
+    content="PMO 規劃的 AI Scrum Team 2026/04/13 至 2026/05 活動單頁網站，含時間軸、活動卡、里程碑與 RACI。"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Outfit:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <main class="page">
-    <section class="hero">
-      <p class="eyebrow">GitHub Pages Ready</p>
-      <h1>這個網站已經可以部署到 GitHub Pages</h1>
-      <p class="lead">
-        你可以直接修改這個 HTML 內容，之後把整個資料夾推到 GitHub，
-        就能用公開網址直接開啟。
-      </p>
-      <div class="actions">
-        <a class="button primary" href="https://github.com/" target="_blank" rel="noreferrer">前往 GitHub</a>
-        <a class="button secondary" href="./README.md">查看部署說明</a>
+  <div class="page-shell">
+    <aside class="sidebar reveal" aria-label="頁面導覽">
+      <div class="sidebar__brand">
+        <p class="sidebar__eyebrow">PMO Planning Board</p>
+        <h1>MVP AI Scrum Team</h1>
+        <p>從陌生組隊到穩定協作的啟動節奏。</p>
       </div>
-    </section>
+      <nav class="sidebar__nav">
+        <a href="#hero">專案概覽</a>
+        <a href="#april">4 月活動</a>
+        <a href="#may">5 月活動</a>
+        <a href="#milestone">里程碑檢核</a>
+        <a href="#raci">RACI 矩陣</a>
+      </nav>
+      <div class="sidebar__meta">
+        <span>期間</span>
+        <strong>2026/04/13 - 2026/05/31</strong>
+      </div>
+    </aside>
 
-    <section class="card-grid">
-      <article class="card">
-        <h2>1. 編輯內容</h2>
-        <p>修改這個 <code>index.html</code> 與 <code>style.css</code>，換成你自己的網站內容。</p>
-      </article>
-      <article class="card">
-        <h2>2. 上傳 GitHub</h2>
-        <p>建立 GitHub repository，然後把這個資料夾 push 上去。</p>
-      </article>
-      <article class="card">
-        <h2>3. 開啟 Pages</h2>
-        <p>在 repository 的 Settings → Pages 啟用 GitHub Pages。</p>
-      </article>
-    </section>
-  </main>
+    <main class="content">
+      <section class="hero reveal" id="hero">
+        <div class="hero__copy">
+          <p class="eyebrow">PMO Facilitation Plan</p>
+          <h2>銀行 AI Scrum Team 啟動與節奏建立網頁</h2>
+          <p class="lead">
+            這份規劃以 PMO 視角，協助剛組成的 6 人 AI Scrum Team
+            在 2026/04/13 到 2026/05 底之間完成角色定位、教育訓練、需求訪談與
+            Scrum 例行節奏建立，並為 6 個月平台交付建立可驗證的 M0 與 M1 基礎條件。
+          </p>
+          <div class="hero__chips">
+            <span>銀行數位專案</span>
+            <span>Scrum 啟動期</span>
+            <span>AI Team Enablement</span>
+            <span>可驗證里程碑</span>
+          </div>
+        </div>
+        <div class="hero__panel">
+          <div class="panel-card">
+            <p class="panel-card__label">PMO 角色定位</p>
+            <p class="panel-card__value">
+              協助節奏建立、里程碑檢視、跨角色對齊與高管匯報素材整理
+            </p>
+          </div>
+          <div class="panel-card">
+            <p class="panel-card__label">產品目標</p>
+            <p class="panel-card__value">
+              建置信用卡合作商戶互動訊息登錄與傳遞平台，串接 CardLink 等系統，取代人工輸入
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline reveal">
+        <div class="section-heading">
+          <p class="eyebrow">6-Month View</p>
+          <h3>里程碑時間軸概覽</h3>
+        </div>
+        <div class="timeline__track">
+          <article class="timeline__item is-current">
+            <span>2026/04</span>
+            <strong>團隊組成</strong>
+            <p>建立共識、合作方式與 Sprint 節奏。</p>
+          </article>
+          <article class="timeline__item is-current">
+            <span>2026/05</span>
+            <strong>角色確認與教育訓練</strong>
+            <p>完成 8 場訓練、啟動需求訪談與 Review。</p>
+          </article>
+          <article class="timeline__item">
+            <span>2026/06</span>
+            <strong>需求確認與介面設計</strong>
+            <p>聚焦流程定義、頁面雛型與驗證。</p>
+          </article>
+          <article class="timeline__item">
+            <span>2026/07</span>
+            <strong>設計深化與開發轉測試</strong>
+            <p>設計定稿並啟動開發交付節奏。</p>
+          </article>
+          <article class="timeline__item">
+            <span>2026/08</span>
+            <strong>開發與測試</strong>
+            <p>持續完成功能交付與缺陷修正。</p>
+          </article>
+          <article class="timeline__item">
+            <span>2026/09-10</span>
+            <strong>允收與成果發表</strong>
+            <p>完成驗收、整理可複製方法並對外展示。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="planning reveal" id="april">
+        <div class="section-heading">
+          <p class="eyebrow">April Sprint Setup</p>
+          <h3>4 月活動規劃</h3>
+          <p>從 2026/04/13 起，以每週節奏讓團隊從組隊進入可運作狀態。</p>
+        </div>
+        <div class="activity-list">
+          <details class="activity-card" open>
+            <summary>
+              <div>
+                <p class="activity-card__date">Week 1｜2026/04/13 - 2026/04/17</p>
+                <h4>Team Kickoff 與合作節奏建立</h4>
+              </div>
+              <span class="activity-card__tag">啟動</span>
+            </summary>
+            <div class="activity-card__body">
+              <div>
+                <h5>目標</h5>
+                <p>讓團隊理解專案任務、角色邊界與 6 個月里程碑，建立共同語言與日常合作節奏。</p>
+              </div>
+              <div>
+                <h5>執行內容</h5>
+                <ul>
+                  <li>舉辦 Team Kickoff，介紹專案背景、平台目標、利害關係人與成功條件。</li>
+                  <li>由 PMO 引導 Working Agreement 討論，確認 Daily Scrum、週會、決策與風險通報方式。</li>
+                  <li>安排角色自介與責任地圖工作坊，澄清 PO/BA、UIUX、SA、AI Lead、工程師互動接口。</li>
+                </ul>
+              </div>
+              <div>
+                <h5>產出物</h5>
+                <ul>
+                  <li>團隊合作公約清單</li>
+                  <li>角色責任地圖</li>
+                  <li>6 個月高階里程碑看板</li>
+                </ul>
+              </div>
+              <div>
+                <h5>主責角色</h5>
+                <p>PMO 主責，PO/BA、AI 工程師組長共同參與。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="activity-card">
+            <summary>
+              <div>
+                <p class="activity-card__date">Week 2｜2026/04/20 - 2026/04/24</p>
+                <h4>Scrum 基礎訓練與 M0 啟動 Sprint</h4>
+              </div>
+              <span class="activity-card__tag">訓練</span>
+            </summary>
+            <div class="activity-card__body">
+              <div>
+                <h5>目標</h5>
+                <p>建立 Scrum 最小共同認知，讓團隊開始用 Sprint 方式運作並追蹤啟動期待辦。</p>
+              </div>
+              <div>
+                <h5>執行內容</h5>
+                <ul>
+                  <li>完成教育訓練模組 1 至 3：Scrum 框架、需求拆解概念、跨角色協作模式。</li>
+                  <li>舉辦 Sprint Planning，建立 M0 啟動 Sprint 待辦並為每項工作指定 owner。</li>
+                  <li>開始固定 Daily Scrum，由 PMO 觀察節奏並協助障礙排除。</li>
+                </ul>
+              </div>
+              <div>
+                <h5>產出物</h5>
+                <ul>
+                  <li>M0 Sprint Backlog</li>
+                  <li>訓練出席與學習重點紀錄</li>
+                  <li>風險與阻礙清單</li>
+                </ul>
+              </div>
+              <div>
+                <h5>主責角色</h5>
+                <p>PMO、AI 工程師組長。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="activity-card">
+            <summary>
+              <div>
+                <p class="activity-card__date">Week 3｜2026/04/27 - 2026/04/30</p>
+                <h4>M0 對齊會議與 Sprint Review / Retro</h4>
+              </div>
+              <span class="activity-card__tag">檢核</span>
+            </summary>
+            <div class="activity-card__body">
+              <div>
+                <h5>目標</h5>
+                <p>確認啟動期產出已形成可運作的團隊基礎，並對大 PO 呈現目前狀態與下階段準備度。</p>
+              </div>
+              <div>
+                <h5>執行內容</h5>
+                <ul>
+                  <li>進行 Sprint Review，展示合作公約、責任地圖、Sprint 節奏與訓練完成情形。</li>
+                  <li>召開 Retrospective，整理初期協作摩擦點、資訊斷點與後續改善行動。</li>
+                  <li>由 PMO 與大 PO 對齊 M0 檢核結果與 5 月重點安排。</li>
+                </ul>
+              </div>
+              <div>
+                <h5>產出物</h5>
+                <ul>
+                  <li>M0 里程碑檢核結果</li>
+                  <li>Sprint Review 展示頁</li>
+                  <li>Retro 改善行動清單</li>
+                </ul>
+              </div>
+              <div>
+                <h5>主責角色</h5>
+                <p>PMO 主責，大 PO、全體團隊參與。</p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="planning reveal" id="may">
+        <div class="section-heading">
+          <p class="eyebrow">May Discovery Sprint</p>
+          <h3>5 月活動規劃</h3>
+          <p>延續訓練並進入需求訪談、訪談整理與 Sprint Review 節奏。</p>
+        </div>
+        <div class="training-strip">
+          <div class="training-strip__item">
+            <strong>訓練模組 4-5</strong>
+            <span>需求規格寫作、訪談引導技巧</span>
+          </div>
+          <div class="training-strip__item">
+            <strong>訓練模組 6-8</strong>
+            <span>非功能需求、AI 協作流程、自動化實務</span>
+          </div>
+        </div>
+        <div class="activity-list">
+          <details class="activity-card" open>
+            <summary>
+              <div>
+                <p class="activity-card__date">Week 1｜2026/05/01 - 2026/05/08</p>
+                <h4>教育訓練收斂與訪談腳本定稿</h4>
+              </div>
+              <span class="activity-card__tag">收斂</span>
+            </summary>
+            <div class="activity-card__body">
+              <div>
+                <h5>目標</h5>
+                <p>完成 8 場教育訓練，讓每個角色能以一致框架進入需求探索階段。</p>
+              </div>
+              <div>
+                <h5>執行內容</h5>
+                <ul>
+                  <li>完成訓練模組 4 至 8，並整理各角色在需求探索期的實際應用方式。</li>
+                  <li>由 PO/BA 主導、PMO 協作完成訪談題綱，涵蓋商戶端、銀行信用卡經營端、支付商戶經營端。</li>
+                  <li>舉辦 Sprint Planning，建立需求訪談 Sprint Backlog 與排程。</li>
+                </ul>
+              </div>
+              <div>
+                <h5>產出物</h5>
+                <ul>
+                  <li>8 場訓練完成清單</li>
+                  <li>三類使用者訪談題綱</li>
+                  <li>需求探索 Sprint Backlog</li>
+                </ul>
+              </div>
+              <div>
+                <h5>主責角色</h5>
+                <p>PO/BA、PMO、AI 工程師組長。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="activity-card">
+            <summary>
+              <div>
+                <p class="activity-card__date">Week 2｜2026/05/11 - 2026/05/15</p>
+                <h4>利害關係人與使用者需求訪談</h4>
+              </div>
+              <span class="activity-card__tag">訪談</span>
+            </summary>
+            <div class="activity-card__body">
+              <div>
+                <h5>目標</h5>
+                <p>透過訪談掌握人工輸入現況、訊息登錄流程、資料傳遞節點與未來平台關鍵需求。</p>
+              </div>
+              <div>
+                <h5>執行內容</h5>
+                <ul>
+                  <li>安排大 PO、銀行信用卡經營人員、支付商戶經營人員及合作商戶代表訪談時段。</li>
+                  <li>PO/BA 主訪、UIUX 與 SA 陪訪，分別收集流程痛點、畫面需求與非功能條件。</li>
+                  <li>PMO 每日彙整訪談阻礙與待確認事項，確保 Sprint 內可持續推進。</li>
+                </ul>
+              </div>
+              <div>
+                <h5>產出物</h5>
+                <ul>
+                  <li>訪談排程表</li>
+                  <li>角色別痛點清單</li>
+                  <li>現況流程重點摘要</li>
+                </ul>
+              </div>
+              <div>
+                <h5>主責角色</h5>
+                <p>PO/BA 主責，PMO 協調，UIUX 與 SA 共同參與。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="activity-card">
+            <summary>
+              <div>
+                <p class="activity-card__date">Week 3｜2026/05/18 - 2026/05/22</p>
+                <h4>需求整理工作坊與初版流程對齊</h4>
+              </div>
+              <span class="activity-card__tag">整合</span>
+            </summary>
+            <div class="activity-card__body">
+              <div>
+                <h5>目標</h5>
+                <p>把訪談資訊轉為可追蹤的需求主題與角色分工，為 6 月需求確認與 UI 設計鋪路。</p>
+              </div>
+              <div>
+                <h5>執行內容</h5>
+                <ul>
+                  <li>進行需求整理工作坊，萃取高頻痛點、資料節點與關鍵作業情境。</li>
+                  <li>PO/BA 建立初版 Product Backlog，UIUX 畫出核心流程草圖，SA 補充非功能需求輪廓。</li>
+                  <li>AI 工程師組長盤點 AI 團隊自動化作業可行範圍，支持後續交付節奏。</li>
+                </ul>
+              </div>
+              <div>
+                <h5>產出物</h5>
+                <ul>
+                  <li>初版 Product Backlog</li>
+                  <li>核心流程草圖</li>
+                  <li>非功能需求清單初稿</li>
+                </ul>
+              </div>
+              <div>
+                <h5>主責角色</h5>
+                <p>PO/BA、UIUX、SA、AI 工程師組長。</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="activity-card">
+            <summary>
+              <div>
+                <p class="activity-card__date">Week 4｜2026/05/25 - 2026/05/31</p>
+                <h4>M1 Review、Retro 與 6 月準備</h4>
+              </div>
+              <span class="activity-card__tag">Review</span>
+            </summary>
+            <div class="activity-card__body">
+              <div>
+                <h5>目標</h5>
+                <p>確認 5 月底已形成可驗證的需求探索成果，並建立 6 月需求確認與介面設計的進場條件。</p>
+              </div>
+              <div>
+                <h5>執行內容</h5>
+                <ul>
+                  <li>舉辦 Sprint Review，向大 PO 展示訓練完成、訪談成果、Backlog 與流程草圖。</li>
+                  <li>進行 Retro，調整訪談節奏、紀錄品質與跨角色協作方式。</li>
+                  <li>由 PMO 統整 M1 達成度、未決議題與 6 月行動清單。</li>
+                </ul>
+              </div>
+              <div>
+                <h5>產出物</h5>
+                <ul>
+                  <li>M1 里程碑檢核結果</li>
+                  <li>Sprint Review 展示摘要</li>
+                  <li>6 月需求確認準備清單</li>
+                </ul>
+              </div>
+              <div>
+                <h5>主責角色</h5>
+                <p>PMO 主責，全體團隊與大 PO 共同參與。</p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="milestone reveal" id="milestone">
+        <div class="section-heading">
+          <p class="eyebrow">Milestone Gates</p>
+          <h3>里程碑檢核表</h3>
+          <p>每一項條件都設計成可被驗證的完成狀態，方便 PMO 與大 PO 對齊。</p>
+        </div>
+        <div class="milestone-grid">
+          <article class="check-card">
+            <div class="check-card__header">
+              <span class="check-card__badge">M0</span>
+              <div>
+                <h4>2026/04/30 啟動完成條件</h4>
+                <p>團隊已能用固定節奏協作，具備 5 月進入需求探索的基本運作能力。</p>
+              </div>
+            </div>
+            <label class="check-item"><input type="checkbox"><span>已完成 Team Kickoff，6 個角色皆參與並確認專案目標。</span></label>
+            <label class="check-item"><input type="checkbox"><span>團隊合作公約已確認，包含 Daily Scrum、週會、風險通報與決策方式。</span></label>
+            <label class="check-item"><input type="checkbox"><span>角色責任地圖已完成並可對照主要合作接口。</span></label>
+            <label class="check-item"><input type="checkbox"><span>教育訓練模組 1 至 3 已完成，並有出席與學習重點紀錄。</span></label>
+            <label class="check-item"><input type="checkbox"><span>M0 Sprint Backlog 已執行並完成 Sprint Review 與 Retro。</span></label>
+          </article>
+
+          <article class="check-card">
+            <div class="check-card__header">
+              <span class="check-card__badge is-secondary">M1</span>
+              <div>
+                <h4>2026/05/31 探索完成條件</h4>
+                <p>團隊已完成訓練與需求探索，能在 6 月進入需求確認與介面設計。</p>
+              </div>
+            </div>
+            <label class="check-item"><input type="checkbox"><span>8 場教育訓練皆完成，且各角色應用方式已整理。</span></label>
+            <label class="check-item"><input type="checkbox"><span>三類使用者訪談題綱、排程表與訪談紀錄摘要已完成。</span></label>
+            <label class="check-item"><input type="checkbox"><span>已形成角色別痛點清單與現況流程重點摘要。</span></label>
+            <label class="check-item"><input type="checkbox"><span>初版 Product Backlog、核心流程草圖與非功能需求清單初稿已完成。</span></label>
+            <label class="check-item"><input type="checkbox"><span>M1 Sprint Review 與 Retro 已完成，6 月準備清單已對齊大 PO。</span></label>
+          </article>
+        </div>
+      </section>
+
+      <section class="raci reveal" id="raci">
+        <div class="section-heading">
+          <p class="eyebrow">Responsibility Map</p>
+          <h3>RACI 矩陣</h3>
+          <p>聚焦 4 月至 5 月的主要工作事項，幫助團隊快速找到責任位置。</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>工作事項</th>
+                <th>PO / BA</th>
+                <th>UIUX</th>
+                <th>SA</th>
+                <th>AI 組長</th>
+                <th>AI 工程師</th>
+                <th>PMO</th>
+                <th>大 PO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Team Kickoff 與合作公約</th>
+                <td>C</td>
+                <td>C</td>
+                <td>C</td>
+                <td>C</td>
+                <td>I</td>
+                <td>A/R</td>
+                <td>I</td>
+              </tr>
+              <tr>
+                <th>教育訓練規劃與完成追蹤</th>
+                <td>C</td>
+                <td>C</td>
+                <td>C</td>
+                <td>R</td>
+                <td>I</td>
+                <td>A</td>
+                <td>I</td>
+              </tr>
+              <tr>
+                <th>Sprint Planning / Review / Retro</th>
+                <td>R</td>
+                <td>C</td>
+                <td>C</td>
+                <td>R</td>
+                <td>C</td>
+                <td>A</td>
+                <td>I</td>
+              </tr>
+              <tr>
+                <th>需求訪談題綱與排程</th>
+                <td>A/R</td>
+                <td>C</td>
+                <td>C</td>
+                <td>I</td>
+                <td>I</td>
+                <td>R</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <th>需求訪談執行與彙整</th>
+                <td>A/R</td>
+                <td>R</td>
+                <td>R</td>
+                <td>I</td>
+                <td>I</td>
+                <td>C</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <th>初版 Backlog / 流程草圖 / NFR 初稿</th>
+                <td>A/R</td>
+                <td>R</td>
+                <td>R</td>
+                <td>C</td>
+                <td>I</td>
+                <td>C</td>
+                <td>I</td>
+              </tr>
+              <tr>
+                <th>M0 / M1 里程碑檢核與高管匯報</th>
+                <td>C</td>
+                <td>I</td>
+                <td>I</td>
+                <td>C</td>
+                <td>I</td>
+                <td>A/R</td>
+                <td>C</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./script.js"></script>
 </body>
 </html>
