@@ -14,7 +14,564 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Outfit:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
-  <link rel="stylesheet" href="./style.css">
+  <style>
+    :root {
+      color-scheme: light;
+      --panel: rgba(255, 251, 245, 0.9);
+      --panel-strong: #fffdf8;
+      --line: rgba(30, 41, 59, 0.1);
+      --line-strong: rgba(20, 76, 73, 0.2);
+      --text: #1e293b;
+      --muted: #5b6472;
+      --accent: #1f766c;
+      --accent-deep: #184e49;
+      --accent-soft: #dff2ee;
+      --gold: #c49b53;
+      --shadow: 0 20px 50px rgba(58, 66, 86, 0.12);
+      --radius-xl: 30px;
+      --radius-lg: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: "Noto Sans TC", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(196, 155, 83, 0.22), transparent 22%),
+        radial-gradient(circle at right 12%, rgba(31, 118, 108, 0.14), transparent 28%),
+        linear-gradient(180deg, #faf6ef 0%, #f3eee5 54%, #f8f5f0 100%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      width: min(1440px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 40px;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 24px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 24px;
+      align-self: start;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 253, 248, 0.82);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .sidebar__brand h1,
+    .hero h2,
+    .section-heading h3,
+    .activity-card h4,
+    .check-card h4 {
+      font-family: "Outfit", "Noto Sans TC", sans-serif;
+    }
+
+    .sidebar__eyebrow,
+    .eyebrow,
+    .panel-card__label,
+    .activity-card__date {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .sidebar__brand h1 {
+      margin: 8px 0 10px;
+      font-size: 1.8rem;
+      line-height: 1.05;
+    }
+
+    .sidebar__brand p,
+    .sidebar__meta span,
+    .sidebar__meta strong {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .sidebar__nav {
+      display: grid;
+      gap: 10px;
+      margin: 28px 0;
+    }
+
+    .sidebar__nav a {
+      padding: 12px 14px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--muted);
+      transition: 180ms ease;
+    }
+
+    .sidebar__nav a:hover,
+    .sidebar__nav a:focus-visible {
+      color: var(--accent-deep);
+      border-color: var(--line-strong);
+      background: rgba(31, 118, 108, 0.08);
+      outline: none;
+    }
+
+    .sidebar__meta {
+      display: grid;
+      gap: 6px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .content {
+      display: grid;
+      gap: 24px;
+    }
+
+    .hero,
+    .timeline,
+    .planning,
+    .milestone,
+    .raci {
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .eyebrow,
+    .sidebar__eyebrow {
+      margin: 0;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .hero h2 {
+      margin: 14px 0 0;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.04;
+    }
+
+    .lead,
+    .section-heading p,
+    .timeline__item p,
+    .panel-card__value,
+    .activity-card__body p,
+    .check-card__header p {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .hero__chips {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .hero__chips span,
+    .activity-card__tag,
+    .check-card__badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 14px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .hero__chips span {
+      color: var(--accent-deep);
+      background: rgba(31, 118, 108, 0.09);
+      border: 1px solid rgba(31, 118, 108, 0.12);
+    }
+
+    .hero__panel {
+      display: grid;
+      gap: 16px;
+    }
+
+    .panel-card {
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 251, 245, 0.98)),
+        var(--panel-strong);
+      border: 1px solid rgba(196, 155, 83, 0.18);
+    }
+
+    .panel-card__label {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .panel-card__value {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .section-heading {
+      margin-bottom: 20px;
+    }
+
+    .section-heading h3 {
+      margin: 12px 0 8px;
+      font-size: clamp(1.6rem, 3vw, 2.6rem);
+    }
+
+    .section-heading p {
+      margin: 0;
+    }
+
+    .timeline__track {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .timeline__item {
+      position: relative;
+      min-height: 190px;
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+    }
+
+    .timeline__item::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(196, 155, 83, 0.25);
+    }
+
+    .timeline__item.is-current::before {
+      background: linear-gradient(90deg, var(--accent), #54ae99);
+    }
+
+    .timeline__item span {
+      display: block;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .timeline__item strong {
+      display: block;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    .activity-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .activity-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.68);
+      overflow: hidden;
+    }
+
+    .activity-card summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 22px 24px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .activity-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .activity-card[open] summary {
+      background: rgba(31, 118, 108, 0.05);
+    }
+
+    .activity-card__date {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .activity-card h4 {
+      margin: 0;
+      font-size: 1.35rem;
+    }
+
+    .activity-card__tag {
+      flex-shrink: 0;
+      color: var(--accent-deep);
+      background: var(--accent-soft);
+    }
+
+    .activity-card__body {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      padding: 0 24px 24px;
+    }
+
+    .activity-card__body h5 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+    }
+
+    .activity-card__body p,
+    .activity-card__body ul {
+      margin: 0;
+    }
+
+    .activity-card__body ul {
+      padding-left: 20px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .training-strip {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .training-strip__item {
+      padding: 18px 20px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(31, 118, 108, 0.15);
+      background: linear-gradient(135deg, rgba(223, 242, 238, 0.82), rgba(255, 249, 238, 0.9));
+    }
+
+    .training-strip__item strong,
+    .training-strip__item span {
+      display: block;
+    }
+
+    .training-strip__item strong {
+      margin-bottom: 6px;
+    }
+
+    .training-strip__item span {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .milestone-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .check-card {
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .check-card__header {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .check-card__badge {
+      background: rgba(196, 155, 83, 0.16);
+      color: #8b651f;
+    }
+
+    .check-card__badge.is-secondary {
+      color: var(--accent-deep);
+      background: rgba(31, 118, 108, 0.12);
+    }
+
+    .check-card h4 {
+      margin: 0 0 6px;
+      font-size: 1.3rem;
+    }
+
+    .check-card__header p {
+      margin: 0;
+    }
+
+    .check-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 0;
+      border-top: 1px solid rgba(30, 41, 59, 0.07);
+      cursor: pointer;
+    }
+
+    .check-item input {
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      margin: 3px 0 0;
+      flex-shrink: 0;
+      border: 1.5px solid rgba(31, 118, 108, 0.32);
+      border-radius: 7px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+    }
+
+    .check-item input::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      transform: scale(0);
+      transition: transform 150ms ease;
+      background: var(--accent);
+    }
+
+    .check-item input:checked::after {
+      transform: scale(1);
+    }
+
+    .check-item span {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .check-item.is-complete span {
+      color: var(--text);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 880px;
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    thead th {
+      background: rgba(31, 118, 108, 0.08);
+      color: var(--accent-deep);
+    }
+
+    th,
+    td {
+      padding: 16px 14px;
+      border-bottom: 1px solid rgba(30, 41, 59, 0.08);
+      text-align: center;
+    }
+
+    tbody th {
+      text-align: left;
+      background: rgba(255, 251, 245, 0.72);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+    }
+
+    .reveal.is-visible {
+      animation: reveal-up 700ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+    @keyframes reveal-up {
+      from {
+        opacity: 0;
+        transform: translateY(26px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1180px) {
+      .page-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: relative;
+        top: auto;
+      }
+
+      .timeline__track {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .activity-card__body,
+      .milestone-grid,
+      .training-strip {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page-shell {
+        width: min(100%, calc(100% - 20px));
+        padding-top: 10px;
+      }
+
+      .hero,
+      .timeline,
+      .planning,
+      .milestone,
+      .raci,
+      .sidebar {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      .timeline__track {
+        grid-template-columns: 1fr;
+      }
+
+      .activity-card summary {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="page-shell">
@@ -525,6 +1082,39 @@
       </section>
     </main>
   </div>
-  <script src="./script.js"></script>
+  <script>
+    const revealItems = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          const element = entry.target;
+          element.style.animationDelay = `${index * 80}ms`;
+          element.classList.add("is-visible");
+          revealObserver.unobserve(element);
+        });
+      },
+      {
+        threshold: 0.18,
+      }
+    );
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+
+    document.querySelectorAll(".check-item input").forEach((input) => {
+      const wrapper = input.closest(".check-item");
+
+      const syncState = () => {
+        wrapper.classList.toggle("is-complete", input.checked);
+      };
+
+      input.addEventListener("change", syncState);
+      syncState();
+    });
+  </script>
 </body>
 </html>
