@@ -1,0 +1,1677 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>新竹海線 2 天 1 夜 ｜ 2026.09.12 - 09.13 自駕行程</title>
+  <meta
+    name="description"
+    content="宜蘭出發的新竹 2 天 1 夜自駕行程：時刻表式排程、店家地址電話與營業檢核、國道動線與停車、電動車充電規劃、九降風穿搭與雨天備案。"
+  >
+  <meta name="theme-color" content="#e6eaf1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    /* ============================================================
+       Theme — Tidal Blue 潮藍
+       ground 海霧藍灰 / ink 深海墨 / accent 海圖群青
+       色相三個：accent 藍（主）· amber 琥珀（警示）· good 綠（通過）
+       間距 4/8 grid · 字級 8 階 · 字體 3 角色（襯線標題／黑體內文／等寬數據）
+       ============================================================ */
+    :root {
+      color-scheme: light;
+
+      /* --- color ------------------------------------------------ */
+      --ground: #e6eaf1;
+      --paper: #f4f7fb;
+      --ink: #0f1b2e;
+      --ink-soft: #33455f;
+      --muted: #5c6f88;
+      --rule: rgba(15, 27, 46, 0.16);
+      --rule-soft: rgba(15, 27, 46, 0.09);
+      --accent: #1a4bab;
+      --accent-soft: #dee7f8;
+      --amber: #8a6010;
+      --amber-soft: #f1ead7;
+      --good: #1f6b57;
+
+      /* --- spacing · 4/8 grid ----------------------------------- */
+      --s1: 4px;
+      --s2: 8px;
+      --s3: 12px;
+      --s4: 16px;
+      --s5: 24px;
+      --s6: 32px;
+      --s7: 48px;
+      --s8: 64px;
+      --s9: 96px;
+
+      /* --- type scale ------------------------------------------- */
+      --t-micro: 12px;
+      --t-mini: 13px;
+      --t-small: 14px;
+      --t-body: 16px;
+      --t-lead: 18px;
+      --t-h4: 20px;
+      --t-h3: 24px;
+      --t-h2: clamp(28px, 4vw, 44px);
+      --t-h1: clamp(40px, 7.4vw, 76px);
+
+      --shell: min(1160px, calc(100% - var(--s6)));
+      --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+      --serif: "Noto Serif TC", "Songti TC", "Source Han Serif TC", serif;
+      --sans: "Noto Sans TC", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --ground: #0b111c;
+        --paper: #121b2a;
+        --ink: #e8eef8;
+        --ink-soft: #b9c6d8;
+        --muted: #8496ac;
+        --rule: rgba(232, 238, 248, 0.2);
+        --rule-soft: rgba(232, 238, 248, 0.1);
+        --accent: #8ab0ff;
+        --accent-soft: #182742;
+        --amber: #d7a55e;
+        --amber-soft: #29231a;
+        --good: #6fc0a4;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --ground: #0b111c;
+      --paper: #121b2a;
+      --ink: #e8eef8;
+      --ink-soft: #b9c6d8;
+      --muted: #8496ac;
+      --rule: rgba(232, 238, 248, 0.2);
+      --rule-soft: rgba(232, 238, 248, 0.1);
+      --accent: #8ab0ff;
+      --accent-soft: #182742;
+      --amber: #d7a55e;
+      --amber-soft: #29231a;
+      --good: #6fc0a4;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--s9);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ground);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: var(--t-body);
+      line-height: 1.8;
+      letter-spacing: 0.01em;
+      text-wrap: pretty;
+    }
+
+    h1, h2, h3, h4 {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 900;
+      line-height: 1.26;
+      text-wrap: balance;
+    }
+
+    /* smaller headings hold the page better at 700 than at full black */
+    .card h3,
+    .place-card h4,
+    .block h3 { font-weight: 700; }
+
+    p { margin: 0; }
+
+    a { color: inherit; }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+    .ico {
+      width: 1em;
+      height: 1em;
+      flex: none;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .label {
+      font-family: var(--mono);
+      font-size: var(--t-micro);
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .shell { width: var(--shell); margin-inline: auto; }
+
+    /* ---------------- top rail ---------------- */
+    .rail {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: color-mix(in srgb, var(--ground) 88%, transparent);
+      backdrop-filter: blur(10px) saturate(1.2);
+      border-bottom: 1px solid var(--rule-soft);
+    }
+
+    .rail__inner {
+      width: var(--shell);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      gap: var(--s5);
+      height: var(--s8);
+    }
+
+    .rail__mark {
+      font-family: var(--mono);
+      font-size: var(--t-micro);
+      letter-spacing: 0.2em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .rail__mark b { color: var(--accent); font-weight: 500; }
+
+    .rail nav {
+      margin-left: auto;
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .rail nav::-webkit-scrollbar { display: none; }
+
+    .rail nav a {
+      position: relative;
+      padding: var(--s2) var(--s3);
+      font-size: var(--t-small);
+      color: var(--muted);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.18s ease;
+    }
+
+    .rail nav a::after {
+      content: "";
+      position: absolute;
+      left: var(--s3);
+      right: var(--s3);
+      bottom: 0;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform 0.22s ease;
+    }
+
+    .rail nav a:hover { color: var(--ink); }
+
+    .rail nav a.is-active {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .rail nav a.is-active::after { transform: scaleX(1); }
+
+    /* ---------------- masthead ---------------- */
+    .masthead {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .scales {
+      position: absolute;
+      right: -4%;
+      top: -10%;
+      width: min(620px, 62%);
+      height: 130%;
+      color: var(--accent);
+      opacity: 0.14;
+      -webkit-mask-image: linear-gradient(255deg, #000 8%, transparent 72%);
+      mask-image: linear-gradient(255deg, #000 8%, transparent 72%);
+      pointer-events: none;
+    }
+
+    .masthead__inner {
+      position: relative;
+      width: var(--shell);
+      margin-inline: auto;
+      padding: clamp(48px, 8vw, 96px) 0 var(--s7);
+    }
+
+    .masthead h1 {
+      margin: var(--s5) 0 0;
+      font-size: var(--t-h1);
+      letter-spacing: 0.02em;
+    }
+
+    .masthead h1 .sub {
+      display: block;
+      margin-top: var(--s2);
+      font-family: var(--mono);
+      font-size: clamp(15px, 2vw, 21px);
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+    }
+
+    .lede {
+      margin-top: var(--s5);
+      max-width: 46ch;
+      color: var(--ink-soft);
+      font-size: var(--t-lead);
+    }
+
+    .spec {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      margin: var(--s7) 0 0;
+      border-top: 1px solid var(--ink);
+      padding-top: var(--s4);
+      gap: var(--s1) 0;
+    }
+
+    .spec > div { padding-right: var(--s3); }
+
+    .spec > div + div {
+      padding-left: var(--s4);
+      border-left: 1px solid var(--rule-soft);
+    }
+
+    .spec dt { margin-bottom: var(--s1); }
+
+    .spec dd {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: var(--t-body);
+      font-variant-numeric: tabular-nums;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+
+    /* ---------------- sections ---------------- */
+    section { padding-top: var(--s9); scroll-margin-top: var(--s8); }
+
+    .sec-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: var(--s5) var(--s7);
+      flex-wrap: wrap;
+      padding-top: var(--s4);
+      border-top: 1px solid var(--ink);
+      margin-bottom: var(--s6);
+    }
+
+    .sec-head h2 {
+      font-size: var(--t-h2);
+      letter-spacing: 0.03em;
+    }
+
+    .sec-head h2 small {
+      display: block;
+      margin-bottom: var(--s2);
+      font-family: var(--mono);
+      font-size: var(--t-micro);
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .sec-note {
+      max-width: 42ch;
+      color: var(--muted);
+      font-size: var(--t-small);
+      line-height: 1.7;
+    }
+
+    .sub-head {
+      display: flex;
+      align-items: center;
+      gap: var(--s3);
+      margin: var(--s7) 0 var(--s4);
+      color: var(--muted);
+    }
+
+    .sub-head::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--rule-soft);
+    }
+
+    /* ---------------- day switch ---------------- */
+    .days {
+      display: flex;
+      gap: var(--s5);
+      margin-bottom: var(--s6);
+      border-bottom: 1px solid var(--rule-soft);
+    }
+
+    .day-tab {
+      appearance: none;
+      background: none;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      padding: 0 0 var(--s3);
+      cursor: pointer;
+      font-family: var(--mono);
+      font-size: var(--t-mini);
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      transition: color 0.18s ease, border-color 0.18s ease;
+    }
+
+    .day-tab:hover { color: var(--ink); }
+
+    .day-tab[aria-selected="true"] {
+      color: var(--ink);
+      border-bottom-color: var(--accent);
+    }
+
+    .day-panel {
+      display: grid;
+      gap: var(--s4);
+    }
+
+    .day-panel[hidden] { display: none; }
+
+    .day-intro {
+      display: flex;
+      align-items: center;
+      gap: var(--s2) var(--s4);
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: var(--t-small);
+    }
+
+    .day-intro .arrow { color: var(--accent); }
+
+    /* ---------------- itinerary cards (ticket-stub form) ----------------
+       Each stop is a ticket: the stub carries sequence + time, a perforated
+       dashed line with punched notches separates it from the body. */
+    .cards-stack {
+      display: grid;
+      gap: var(--s4);
+    }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 108px minmax(0, 1fr);
+      background: var(--paper);
+      border-radius: 3px;
+      box-shadow: 0 0 0 1px var(--rule-soft);
+      transition: box-shadow 0.22s ease, transform 0.22s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 0 1px var(--rule), 0 10px 24px -14px rgba(15, 27, 46, 0.5);
+    }
+
+    .card__stub {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: var(--s1);
+      padding: var(--s5) var(--s4) var(--s5) var(--s5);
+      border-right: 1px dashed var(--rule);
+      font-family: var(--mono);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* punched holes at both ends of the perforation */
+    .card__stub::before,
+    .card__stub::after {
+      content: "";
+      position: absolute;
+      right: -7px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--ground);
+    }
+
+    .card__stub::before { top: -7px; }
+    .card__stub::after { bottom: -7px; }
+
+    .card__seq {
+      font-size: var(--t-micro);
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      margin-bottom: var(--s1);
+    }
+
+    .card--minor .card__seq { color: var(--muted); }
+
+    .card__t {
+      font-size: var(--t-lead);
+      line-height: 1.35;
+      color: var(--ink);
+    }
+
+    .card__t--end {
+      font-size: var(--t-mini);
+      color: var(--muted);
+    }
+
+    .card__t--end::before {
+      content: "↓ ";
+      opacity: 0.55;
+    }
+
+    .card__body { padding: var(--s5); }
+
+    .card__kind {
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+      margin-bottom: var(--s2);
+      font-family: var(--mono);
+      font-size: var(--t-micro);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .card--minor .card__kind { color: var(--muted); }
+
+    .card__kind .ico { font-size: var(--t-lead); stroke-width: 1.4; }
+
+    .card h3 {
+      font-size: var(--t-h3);
+      letter-spacing: 0.02em;
+    }
+
+    .card h3 .place { color: var(--accent); }
+
+    .card p {
+      margin-top: var(--s3);
+      max-width: 60ch;
+      color: var(--ink-soft);
+    }
+
+    /* inline notes */
+    .note {
+      display: flex;
+      gap: var(--s3);
+      margin-top: var(--s4);
+      padding: var(--s3) var(--s4);
+      max-width: 62ch;
+      background: var(--paper);
+      border-left: 2px solid var(--accent);
+      font-size: var(--t-small);
+      line-height: 1.75;
+      color: var(--ink-soft);
+    }
+
+    .note .ico { font-size: var(--t-lead); margin-top: 3px; color: var(--accent); }
+
+    .note b { color: var(--ink); font-weight: 500; }
+
+    .note--park {
+      border-left-color: var(--amber);
+      background: var(--amber-soft);
+    }
+
+    .note--park .ico { color: var(--amber); }
+
+    .note--ev { background: var(--accent-soft); }
+
+    .shops {
+      list-style: none;
+      margin: var(--s4) 0 0;
+      padding: 0;
+      display: grid;
+      gap: 1px;
+      max-width: 62ch;
+      background: var(--rule-soft);
+      border-block: 1px solid var(--rule-soft);
+    }
+
+    .shops li {
+      background: var(--ground);
+      padding: var(--s3) 0;
+    }
+
+    .shops b {
+      display: block;
+      font-family: var(--serif);
+      font-size: var(--t-lead);
+      font-weight: 700;
+      margin-bottom: var(--s1);
+    }
+
+    .shops span {
+      font-family: var(--mono);
+      font-size: var(--t-micro);
+      color: var(--accent);
+      letter-spacing: 0.06em;
+    }
+
+    .shops p { margin-top: var(--s1); font-size: var(--t-small); }
+
+    /* ---------------- place index ---------------- */
+    .places {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(292px, 1fr));
+      gap: 1px;
+    }
+
+    /* hairlines come from each card's own ring, so empty grid cells stay clear */
+    .place-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--paper);
+      box-shadow: 0 0 0 1px var(--rule-soft);
+      padding: var(--s5) var(--s5) var(--s4);
+      transition: box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .place-card:hover {
+      background: var(--ground);
+      box-shadow: 0 0 0 1px var(--rule);
+    }
+
+    .place-card__kind {
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+      font-family: var(--mono);
+      font-size: var(--t-micro);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: var(--s3);
+    }
+
+    .place-card__kind .ico { font-size: var(--t-lead); color: var(--accent); }
+
+    .place-card h4 {
+      font-size: var(--t-h4);
+      letter-spacing: 0.02em;
+      margin-bottom: var(--s4);
+    }
+
+    .place-card dl {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: var(--s2) var(--s3);
+      margin: 0 0 var(--s4);
+      font-size: var(--t-small);
+    }
+
+    .place-card dt {
+      color: var(--muted);
+      display: flex;
+      padding-top: 3px;
+    }
+
+    .place-card dt .ico { font-size: var(--t-body); }
+
+    .place-card dd { margin: 0; color: var(--ink-soft); }
+
+    .place-card dd a {
+      color: var(--ink);
+      text-decoration: none;
+      background-image: linear-gradient(var(--accent), var(--accent));
+      background-size: 100% 1px;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      padding-bottom: 1px;
+      transition: color 0.18s ease;
+    }
+
+    .place-card dd a:hover { color: var(--accent); }
+
+    .place-card dd small {
+      display: block;
+      color: var(--muted);
+      font-size: var(--t-mini);
+      line-height: 1.5;
+    }
+
+    .place-card .hours { font-family: var(--mono); font-size: var(--t-mini); }
+
+    .status {
+      margin-top: auto;
+      padding-top: var(--s3);
+      border-top: 1px solid var(--rule-soft);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--s2);
+      font-size: var(--t-mini);
+      line-height: 1.6;
+      color: var(--good);
+    }
+
+    .status i {
+      flex: none;
+      width: 6px;
+      height: 6px;
+      margin-top: var(--s2);
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .status--watch { color: var(--amber); }
+
+    /* ---------------- data blocks ---------------- */
+    .cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: var(--s6) var(--s7);
+    }
+
+    .block h3 {
+      font-size: var(--t-h4);
+      letter-spacing: 0.02em;
+      margin-bottom: var(--s3);
+      padding-bottom: var(--s3);
+      border-bottom: 1px solid var(--rule-soft);
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+    }
+
+    .block h3 .ico { font-size: var(--t-h4); color: var(--accent); stroke-width: 1.4; }
+
+    .block p { color: var(--ink-soft); font-size: var(--t-small); }
+    .block p + p { margin-top: var(--s3); }
+
+    .block b { color: var(--ink); font-weight: 500; }
+
+    .block ul, .block ol {
+      margin: 0;
+      padding-left: var(--s4);
+      display: grid;
+      gap: var(--s3);
+      color: var(--ink-soft);
+      font-size: var(--t-small);
+    }
+
+    .block li::marker { color: var(--muted); }
+
+    .block li b { display: block; }
+
+    .route {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--s2);
+      margin-bottom: var(--s4);
+      font-family: var(--mono);
+      font-size: var(--t-mini);
+    }
+
+    .route em {
+      font-style: normal;
+      padding: var(--s1) var(--s3);
+      background: var(--paper);
+      border: 1px solid var(--rule-soft);
+      color: var(--ink);
+    }
+
+    .route i { font-style: normal; color: var(--accent); }
+
+    .facts {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: var(--s2) var(--s5);
+      margin: 0;
+      font-size: var(--t-small);
+    }
+
+    .facts dt { color: var(--muted); white-space: nowrap; }
+
+    .facts dd {
+      margin: 0;
+      font-family: var(--mono);
+      font-variant-numeric: tabular-nums;
+      color: var(--ink);
+    }
+
+    .highlight {
+      padding: var(--s5);
+      background: var(--accent-soft);
+      border-left: 2px solid var(--accent);
+    }
+
+    .highlight h3 { border-bottom-color: color-mix(in srgb, var(--accent) 26%, transparent); }
+
+    /* ---------------- table ---------------- */
+    .table-wrap { overflow-x: auto; }
+
+    table {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: collapse;
+      font-size: var(--t-small);
+    }
+
+    thead th {
+      text-align: left;
+      padding: 0 var(--s4) var(--s3) 0;
+      border-bottom: 1px solid var(--ink);
+      font-family: var(--mono);
+      font-size: var(--t-micro);
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    tbody tr { transition: background 0.18s ease; }
+
+    tbody tr:hover { background: var(--paper); }
+
+    tbody td {
+      padding: var(--s3) var(--s4) var(--s3) 0;
+      border-bottom: 1px solid var(--rule-soft);
+      color: var(--ink-soft);
+      vertical-align: top;
+    }
+
+    tbody th {
+      text-align: left;
+      padding: var(--s3) var(--s4) var(--s3) 0;
+      border-bottom: 1px solid var(--rule-soft);
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: var(--t-body);
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    td.spec-col { font-family: var(--mono); font-size: var(--t-mini); white-space: nowrap; }
+
+    .use-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s2);
+      font-family: var(--mono);
+      font-size: var(--t-micro);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .use-tag--alt { color: var(--muted); }
+
+    /* ---------------- footer ---------------- */
+    footer {
+      margin-top: var(--s9);
+      padding: var(--s5) 0 var(--s7);
+      border-top: 1px solid var(--ink);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s3) var(--s5);
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: var(--t-micro);
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+
+    footer a { text-decoration: none; color: var(--accent); }
+
+    /* ---------------- reveal ---------------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.is-in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .rail nav a::after,
+      .place-card,
+      tbody tr { transition: none; }
+    }
+
+    /* ---------------- responsive ----------------
+       Breakpoint ladder: 1024 tablet · 860 spec reflow · 720 table→rows
+       · 640 single column + stub on top · 380 tightened */
+
+    @media (max-width: 1024px) {
+      .cols { gap: var(--s6) var(--s6); }
+      .masthead__inner { padding-bottom: var(--s6); }
+    }
+
+    @media (max-width: 860px) {
+      .spec { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s5) 0; }
+      .spec > div:nth-child(3n + 1) { padding-left: 0; border-left: 0; }
+      section { padding-top: var(--s8); }
+      .card { grid-template-columns: 92px minmax(0, 1fr); }
+      .card__stub { padding: var(--s4); }
+      .card__body { padding: var(--s4); }
+    }
+
+    /* the charging table stops being a table and becomes labelled rows */
+    @media (max-width: 720px) {
+      table { min-width: 0; }
+      thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+      tbody tr {
+        display: grid;
+        gap: var(--s1);
+        padding: var(--s4) 0;
+        border-bottom: 1px solid var(--rule-soft);
+      }
+      tbody tr:hover { background: none; }
+      tbody th,
+      tbody td {
+        padding: 0;
+        border: 0;
+        white-space: normal;
+      }
+      tbody th { font-size: var(--t-lead); margin-bottom: var(--s1); }
+      tbody td::before {
+        content: attr(data-label) " · ";
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: var(--t-micro);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+    }
+
+    @media (max-width: 640px) {
+      :root { --shell: calc(100% - var(--s5)); }
+      body { line-height: 1.75; }
+      .rail__mark { display: none; }
+      .rail nav { margin-left: 0; }
+      .rail__inner { height: var(--s7); }
+      html { scroll-padding-top: var(--s8); }
+
+      .masthead__inner { padding-top: var(--s7); }
+      .lede { font-size: var(--t-body); max-width: none; }
+      .spec { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .spec > div:nth-child(3n + 1) { padding-left: var(--s4); border-left: 1px solid var(--rule-soft); }
+      .spec > div:nth-child(2n + 1) { padding-left: 0; border-left: 0; }
+
+      .sec-head { display: block; }
+      .sec-head .sec-note { margin-top: var(--s3); max-width: none; }
+      .days { gap: var(--s4); }
+      .day-tab { font-size: var(--t-micro); }
+
+      /* stub rotates to the top edge; the perforation goes horizontal */
+      .card { grid-template-columns: minmax(0, 1fr); }
+      .card:hover { transform: none; }
+      .card__stub {
+        flex-direction: row;
+        align-items: baseline;
+        gap: var(--s3);
+        padding: var(--s3) var(--s4);
+        border-right: 0;
+        border-bottom: 1px dashed var(--rule);
+      }
+      .card__stub::before,
+      .card__stub::after {
+        top: auto;
+        bottom: -7px;
+      }
+      .card__stub::before { left: -7px; right: auto; }
+      .card__seq { margin-bottom: 0; }
+      .card__t { font-size: var(--t-body); }
+      .card__t--end::before { content: "– "; }
+      .card h3 { font-size: var(--t-lead); }
+      .note { padding: var(--s3); }
+      .shops { max-width: none; }
+      .cols { gap: var(--s6); }
+      footer { justify-content: flex-start; }
+    }
+
+    @media (max-width: 380px) {
+      .spec { grid-template-columns: minmax(0, 1fr); }
+      .spec > div { padding-left: 0 !important; border-left: 0 !important; }
+      .card__stub { flex-wrap: wrap; }
+      .route { font-size: var(--t-micro); }
+    }
+
+    @media print {
+      .rail, .days { display: none !important; }
+      .day-panel[hidden] { display: block !important; }
+      .reveal { opacity: 1; transform: none; }
+      body { background: #fff; }
+      .scales { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-car" viewBox="0 0 24 24">
+        <path d="M4 15 5.7 9.7A2.1 2.1 0 0 1 7.7 8.2h8.6a2.1 2.1 0 0 1 2 1.5L20 15"/>
+        <rect x="3" y="15" width="18" height="4.2" rx="1"/>
+        <path d="M6.6 19.2v1.3M17.4 19.2v1.3"/>
+      </symbol>
+      <symbol id="i-cup" viewBox="0 0 24 24">
+        <path d="M4.8 8.2h11.4v6.1a4.2 4.2 0 0 1-4.2 4.2H9a4.2 4.2 0 0 1-4.2-4.2V8.2z"/>
+        <path d="M16.2 9.8h1.9a2.2 2.2 0 0 1 0 4.4h-1.9"/>
+        <path d="M7.4 4.4v1.9M11 3.9v2.4M4 20.8h13"/>
+      </symbol>
+      <symbol id="i-drink" viewBox="0 0 24 24">
+        <path d="M6.2 7.4h11.6l-1.3 12a1.6 1.6 0 0 1-1.6 1.4H9.1a1.6 1.6 0 0 1-1.6-1.4l-1.3-12z"/>
+        <path d="M5.2 7.4h13.6M13.6 7.4 17 3.2"/>
+      </symbol>
+      <symbol id="i-steps" viewBox="0 0 24 24">
+        <path d="M2.6 20.4h4.6v-4.1h4.6v-4.1h4.6V8.1h4.9"/>
+        <path d="M2.6 20.4V16"/>
+      </symbol>
+      <symbol id="i-waves" viewBox="0 0 24 24">
+        <path d="M2.6 8c1.7-1.9 3.5-1.9 5.2 0s3.5 1.9 5.2 0 3.5-1.9 5.2 0"/>
+        <path d="M2.6 12.5c1.7-1.9 3.5-1.9 5.2 0s3.5 1.9 5.2 0 3.5-1.9 5.2 0"/>
+        <path d="M2.6 17c1.7-1.9 3.5-1.9 5.2 0s3.5 1.9 5.2 0 3.5-1.9 5.2 0"/>
+      </symbol>
+      <symbol id="i-bridge" viewBox="0 0 24 24">
+        <path d="M2.6 19.4h18.8M12 3.4v16"/>
+        <path d="M12 6.2 5.6 19.4M12 6.2l6.4 13.2M12 11.4l-3.6 8M12 11.4l3.6 8"/>
+      </symbol>
+      <symbol id="i-bowl" viewBox="0 0 24 24">
+        <path d="M3.2 11.6h17.6a8.8 8.8 0 0 1-17.6 0z"/>
+        <path d="M2.4 21h19.2"/>
+        <path d="M12.6 8.8 18.4 3M14.9 9.4 20.6 4.6"/>
+      </symbol>
+      <symbol id="i-bed" viewBox="0 0 24 24">
+        <path d="M3 19.4V7.6"/>
+        <path d="M21 19.4v-4a2.2 2.2 0 0 0-2.2-2.2H3"/>
+        <path d="M6.9 13.2V9.9h4.7v3.3M3 16.4h18"/>
+      </symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24">
+        <path d="M4.6 8h14.8l-1.2 11.4a1.6 1.6 0 0 1-1.6 1.4H7.4a1.6 1.6 0 0 1-1.6-1.4L4.6 8z"/>
+        <path d="M8.9 10.6V7a3.1 3.1 0 0 1 6.2 0v3.6"/>
+      </symbol>
+      <symbol id="i-bolt" viewBox="0 0 24 24">
+        <path d="M13.4 2.6 5.2 13.9h5.9l-.5 7.5 8.2-11.3h-5.9l.5-7.5z"/>
+      </symbol>
+      <symbol id="i-park" viewBox="0 0 24 24">
+        <rect x="3.4" y="3.4" width="17.2" height="17.2" rx="2.4"/>
+        <path d="M9.4 17.2V7.4h3.4a2.9 2.9 0 0 1 0 5.8H9.4"/>
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8.6"/>
+        <path d="M12 7.1V12l3.3 2"/>
+      </symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24">
+        <path d="M12 3.6 21.4 19.9H2.6L12 3.6z"/>
+        <path d="M12 9.9v4.3M12 17.2v.1"/>
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M12 21.4s6.9-6.2 6.9-10.9a6.9 6.9 0 1 0-13.8 0C5.1 15.2 12 21.4 12 21.4z"/>
+        <circle cx="12" cy="10.3" r="2.5"/>
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path d="M7.7 3.4H5.3a1.9 1.9 0 0 0-1.9 1.9c0 8.4 6.9 15.3 15.3 15.3a1.9 1.9 0 0 0 1.9-1.9v-2.4l-4.4-1.6-2 2.4a13.7 13.7 0 0 1-6.2-6.2l2.4-2L7.7 3.4z"/>
+      </symbol>
+      <symbol id="i-building" viewBox="0 0 24 24">
+        <path d="M4.6 20.4V5.2L13.8 3v17.4M13.8 9.4h5.6v11M2.6 20.4h18.8"/>
+        <path d="M7.8 8.2h2.9M7.8 11.6h2.9M7.8 15h2.9"/>
+      </symbol>
+      <symbol id="i-gift" viewBox="0 0 24 24">
+        <path d="M4 12.4h16v8.2H4z"/>
+        <path d="M2.8 8.4h18.4v4H2.8zM12 8.4v12.2"/>
+        <path d="M12 8.4S9.6 8.5 8.4 7.3a2 2 0 0 1 2.8-2.8c1.2 1.2.8 3.9.8 3.9zM12 8.4s2.4.1 3.6-1.1a2 2 0 0 0-2.8-2.8c-1.2 1.2-.8 3.9-.8 3.9z"/>
+      </symbol>
+      <symbol id="i-wind" viewBox="0 0 24 24">
+        <path d="M2.8 8.4h9.9a2.8 2.8 0 1 0-2.8-2.8"/>
+        <path d="M2.8 13h12.6a3 3 0 1 1-3 3"/>
+        <path d="M2.8 17.6h5.8"/>
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4.1"/>
+        <path d="M12 2.8v2.3M12 18.9v2.3M2.8 12h2.3M18.9 12h2.3M5.5 5.5l1.6 1.6M16.9 16.9l1.6 1.6M18.5 5.5l-1.6 1.6M7.1 16.9l-1.6 1.6"/>
+      </symbol>
+      <symbol id="i-rain" viewBox="0 0 24 24">
+        <path d="M12 3.2a8.8 8.8 0 0 1 8.8 8.8H3.2A8.8 8.8 0 0 1 12 3.2z"/>
+        <path d="M12 12v6.6a2.1 2.1 0 0 1-4.2 0"/>
+      </symbol>
+      <symbol id="i-tide" viewBox="0 0 24 24">
+        <path d="M2.6 16.4c1.7-1.9 3.5-1.9 5.2 0s3.5 1.9 5.2 0 3.5-1.9 5.2 0"/>
+        <path d="M2.6 20.4c1.7-1.9 3.5-1.9 5.2 0s3.5 1.9 5.2 0 3.5-1.9 5.2 0"/>
+        <path d="M7.4 11.6V3.4M12 11.6V6M16.6 11.6V4.8"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="rail">
+    <div class="rail__inner">
+      <div class="rail__mark">HSINCHU <b>/</b> 2D1N</div>
+      <nav id="nav">
+        <a href="#overview">總覽</a>
+        <a href="#itinerary">行程</a>
+        <a href="#places">地點</a>
+        <a href="#traffic">交通</a>
+        <a href="#charging">充電</a>
+        <a href="#notes">提醒</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="masthead" id="overview">
+    <svg class="scales" aria-hidden="true">
+      <defs>
+        <pattern id="scale" width="26" height="13" patternUnits="userSpaceOnUse">
+          <path d="M-13 13a13 13 0 0 1 26 0a13 13 0 0 1 26 0" fill="none" stroke="currentColor" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#scale)"/>
+    </svg>
+    <div class="masthead__inner">
+      <p class="label">Self-drive Guide — 2026.09.12 → 09.13</p>
+      <h1>
+        新竹海線<br>兩天一夜
+        <span class="sub">TIDAL TERRACE</span>
+      </h1>
+      <p class="lede">
+        從宜蘭市延平路出發，沿雪隧南下。上午城中早午餐，下午魚鱗天梯與香山濕地的海岸線，
+        入夜回到巨城商圈；隔日採買鐵盒餅乾，趕在紫爆前的黃金時段北返。
+      </p>
+      <dl class="spec">
+        <div><dt class="label">Dates</dt><dd>09.12<span style="color:var(--muted)">–</span>09.13</dd></div>
+        <div><dt class="label">Nights</dt><dd>2天1夜</dd></div>
+        <div><dt class="label">Route</dt><dd>宜蘭 ⇄ 新竹</dd></div>
+        <div><dt class="label">Drive</dt><dd>2–2.5 h</dd></div>
+        <div><dt class="label">ETC</dt><dd>$120–150</dd></div>
+        <div><dt class="label">Stops</dt><dd>8 處</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <main class="shell">
+    <!-- ITINERARY -->
+    <section id="itinerary">
+      <div class="sec-head reveal">
+        <h2><small>Itinerary</small>行程排程</h2>
+        <p class="sec-note">兩日逐段時刻表。停車、充電與逛街的補充說明，以側邊色條標示於各段落下方。</p>
+      </div>
+
+      <div class="days" role="tablist" aria-label="行程日期">
+        <button class="day-tab" id="tab-day1" role="tab" aria-selected="true" aria-controls="day1" type="button">DAY 01 · 09.12 SAT</button>
+        <button class="day-tab" id="tab-day2" role="tab" aria-selected="false" aria-controls="day2" type="button">DAY 02 · 09.13 SUN</button>
+      </div>
+
+      <!-- Day 1 -->
+      <div class="day-panel" id="day1" role="tabpanel" aria-labelledby="tab-day1">
+        <p class="day-intro">
+          <span>宜蘭</span><span class="arrow">→</span><span>城中早午餐</span><span class="arrow">→</span>
+          <span>南寮海岸</span><span class="arrow">→</span><span>香山濕地</span><span class="arrow">→</span>
+          <span>豎琴橋</span><span class="arrow">→</span><span>市區晚餐與夜逛</span>
+        </p>
+
+        <article class="card card--minor">
+          <div class="card__stub">
+              <span class="card__seq">01</span>
+              <span class="card__t">08:00</span>
+              <span class="card__t card__t--end">10:30</span>
+            </div>
+            <div class="card__body">
+            <p class="card__kind"><svg class="ico"><use href="#i-car"/></svg>啟程</p>
+            <h3>宜蘭市延平路 → 新竹</h3>
+            <p>經國道5號轉國道3號，再接國道1號前往新竹。車程約 2 至 2.5 小時，含雪山隧道路段。</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__stub">
+              <span class="card__seq">02</span>
+              <span class="card__t">10:30</span>
+              <span class="card__t card__t--end">12:30</span>
+            </div>
+            <div class="card__body">
+            <p class="card__kind"><svg class="ico"><use href="#i-cup"/></svg>早午餐</p>
+            <h3><span class="place">小稻甜 cafe</span></h3>
+            <p>推薦品嚐經典早午餐拼盤與現做招牌厚鬆餅（舒芙蕾）。建議略過飽足感過重的米飯定食，保持早晨的輕盈。</p>
+            <p class="note note--park">
+              <svg class="ico"><use href="#i-park"/></svg>
+              <span><b>停車：</b>先至「北大路停車場」停妥車輛，步行至店家僅需 2–3 分鐘。</span>
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__stub">
+              <span class="card__seq">03</span>
+              <span class="card__t">12:30</span>
+              <span class="card__t card__t--end">12:50</span>
+            </div>
+            <div class="card__body">
+            <p class="card__kind"><svg class="ico"><use href="#i-drink"/></svg>在地手搖</p>
+            <h3><span class="place">思茶 MissingTea</span> 新竹中山店</h3>
+            <p>離開咖啡廳後順路開車前往。推薦純茶或醇厚鮮奶茶，甜度指定「一分糖」，帶著清爽解渴的飲品前往海邊。</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__stub">
+              <span class="card__seq">04</span>
+              <span class="card__t">13:00</span>
+              <span class="card__t card__t--end">14:30</span>
+            </div>
+            <div class="card__body">
+            <p class="card__kind"><svg class="ico"><use href="#i-steps"/></svg>海岸風光</p>
+            <h3><span class="place">南寮魚鱗天梯</span></h3>
+            <p>漫步拍照，欣賞潔白層疊的海岸地景。行李直接置於車上隱蔽處，不先去飯店。</p>
+            <p class="note note--ev">
+              <svg class="ico"><use href="#i-bolt"/></svg>
+              <span><b>順路補電：</b>車輛直接停放於南寮 Tesla Supercharger（6 支 V3 超充槍、支援 CCS2），利用散步時間充電。若逢客滿，鄰近南勢街的 EVTail 充電站提供 CCS2 快充作為備案。</span>
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__stub">
+              <span class="card__seq">05</span>
+              <span class="card__t">15:00</span>
+              <span class="card__t card__t--end">16:20</span>
+            </div>
+            <div class="card__body">
+            <p class="card__kind"><svg class="ico"><use href="#i-waves"/></svg>生態體驗</p>
+            <h3><span class="place">香山濕地賞蟹步道</span></h3>
+            <p>沿台61線西濱快速公路南下，漫步於 250 公尺長的心型蜿蜒步道，近距離觀察招潮蟹與彈塗魚。退潮時分前往最佳。</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__stub">
+              <span class="card__seq">06</span>
+              <span class="card__t">16:30</span>
+              <span class="card__t card__t--end">17:10</span>
+            </div>
+            <div class="card__body">
+            <p class="card__kind"><svg class="ico"><use href="#i-bridge"/></svg>午後地景</p>
+            <h3><span class="place">香山豎琴橋</span></h3>
+            <p>欣賞午後斜陽照耀在純白巨大豎琴建築上的光影剪影之美。</p>
+          </div>
+        </article>
+
+        <article class="card card--minor">
+          <div class="card__stub">
+              <span class="card__seq">07</span>
+              <span class="card__t">17:10</span>
+              <span class="card__t card__t--end">17:50</span>
+            </div>
+            <div class="card__body">
+            <p class="card__kind"><svg class="ico"><use href="#i-car"/></svg>市區折返</p>
+            <h3>香山 → 新竹市區</h3>
+            <p>為確保晚餐不遲到，預留充足車程與市區停車時間，準時從香山啟程返回市區。</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__stub">
+              <span class="card__seq">08</span>
+              <span class="card__t">18:00</span>
+              <span class="card__t card__t--end">19:30</span>
+            </div>
+            <div class="card__body">
+            <p class="card__kind"><svg class="ico"><use href="#i-bowl"/></svg>晚餐</p>
+            <h3><span class="place">新竹馥億餐坊</span></h3>
+            <p>準時抵達，享用無海鮮的精緻江浙家常菜——經典東坡肉、蔥爆牛肉、老湯芋頭鴨等。</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__stub">
+              <span class="card__seq">09</span>
+              <span class="card__t">20:00</span>
+              <span class="card__t card__t--end">起</span>
+            </div>
+            <div class="card__body">
+            <p class="card__kind"><svg class="ico"><use href="#i-bed"/></svg>入住與夜逛</p>
+            <h3><span class="place">新竹芙洛麗大飯店</span></h3>
+            <p>驅車前往辦理 Check-in 入住休息。以下兩處商圈皆步行可達。</p>
+            <ul class="shops">
+              <li>
+                <b>Big City 遠東巨城購物中心</b>
+                <span>步行 5 分鐘</span>
+                <p>北台灣最大的室內購物天堂。日韓服飾品牌齊全，適合尋找網紗、蕾絲或燈芯絨等材質的摩卡色、海軍藍質感單品；也是採買藥妝、喝杯咖啡或看場電影的最佳地點。</p>
+              </li>
+              <li>
+                <b>護城河親水公園商圈</b>
+                <span>步行 5–8 分鐘</span>
+                <p>沿著綠蔭長廊散步，周邊隱藏許多質感獨立服飾店與風格選物店，環境清幽且逛起來毫無壓迫感。</p>
+              </li>
+            </ul>
+            <p class="note note--ev">
+              <svg class="ico"><use href="#i-bolt"/></svg>
+              <span><b>夜間補電：</b>國光街 U-POWER、湳雅商圈 Tesla Supercharger 與大潤發充電站、金雅商圈 Evoasis 皆在飯店周邊，詳見<a href="#charging">充電規劃</a>。</span>
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="day-panel" id="day2" role="tabpanel" aria-labelledby="tab-day2" hidden>
+        <p class="day-intro">
+          <span>飯店早餐</span><span class="arrow">→</span><span>護城河伴手禮</span><span class="arrow">→</span>
+          <span>10:30 準時北返</span>
+        </p>
+
+        <article class="card">
+          <div class="card__stub">
+              <span class="card__seq">10</span>
+              <span class="card__t">08:30</span>
+              <span class="card__t card__t--end">09:30</span>
+            </div>
+            <div class="card__body">
+            <p class="card__kind"><svg class="ico"><use href="#i-cup"/></svg>飯店早餐</p>
+            <h3>芙洛麗大飯店 · 早餐與退房</h3>
+            <p>於飯店內享用豐盛早餐，隨後辦理退房。</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__stub">
+              <span class="card__seq">11</span>
+              <span class="card__t">10:10</span>
+              <span class="card__t card__t--end">10:30</span>
+            </div>
+            <div class="card__body">
+            <p class="card__kind"><svg class="ico"><use href="#i-gift"/></svg>採買伴手禮</p>
+            <h3><span class="place">RT Baker House 雅特烘焙</span> 府後店</h3>
+            <p>前往護城河旁的門市，購買精緻手工鐵盒小餅乾。</p>
+            <p class="note note--park">
+              <svg class="ico"><use href="#i-park"/></svg>
+              <span><b>臨停：</b>導航至「府後地下停車場」，出站步行 1 分鐘即可抵達。</span>
+            </p>
+          </div>
+        </article>
+
+        <article class="card card--minor">
+          <div class="card__stub">
+              <span class="card__seq">12</span>
+              <span class="card__t">10:30</span>
+              <span class="card__t card__t--end">起</span>
+            </div>
+            <div class="card__body">
+            <p class="card__kind"><svg class="ico"><use href="#i-car"/></svg>賦歸</p>
+            <h3>新竹市區 → 宜蘭市延平路</h3>
+            <p>10:30 準時起程返回宜蘭，預計 11:30 前上國道，完美避開週日下午國道5號北上的紫爆車潮，約於 13:00–14:00 間順利抵達。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PLACES -->
+    <section id="places">
+      <div class="sec-head reveal">
+        <h2><small>Directory</small>地點資訊</h2>
+        <p class="sec-note">地址可點擊開啟 Google 地圖導航，電話可直撥。每則末列為營業日檢核結果。</p>
+      </div>
+
+      <p class="sub-head label">美食 · 手搖 · 伴手禮</p>
+      <div class="places reveal">
+        <article class="place-card">
+          <p class="place-card__kind"><svg class="ico"><use href="#i-cup"/></svg>Day 1 · 早午餐</p>
+          <h4>小稻甜 cafe</h4>
+          <dl>
+            <dt><svg class="ico"><use href="#i-pin"/></svg></dt>
+            <dd><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E5%8C%97%E5%8D%80%E5%8C%97%E5%A4%A7%E8%B7%AF166%E5%B7%B71%E5%BC%841%E8%99%9F" target="_blank" rel="noopener">新竹市北區北大路166巷1弄1號</a></dd>
+            <dt><svg class="ico"><use href="#i-phone"/></svg></dt>
+            <dd><a href="tel:+88635225539">03-522-5539</a></dd>
+            <dt><svg class="ico"><use href="#i-clock"/></svg></dt>
+            <dd class="hours">週六 09:00–16:00</dd>
+          </dl>
+          <p class="status"><i></i>週六正常營業，無公休問題</p>
+        </article>
+
+        <article class="place-card">
+          <p class="place-card__kind"><svg class="ico"><use href="#i-drink"/></svg>Day 1 · 在地手搖</p>
+          <h4>思茶 MissingTea（新竹中山店）</h4>
+          <dl>
+            <dt><svg class="ico"><use href="#i-pin"/></svg></dt>
+            <dd><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E5%8C%97%E5%8D%80%E4%B8%AD%E5%B1%B1%E8%B7%AF446%E8%99%9F" target="_blank" rel="noopener">新竹市北區中山路446號</a></dd>
+            <dt><svg class="ico"><use href="#i-phone"/></svg></dt>
+            <dd><a href="tel:+88635265252">03-526-5252</a></dd>
+            <dt><svg class="ico"><use href="#i-clock"/></svg></dt>
+            <dd class="hours">週六 10:00–22:00</dd>
+          </dl>
+          <p class="status"><i></i>可順利外帶一分糖飲品</p>
+        </article>
+
+        <article class="place-card">
+          <p class="place-card__kind"><svg class="ico"><use href="#i-bowl"/></svg>Day 1 · 晚餐</p>
+          <h4>新竹馥億餐坊中式餐廳</h4>
+          <dl>
+            <dt><svg class="ico"><use href="#i-pin"/></svg></dt>
+            <dd><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E6%B0%91%E6%97%8F%E8%B7%AF67%E5%B7%B71%E5%BC%8425%E8%99%9F" target="_blank" rel="noopener">新竹市東區民族路67巷1弄25號</a></dd>
+            <dt><svg class="ico"><use href="#i-phone"/></svg></dt>
+            <dd><a href="tel:+88635356798">03-535-6798</a></dd>
+            <dt><svg class="ico"><use href="#i-clock"/></svg></dt>
+            <dd class="hours">週六 11:30–13:30 · 17:30–20:30</dd>
+          </dl>
+          <p class="status status--watch"><i></i>每週二、三公休；18:00 用餐時間符合</p>
+        </article>
+
+        <article class="place-card">
+          <p class="place-card__kind"><svg class="ico"><use href="#i-gift"/></svg>Day 2 · 伴手禮</p>
+          <h4>RT Baker House 雅特烘焙（府後店）</h4>
+          <dl>
+            <dt><svg class="ico"><use href="#i-pin"/></svg></dt>
+            <dd><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%BA%9C%E5%BE%8C%E8%A1%9731%E8%99%9F" target="_blank" rel="noopener">新竹市東區府後街31號</a></dd>
+            <dt><svg class="ico"><use href="#i-phone"/></svg></dt>
+            <dd><a href="tel:+88635254571">03-525-4571</a></dd>
+            <dt><svg class="ico"><use href="#i-clock"/></svg></dt>
+            <dd class="hours">週日 10:00–20:30</dd>
+          </dl>
+          <p class="status"><i></i>符合 10:10 採買時間</p>
+        </article>
+      </div>
+
+      <p class="sub-head label">景點 · 住宿 · 商圈</p>
+      <div class="places reveal">
+        <article class="place-card">
+          <p class="place-card__kind"><svg class="ico"><use href="#i-steps"/></svg>Day 1 · 海岸地景</p>
+          <h4>南寮魚鱗天梯</h4>
+          <dl>
+            <dt><svg class="ico"><use href="#i-pin"/></svg></dt>
+            <dd><a href="https://www.google.com/maps/search/?api=1&query=%E5%8D%97%E5%AF%AE%E9%AD%9A%E9%B1%97%E5%A4%A9%E6%A2%AF" target="_blank" rel="noopener">新竹市北區新港路</a></dd>
+            <dt><svg class="ico"><use href="#i-phone"/></svg></dt>
+            <dd>無（戶外開放空間）</dd>
+            <dt><svg class="ico"><use href="#i-clock"/></svg></dt>
+            <dd class="hours">24 小時開放</dd>
+          </dl>
+          <p class="status"><i></i>全年開放，無公休問題</p>
+        </article>
+
+        <article class="place-card">
+          <p class="place-card__kind"><svg class="ico"><use href="#i-waves"/></svg>Day 1 · 生態體驗</p>
+          <h4>香山濕地賞蟹步道</h4>
+          <dl>
+            <dt><svg class="ico"><use href="#i-pin"/></svg></dt>
+            <dd><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E9%A6%99%E5%B1%B1%E5%8D%80%E4%B8%AD%E8%8F%AF%E8%B7%AF%E4%BA%94%E6%AE%B5320%E5%B7%B735%E8%99%9F" target="_blank" rel="noopener">新竹市香山區中華路五段320巷35號</a></dd>
+            <dt><svg class="ico"><use href="#i-phone"/></svg></dt>
+            <dd><a href="tel:+88635216121">03-521-6121</a><small>新竹市政府產發處生態保育科</small></dd>
+            <dt><svg class="ico"><use href="#i-clock"/></svg></dt>
+            <dd class="hours">週六 09:00–18:00</dd>
+          </dl>
+          <p class="status status--watch"><i></i>每週二公休；大雨、強風特報或漲潮期間封閉</p>
+        </article>
+
+        <article class="place-card">
+          <p class="place-card__kind"><svg class="ico"><use href="#i-bridge"/></svg>Day 1 · 午後地景</p>
+          <h4>香山豎琴橋</h4>
+          <dl>
+            <dt><svg class="ico"><use href="#i-pin"/></svg></dt>
+            <dd><a href="https://www.google.com/maps/search/?api=1&query=%E9%A6%99%E5%B1%B1%E8%B1%8E%E7%90%B4%E6%A9%8B" target="_blank" rel="noopener">新竹市香山區西濱公路5號</a></dd>
+            <dt><svg class="ico"><use href="#i-phone"/></svg></dt>
+            <dd>無（戶外開放地景）</dd>
+            <dt><svg class="ico"><use href="#i-clock"/></svg></dt>
+            <dd class="hours">24 小時開放</dd>
+          </dl>
+          <p class="status"><i></i>全年開放，無公休問題</p>
+        </article>
+
+        <article class="place-card">
+          <p class="place-card__kind"><svg class="ico"><use href="#i-bed"/></svg>Day 1 · 住宿</p>
+          <h4>新竹芙洛麗大飯店</h4>
+          <dl>
+            <dt><svg class="ico"><use href="#i-pin"/></svg></dt>
+            <dd><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E6%B0%91%E6%97%8F%E8%B7%AF69%E8%99%9F" target="_blank" rel="noopener">新竹市東區民族路69號</a></dd>
+            <dt><svg class="ico"><use href="#i-phone"/></svg></dt>
+            <dd><a href="tel:+88636238899">03-623-8899</a></dd>
+            <dt><svg class="ico"><use href="#i-clock"/></svg></dt>
+            <dd class="hours">Check-in 20:00 起</dd>
+          </dl>
+          <p class="status status--watch"><i></i>入住時向櫃檯確認高樓層、安靜、無菸房型</p>
+        </article>
+
+        <article class="place-card">
+          <p class="place-card__kind"><svg class="ico"><use href="#i-bag"/></svg>Day 1 · 夜逛 / 雨天備案</p>
+          <h4>Big City 遠東巨城購物中心</h4>
+          <dl>
+            <dt><svg class="ico"><use href="#i-pin"/></svg></dt>
+            <dd><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E4%B8%AD%E5%A4%AE%E8%B7%AF229%E8%99%9F" target="_blank" rel="noopener">新竹市東區中央路229號</a></dd>
+            <dt><svg class="ico"><use href="#i-phone"/></svg></dt>
+            <dd><a href="tel:+88636238000">03-623-8000</a></dd>
+            <dt><svg class="ico"><use href="#i-clock"/></svg></dt>
+            <dd class="hours">週末 11:00–22:00</dd>
+          </dl>
+          <p class="status"><i></i>週末正常營業，距飯店步行 5 分鐘</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TRAFFIC -->
+    <section id="traffic">
+      <div class="sec-head reveal">
+        <h2><small>Driving</small>交通與停車</h2>
+        <p class="sec-note">高速與西濱兩段動線、兩個關鍵停車場，以及週日北返的時間門檻。</p>
+      </div>
+
+      <div class="cols reveal">
+        <div class="block">
+          <h3><svg class="ico"><use href="#i-car"/></svg>高速動線</h3>
+          <p class="route">
+            <em>宜蘭市延平路</em><i>→</i><em>國道5號</em><i>→</i><em>國道3號</em><i>→</i><em>國道1號</em><i>→</i><em>新竹交流道</em>
+          </p>
+          <dl class="facts">
+            <dt>單程車程</dt><dd>2 – 2.5 h（含雪山隧道）</dd>
+            <dt>ETC 通行費</dt><dd>單程約 $120 – $150</dd>
+            <dt>回程終點</dt><dd>宜蘭市延平路（原路折返）</dd>
+          </dl>
+        </div>
+
+        <div class="block">
+          <h3><svg class="ico"><use href="#i-waves"/></svg>西濱動線</h3>
+          <p class="route">
+            <em>市區</em><i>台68→</i><em>南寮</em><i>台61→</i><em>香山濕地</em><i>→</i><em>豎琴橋</em>
+          </p>
+          <p>市區前往南寮走台68線東西向快速公路最快；南寮南下香山濕地與豎琴橋則沿台61線西濱快速公路行駛。沿途車流順暢，各景點間車程約 <b>10–15 分鐘</b>。</p>
+        </div>
+
+        <div class="block">
+          <h3><svg class="ico"><use href="#i-park"/></svg>停車點</h3>
+          <ul>
+            <li><b>北大路停車場</b>新竹市北區大同里。Day 1 早午餐停妥後，步行至小稻甜 cafe 僅需 2–3 分鐘。</li>
+            <li><b>府後地下停車場</b>新竹市東區府後街。Day 2 採買 RT 餅乾時臨停，出站步行 1 分鐘抵達。</li>
+          </ul>
+        </div>
+
+        <div class="block highlight">
+          <h3><svg class="ico"><use href="#i-clock"/></svg>北返黃金時間</h3>
+          <p>週日回程務必於 <b>10:30 準時從市區出發</b>、<b>11:30 前開上國道</b>。此時間點能完美避開國道5號週日下午 14:00 開始的北上高乘載管制與嚴重回堵，確保在 14:00 前輕鬆抵達宜蘭。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARGING -->
+    <section id="charging">
+      <div class="sec-head reveal">
+        <h2><small>Charging</small>電動車充電</h2>
+        <p class="sec-note">主線於南寮散步時順路補電；市區夜間備案分布於四個商圈，皆為 CCS2 快充。</p>
+      </div>
+
+      <div class="table-wrap reveal">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">站點</th>
+              <th scope="col">位置</th>
+              <th scope="col">規格</th>
+              <th scope="col">用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">南寮 Tesla Supercharger</th>
+              <td data-label="位置">南寮漁港周邊</td>
+              <td data-label="規格" class="spec-col">V3 × 6 · CCS2</td>
+              <td data-label="用途"><span class="use-tag"><svg class="ico"><use href="#i-bolt"/></svg>Day 1 主要</span></td>
+            </tr>
+            <tr>
+              <th scope="row">南勢街 EVTail 充電站</th>
+              <td data-label="位置">南寮鄰近</td>
+              <td data-label="規格" class="spec-col">CCS2 快充</td>
+              <td data-label="用途"><span class="use-tag use-tag--alt">南寮備案</span></td>
+            </tr>
+            <tr>
+              <th scope="row">U-POWER 新竹北區國光站</th>
+              <td data-label="位置">國光街商圈</td>
+              <td data-label="規格" class="spec-col">高功率 CCS2 液冷槍</td>
+              <td data-label="用途"><span class="use-tag use-tag--alt">夜間</span></td>
+            </tr>
+            <tr>
+              <th scope="row">大雅路 / 湳雅街 Supercharger</th>
+              <td data-label="位置">大魯閣 · 湳雅商圈</td>
+              <td data-label="規格" class="spec-col">Tesla Supercharger</td>
+              <td data-label="用途"><span class="use-tag use-tag--alt">夜間</span></td>
+            </tr>
+            <tr>
+              <th scope="row">南亞大潤發充電站</th>
+              <td data-label="位置">湳雅商圈</td>
+              <td data-label="規格" class="spec-col">CCS2</td>
+              <td data-label="用途"><span class="use-tag use-tag--alt">夜間</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Evoasis Charging Station</th>
+              <td data-label="位置">金雅商圈</td>
+              <td data-label="規格" class="spec-col">CCS2 多槍</td>
+              <td data-label="用途"><span class="use-tag use-tag--alt">夜間</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="note note--ev reveal" style="margin-top:26px;">
+        <svg class="ico"><use href="#i-bolt"/></svg>
+        <span><b>調度原則：</b>若南寮超充週末需排隊，無須焦慮，直接保留電力至晚間返回市區，利用飯店與餐廳周邊的 U-POWER 國光站或湳雅大潤發快充站補電，確保行程流暢。</span>
+      </p>
+    </section>
+
+    <!-- NOTES -->
+    <section id="notes">
+      <div class="sec-head reveal">
+        <h2><small>Field notes</small>行前提醒</h2>
+        <p class="sec-note">9 月中旬的新竹＝強紫外線、九降風與午後雷陣雨；穿搭與備案都先想好。</p>
+      </div>
+
+      <div class="cols reveal">
+        <div class="block">
+          <h3><svg class="ico"><use href="#i-sun"/></svg>氣候與防曬</h3>
+          <p>9 月新竹均溫約 <b>26–31°C</b>，白天陽光與紫外線依舊強烈。開車與沿海漫步時，防曬乳、保濕噴霧與太陽眼鏡為必備物品。</p>
+        </div>
+
+        <div class="block">
+          <h3><svg class="ico"><use href="#i-wind"/></svg>九降風防護</h3>
+          <p>9 月起新竹「九降風」開始盛行，南寮與香山海邊風勢極大。強烈建議穿著<b>褲裝</b>，搭配薄透材質的長袖罩衫或防風外套（米色、摩卡色或海軍藍等質感色系），既能防曬防風，拍照又具層次感。</p>
+          <p>海邊強風猛烈，建議準備髮圈將頭髮盤起，或配戴附有防風繩的帽子，避免長髮受風吹亂阻擋視線。</p>
+        </div>
+
+        <div class="block">
+          <h3><svg class="ico"><use href="#i-rain"/></svg>雨天切換備案</h3>
+          <p>9 月仍有午後雷陣雨機率。若 Day 1 下午沿海出現大雨，請立即取消海線行程，直接將車輛開回市區的 <b>Big City 遠東巨城購物中心</b>。室內空間極大，可愜意逛街採買日韓服飾、藥妝，或使用威秀 iShow 會員看場電影。</p>
+        </div>
+
+        <div class="block">
+          <h3><svg class="ico"><use href="#i-tide"/></svg>潮汐留意</h3>
+          <p>香山濕地賞蟹步道若逢<b>大雨、強風特報或高潮漲潮期間會暫時封閉</b>。出發前一晚可先至中央氣象署官網查詢潮汐預報，<b>退潮時分前往</b>最能看見滿地招潮蟹。</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>新竹海線 2 天 1 夜 · 2026.09.12 – 09.13 · 宜蘭市延平路 ⇄ 新竹市區</span>
+      <a href="#overview">回到頂端 ↑</a>
+    </footer>
+  </main>
+
+  <script>
+    // Day panels — click plus roving-tabindex arrow navigation
+    (function () {
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('.day-tab'));
+
+      function select(tab, focus) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute('aria-selected', String(on));
+          t.tabIndex = on ? 0 : -1;
+          document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+        });
+        if (focus) tab.focus();
+      }
+
+      tabs.forEach(function (tab, i) {
+        tab.tabIndex = tab.getAttribute('aria-selected') === 'true' ? 0 : -1;
+        tab.addEventListener('click', function () { select(tab, false); });
+        tab.addEventListener('keydown', function (e) {
+          var next = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+          if (next === undefined) return;
+          e.preventDefault();
+          select(tabs[(next + tabs.length) % tabs.length], true);
+        });
+      });
+    })();
+
+    // Active section in the top rail
+    (function () {
+      var links = Array.prototype.slice.call(document.querySelectorAll('#nav a'));
+      var targets = links
+        .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+        .filter(Boolean);
+      if (!('IntersectionObserver' in window) || !targets.length) return;
+
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          links.forEach(function (a) {
+            a.classList.toggle('is-active', a.getAttribute('href') === '#' + entry.target.id);
+          });
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+
+      targets.forEach(function (t) { spy.observe(t); });
+    })();
+
+    // Reveal on scroll
+    (function () {
+      var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('is-in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
