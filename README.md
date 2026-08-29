@@ -5,6 +5,7 @@
 ## 本機檔案
 
 - `index.html`: 首頁
+- `hsinchu-trip.html`: 新竹 2 天 1 夜旅遊攻略（2026.09.12 - 09.13）
 - `style.css`: 樣式
 
 ## 1. 先安裝 Git

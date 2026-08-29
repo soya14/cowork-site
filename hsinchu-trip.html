@@ -1,0 +1,1340 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>新竹 2 天 1 夜深度旅遊攻略 ｜ 2026.09.12 - 09.13</title>
+  <meta
+    name="description"
+    content="宜蘭出發的新竹 2 天 1 夜自駕行程：時間軸排程、店家地址電話與營業檢核、國道動線與停車、電動車充電規劃、九降風穿搭與雨天備案。"
+  >
+  <meta name="theme-color" content="#0e6b7a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f2e9;
+      --panel: #fffdf9;
+      --panel-soft: rgba(255, 253, 249, 0.86);
+      --line: rgba(14, 63, 74, 0.12);
+      --line-strong: rgba(14, 107, 122, 0.28);
+      --text: #16303a;
+      --muted: #5f7480;
+      --ocean: #0e6b7a;
+      --ocean-deep: #0a4a56;
+      --ocean-soft: #ddf0f2;
+      --coral: #d9694a;
+      --coral-soft: #fdeae3;
+      --gold: #c08d3c;
+      --gold-soft: #faf0dc;
+      --shadow-sm: 0 8px 20px rgba(16, 60, 71, 0.07);
+      --shadow: 0 18px 46px rgba(16, 60, 71, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: "Noto Sans TC", system-ui, sans-serif;
+      line-height: 1.7;
+      background:
+        radial-gradient(circle at 12% -4%, rgba(14, 107, 122, 0.18), transparent 32%),
+        radial-gradient(circle at 92% 6%, rgba(217, 105, 74, 0.14), transparent 30%),
+        linear-gradient(180deg, #f9f5ee 0%, #f4efe5 46%, #f8f4ec 100%);
+      background-attachment: fixed;
+    }
+
+    a { color: inherit; }
+
+    h1, h2, h3, h4 {
+      margin: 0;
+      line-height: 1.3;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+    }
+
+    p { margin: 0; }
+
+    .num {
+      font-family: "Outfit", "Noto Sans TC", sans-serif;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ---------- top bar ---------- */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(249, 245, 238, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar__inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-height: 62px;
+    }
+
+    .topbar__brand {
+      font-family: "Outfit", "Noto Sans TC", sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      color: var(--ocean-deep);
+      white-space: nowrap;
+    }
+
+    .topbar__brand span { color: var(--coral); }
+
+    .topnav {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      margin-left: auto;
+    }
+
+    .topnav::-webkit-scrollbar { display: none; }
+
+    .topnav a {
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .topnav a:hover,
+    .topnav a.is-active {
+      background: var(--ocean-soft);
+      color: var(--ocean-deep);
+      font-weight: 700;
+    }
+
+    /* ---------- layout ---------- */
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    section { scroll-margin-top: 84px; }
+
+    .section {
+      margin-top: 64px;
+    }
+
+    .section__head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .section__title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: clamp(21px, 3vw, 27px);
+    }
+
+    .section__title i {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      font-size: 20px;
+      font-style: normal;
+      background: linear-gradient(140deg, var(--ocean-soft), #ffffff);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .section__sub {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 46ch;
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      margin-top: 34px;
+      padding: clamp(28px, 5vw, 52px);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 88% 8%, rgba(217, 105, 74, 0.16), transparent 46%),
+        linear-gradient(135deg, #0e6b7a 0%, #0a4a56 58%, #093b47 100%);
+      color: #f4fbfb;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -46% 40%;
+      height: 260px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.14), transparent 62%);
+      pointer-events: none;
+    }
+
+    .hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    .hero h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(30px, 5.4vw, 48px);
+      letter-spacing: 0.02em;
+    }
+
+    .hero__lede {
+      max-width: 54ch;
+      color: rgba(238, 250, 250, 0.86);
+      font-size: clamp(15px, 1.7vw, 16px);
+    }
+
+    .hero__chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .chip {
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero__stats {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .stat {
+      padding: 16px 18px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .stat b {
+      display: block;
+      font-family: "Outfit", sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+
+    .stat b small {
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.82;
+      margin: 0 1px;
+    }
+
+    .stat span {
+      font-size: 12.5px;
+      color: rgba(233, 248, 248, 0.76);
+      letter-spacing: 0.04em;
+    }
+
+    /* ---------- day tabs ---------- */
+    .daytabs {
+      display: inline-flex;
+      padding: 5px;
+      gap: 4px;
+      border-radius: 999px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .daytab {
+      appearance: none;
+      border: 0;
+      cursor: pointer;
+      padding: 9px 20px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .daytab[aria-selected="true"] {
+      background: linear-gradient(135deg, var(--ocean), var(--ocean-deep));
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(10, 74, 86, 0.28);
+    }
+
+    .day[hidden] { display: none; }
+
+    .day__banner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 14px 20px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(120deg, var(--gold-soft), var(--panel));
+      border: 1px solid rgba(192, 141, 60, 0.28);
+      margin-bottom: 26px;
+      font-size: 14px;
+      color: #6c5326;
+    }
+
+    .day__banner b { color: #4d3a15; }
+
+    /* ---------- timeline ---------- */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 9px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      border-radius: 2px;
+      background: linear-gradient(180deg, var(--ocean), rgba(14, 107, 122, 0.22) 78%, transparent);
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 18px;
+    }
+
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      left: -26px;
+      top: 26px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--panel);
+      border: 3px solid var(--ocean);
+      box-shadow: 0 0 0 4px rgba(14, 107, 122, 0.1);
+    }
+
+    .tl-item--accent::before {
+      border-color: var(--coral);
+      box-shadow: 0 0 0 4px rgba(217, 105, 74, 0.14);
+    }
+
+    .tl-card {
+      padding: 20px 22px;
+      border-radius: var(--radius-lg);
+      background: var(--panel-soft);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .tl-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: var(--line-strong);
+    }
+
+    .tl-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .tl-time {
+      font-family: "Outfit", sans-serif;
+      font-variant-numeric: tabular-nums;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--ocean-soft);
+    }
+
+    .tl-item--accent .tl-time {
+      color: #96371f;
+      background: var(--coral-soft);
+    }
+
+    .tl-title {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tl-card p + p { margin-top: 10px; }
+
+    .tl-card p {
+      font-size: 15px;
+      color: #33505c;
+    }
+
+    .tl-note {
+      margin-top: 12px;
+      padding: 12px 15px;
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      border-left: 3px solid var(--ocean);
+      background: rgba(221, 240, 242, 0.55);
+      color: #22505c;
+    }
+
+    .tl-note--park {
+      border-left-color: var(--gold);
+      background: rgba(250, 240, 220, 0.7);
+      color: #6b5223;
+    }
+
+    .tl-note--ev {
+      border-left-color: var(--coral);
+      background: rgba(253, 234, 227, 0.7);
+      color: #8b4029;
+    }
+
+    .tl-note b { font-weight: 700; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: #eef4f4;
+      border: 1px solid var(--line);
+      color: #4b6672;
+    }
+
+    .sub-list {
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .sub-list li {
+      padding: 12px 15px;
+      border-radius: var(--radius-md);
+      background: #fbf8f2;
+      border: 1px solid var(--line);
+      font-size: 14px;
+      color: #3d5964;
+    }
+
+    .sub-list li b {
+      display: block;
+      color: var(--ocean-deep);
+      margin-bottom: 2px;
+      font-size: 14.5px;
+    }
+
+    /* ---------- place cards ---------- */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 21px;
+      border-radius: var(--radius-lg);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+      border-color: var(--line-strong);
+    }
+
+    .card__head {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .card__icon {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      font-size: 19px;
+      background: linear-gradient(140deg, var(--ocean-soft), #fff);
+      border: 1px solid var(--line);
+    }
+
+    .card__name {
+      font-size: 16.5px;
+      margin-bottom: 2px;
+    }
+
+    .card__kind {
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .card__rows {
+      display: grid;
+      gap: 9px;
+      font-size: 14px;
+      color: #3d5964;
+      margin-bottom: 14px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 8px;
+      align-items: start;
+    }
+
+    .row em {
+      font-style: normal;
+      opacity: 0.85;
+    }
+
+    .row a {
+      justify-self: start;
+      color: var(--ocean-deep);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(14, 107, 122, 0.42);
+    }
+
+    .row a:hover {
+      color: var(--coral);
+      border-bottom-color: var(--coral);
+    }
+
+    .badge {
+      align-self: flex-start;
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 700;
+      background: #e6f5ec;
+      border: 1px solid rgba(29, 122, 74, 0.24);
+      color: #1d7a4a;
+    }
+
+    .badge--warn {
+      background: var(--gold-soft);
+      border-color: rgba(192, 141, 60, 0.32);
+      color: #8a6420;
+    }
+
+    /* ---------- generic panel ---------- */
+    .panel {
+      padding: 24px 26px;
+      border-radius: var(--radius-lg);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .panel h3 {
+      font-size: 17px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .panel p,
+    .panel li {
+      font-size: 14.5px;
+      color: #3d5964;
+    }
+
+    .panel ul {
+      margin: 0;
+      padding-left: 20px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .panel ol {
+      margin: 0;
+      padding-left: 20px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .panel b { color: var(--ocean-deep); }
+
+    .route {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin: 4px 0 16px;
+    }
+
+    .route span {
+      padding: 7px 14px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-weight: 700;
+      background: var(--ocean-soft);
+      color: var(--ocean-deep);
+      border: 1px solid rgba(14, 107, 122, 0.18);
+    }
+
+    .route i {
+      font-style: normal;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .kv {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px 14px;
+      font-size: 14.5px;
+      margin-top: 4px;
+    }
+
+    .kv dt {
+      font-weight: 700;
+      color: var(--ocean-deep);
+      white-space: nowrap;
+    }
+
+    .kv dd {
+      margin: 0;
+      color: #3d5964;
+    }
+
+    /* ---------- EV ---------- */
+    .ev-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 14px;
+    }
+
+    .ev {
+      padding: 17px 19px;
+      border-radius: var(--radius-md);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--ocean);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ev--backup { border-top-color: var(--gold); }
+
+    .ev__tag {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--ocean);
+      text-transform: uppercase;
+    }
+
+    .ev--backup .ev__tag { color: var(--gold); }
+
+    .ev h4 {
+      font-size: 15.5px;
+      margin: 5px 0 7px;
+    }
+
+    .ev p {
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+
+    /* ---------- alerts ---------- */
+    .alert {
+      padding: 20px 22px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(217, 105, 74, 0.26);
+      background: linear-gradient(135deg, var(--coral-soft), #fffaf7);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .alert h3 {
+      color: #96371f;
+      font-size: 16.5px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .alert p,
+    .alert li { color: #7c4530; font-size: 14.5px; }
+
+    .alert b { color: #96371f; }
+
+    /* ---------- footer ---------- */
+    footer {
+      margin: 74px 0 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+
+    .to-top {
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      padding: 7px 15px;
+      border-radius: 999px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .to-top:hover { background: var(--ocean-soft); }
+
+    @media (max-width: 760px) {
+      .hero__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .topbar__brand { display: none; }
+      .topnav { margin-left: 0; }
+      .timeline { padding-left: 22px; }
+      .tl-item::before { left: -19px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .card, .tl-card { transition: none; }
+    }
+
+    @media print {
+      .topbar, .daytabs, .to-top { display: none !important; }
+      .day[hidden] { display: block !important; }
+      body { background: #fff; }
+      .hero { background: #0a4a56 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__brand">HSINCHU <span>·</span> 2D1N</div>
+      <nav class="topnav" id="topnav">
+        <a href="#overview">總覽</a>
+        <a href="#itinerary">行程排程</a>
+        <a href="#places">地點資訊</a>
+        <a href="#traffic">交通停車</a>
+        <a href="#charging">充電規劃</a>
+        <a href="#notes">注意事項</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" id="overview">
+      <span class="hero__eyebrow">🚘 自駕深度旅遊攻略</span>
+      <h1>新竹 2 天 1 夜<br>海線散策 × 城中漫遊</h1>
+      <p class="hero__lede">
+        2026 年 9 月 12 日（六）至 9 月 13 日（日），從宜蘭市延平路出發，
+        沿雪隧南下新竹。上午城中早午餐、下午魚鱗天梯與香山濕地的海岸線，
+        入夜回到巨城商圈；隔日採買鐵盒餅乾後，趕在紫爆前的黃金時段北返。
+      </p>
+      <div class="hero__chips">
+        <span class="chip">🍽️ 無海鮮餐廳</span>
+        <span class="chip">⚡ 電動車充電友善</span>
+        <span class="chip">🌬️ 九降風季節</span>
+        <span class="chip">🅿️ 停車點已標註</span>
+        <span class="chip">🛍️ 巨城 × 護城河商圈</span>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><b class="num">2<small>天</small>1<small>夜</small></b><span>行程天數</span></div>
+        <div class="stat"><b class="num">8</b><span>主要停留點</span></div>
+        <div class="stat"><b class="num">2~2.5<small>h</small></b><span>單程車程</span></div>
+        <div class="stat"><b class="num">$120-150</b><span>單程 ETC 預估</span></div>
+      </div>
+    </section>
+
+    <!-- ITINERARY -->
+    <section class="section" id="itinerary">
+      <div class="section__head">
+        <h2 class="section__title"><i>🗺️</i>完整行程排程</h2>
+        <div class="daytabs" role="tablist" aria-label="行程日期">
+          <button class="daytab" id="tab-day1" role="tab" aria-selected="true" aria-controls="day1" type="button">Day 1 · 09/12 六</button>
+          <button class="daytab" id="tab-day2" role="tab" aria-selected="false" aria-controls="day2" type="button">Day 2 · 09/13 日</button>
+        </div>
+      </div>
+
+      <!-- DAY 1 -->
+      <div class="day" id="day1" role="tabpanel" aria-labelledby="tab-day1">
+        <div class="day__banner">
+          <b>📅 Day 1｜09/12（六）</b>
+          <span>宜蘭 ➔ 新竹城中早午餐 ➔ 南寮海岸 ➔ 香山濕地 ➔ 豎琴橋 ➔ 市區晚餐與夜逛</span>
+        </div>
+
+        <div class="timeline">
+          <article class="tl-item">
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-time">08:00 – 10:30</span>
+                <h3 class="tl-title">🚗 啟程</h3>
+              </div>
+              <p>從宜蘭市延平路開車出發，經國道5號轉國道3號，再接國道1號前往新竹。</p>
+              <div class="tags"><span class="tag">車程約 2~2.5 小時</span><span class="tag">雪山隧道</span></div>
+            </div>
+          </article>
+
+          <article class="tl-item tl-item--accent">
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-time">10:30 – 12:30</span>
+                <h3 class="tl-title">🥞 早午餐 · 小稻甜 cafe</h3>
+              </div>
+              <p>步行前往小稻甜 cafe 享用早午餐。推薦品嚐經典早午餐拼盤與現做招牌厚鬆餅（舒芙蕾），建議略過飽足感過重的米飯定食，保持早晨的輕盈。</p>
+              <div class="tl-note tl-note--park">🅿️ <b>停車備註：</b>請先至「北大路停車場」停妥車輛，步行至店家僅需 2–3 分鐘。</div>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-time">12:30 – 12:50</span>
+                <h3 class="tl-title">🥤 在地手搖 · 思茶 MissingTea</h3>
+              </div>
+              <p>離開咖啡廳後，順路開車前往思茶 MissingTea（新竹中山店）購買手搖飲。推薦點選純茶或醇厚鮮奶茶，並指定「一分糖」甜度，帶著清爽解渴的飲品前往海邊。</p>
+              <div class="tags"><span class="tag">一分糖</span><span class="tag">純茶 / 鮮奶茶</span><span class="tag">外帶</span></div>
+            </div>
+          </article>
+
+          <article class="tl-item tl-item--accent">
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-time">13:00 – 14:30</span>
+                <h3 class="tl-title">🏞️ 海岸風光與充電 · 南寮魚鱗天梯</h3>
+              </div>
+              <p>驅車前往南寮魚鱗天梯漫步拍照、欣賞潔白層疊的海岸地景。行李直接置於車上隱蔽處，不先去飯店。</p>
+              <div class="tl-note tl-note--ev">⚡ <b>充電規劃：</b>直接將愛車停放於南寮的 Tesla Supercharger（6 支 V3 超充槍，支援 CCS2），利用散步時間順路補電。若逢客滿，附近<b>南勢街 EVTail 充電站</b>提供 CCS2 規格快充作為備案。</div>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-time">15:00 – 16:20</span>
+                <h3 class="tl-title">🦀 生態體驗 · 香山濕地賞蟹步道</h3>
+              </div>
+              <p>充電完成後沿台61線（西濱快速公路）南下，漫步於 250 公尺長的心型蜿蜒步道上，近距離觀察招潮蟹與彈塗魚。</p>
+              <div class="tags"><span class="tag">心型步道 250m</span><span class="tag">招潮蟹</span><span class="tag">彈塗魚</span><span class="tag">退潮時段最佳</span></div>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-time">16:30 – 17:10</span>
+                <h3 class="tl-title">🌉 午後地景 · 香山豎琴橋</h3>
+              </div>
+              <p>欣賞午後斜陽照耀在純白巨大豎琴建築上的光影剪影之美。</p>
+              <div class="tags"><span class="tag">逆光剪影</span><span class="tag">24 小時開放</span></div>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-time">17:10 – 17:50</span>
+                <h3 class="tl-title">🚗 市區折返</h3>
+              </div>
+              <p>為確保晚餐不遲到，預留充足車程與市區停車時間，準時從香山啟程返回市區。</p>
+            </div>
+          </article>
+
+          <article class="tl-item tl-item--accent">
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-time">18:00 – 19:30</span>
+                <h3 class="tl-title">🥢 晚餐 · 新竹馥億餐坊</h3>
+              </div>
+              <p>準時抵達新竹馥億餐坊中式餐廳，享用無海鮮的精緻江浙家常菜。</p>
+              <div class="tags"><span class="tag">經典東坡肉</span><span class="tag">蔥爆牛肉</span><span class="tag">老湯芋頭鴨</span><span class="tag">無海鮮</span></div>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-time">20:00 起</span>
+                <h3 class="tl-title">🏨 入住與夜間逛街</h3>
+              </div>
+              <p>驅車前往新竹芙洛麗大飯店辦理 Check-in 入住休息。</p>
+              <p><b>🛍️ 周邊逛街指南（步行可達）：</b></p>
+              <ul class="sub-list">
+                <li>
+                  <b>Big City 遠東巨城購物中心（步行 5 分鐘）</b>
+                  北台灣最大的室內購物天堂。館內日韓服飾品牌齊全，適合尋找網紗、蕾絲或燈芯絨等材質的摩卡色、海軍藍質感單品；同時也是採買藥妝、到星巴克喝杯咖啡或至威秀看電影的最佳地點。
+                </li>
+                <li>
+                  <b>護城河親水公園商圈（步行 5–8 分鐘）</b>
+                  沿著綠蔭長廊散步，周邊隱藏許多質感獨立服飾店與風格選物店，環境清幽且逛起來毫無壓迫感。
+                </li>
+              </ul>
+              <div class="tl-note tl-note--ev">⚡ <b>市區夜間充電備案：</b>國光街商圈 U-POWER 新竹北區國光站（高功率 CCS2 液冷槍）／大魯閣 · 湳雅商圈（大雅路、湳雅街 Tesla Supercharger 與南亞大潤發充電站）／金雅商圈 Evoasis Charging Station。詳見<a href="#charging">充電規劃</a>。</div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day" id="day2" role="tabpanel" aria-labelledby="tab-day2" hidden>
+        <div class="day__banner">
+          <b>📅 Day 2｜09/13（日）</b>
+          <span>飯店早餐 ➔ 護城河伴手禮 ➔ 10:30 準時北返，避開國道5號紫爆</span>
+        </div>
+
+        <div class="timeline">
+          <article class="tl-item">
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-time">08:30 – 09:30</span>
+                <h3 class="tl-title">🏨 飯店早餐</h3>
+              </div>
+              <p>於飯店內享用豐盛早餐，隨後辦理退房。</p>
+            </div>
+          </article>
+
+          <article class="tl-item tl-item--accent">
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-time">10:10 – 10:30</span>
+                <h3 class="tl-title">🍪 採買伴手禮 · RT Baker House</h3>
+              </div>
+              <p>前往護城河旁的 RT Baker House 雅特烘焙（府後店）購買精緻手工鐵盒小餅乾。</p>
+              <div class="tl-note tl-note--park">🅿️ <b>停車備註：</b>建議車輛臨停於附近的「府後地下停車場」，出站步行 1 分鐘即可抵達。</div>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-time">10:30 起</span>
+                <h3 class="tl-title">🚗 賦歸</h3>
+              </div>
+              <p>10:30 準時起程返回宜蘭。預計可在 11:30 前上國道，完美避開週日下午國道5號北上的紫爆車潮，約於 13:00 – 14:00 間順利抵達宜蘭市延平路。</p>
+              <div class="tags"><span class="tag">11:30 前上國道</span><span class="tag">避開高乘載管制</span><span class="tag">14:00 前到家</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLACES -->
+    <section class="section" id="places">
+      <div class="section__head">
+        <h2 class="section__title"><i>📍</i>地點詳細資訊</h2>
+        <p class="section__sub">含地址、電話與營業日檢核；點擊地址可直接開啟 Google 地圖導航，點擊電話可直撥。</p>
+      </div>
+
+      <h3 style="font-size:16px;color:var(--muted);letter-spacing:.06em;margin-bottom:14px;">🥞 美食、手搖與伴手禮</h3>
+      <div class="cards">
+        <article class="card">
+          <div class="card__head">
+            <span class="card__icon">🥞</span>
+            <div>
+              <h4 class="card__name">小稻甜 cafe</h4>
+              <span class="card__kind">Day 1 · 早午餐</span>
+            </div>
+          </div>
+          <div class="card__rows">
+            <div class="row"><em>🏢</em><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E5%8C%97%E5%8D%80%E5%8C%97%E5%A4%A7%E8%B7%AF166%E5%B7%B71%E5%BC%841%E8%99%9F" target="_blank" rel="noopener">新竹市北區北大路166巷1弄1號</a></div>
+            <div class="row"><em>📞</em><a href="tel:+88635225539">03-522-5539</a></div>
+            <div class="row"><em>🕘</em><span>週六 09:00–16:00</span></div>
+          </div>
+          <span class="badge">✅ 週六正常營業，無公休問題</span>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <span class="card__icon">🥤</span>
+            <div>
+              <h4 class="card__name">思茶 MissingTea（新竹中山店）</h4>
+              <span class="card__kind">Day 1 · 在地手搖</span>
+            </div>
+          </div>
+          <div class="card__rows">
+            <div class="row"><em>🏢</em><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E5%8C%97%E5%8D%80%E4%B8%AD%E5%B1%B1%E8%B7%AF446%E8%99%9F" target="_blank" rel="noopener">新竹市北區中山路446號</a></div>
+            <div class="row"><em>📞</em><a href="tel:+88635265252">03-526-5252</a></div>
+            <div class="row"><em>🕘</em><span>週六 10:00–22:00</span></div>
+          </div>
+          <span class="badge">✅ 可順利外帶一分糖飲品</span>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <span class="card__icon">🥢</span>
+            <div>
+              <h4 class="card__name">新竹馥億餐坊中式餐廳</h4>
+              <span class="card__kind">Day 1 · 晚餐</span>
+            </div>
+          </div>
+          <div class="card__rows">
+            <div class="row"><em>🏢</em><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E6%B0%91%E6%97%8F%E8%B7%AF67%E5%B7%B71%E5%BC%8425%E8%99%9F" target="_blank" rel="noopener">新竹市東區民族路67巷1弄25號</a></div>
+            <div class="row"><em>📞</em><a href="tel:+88635356798">03-535-6798</a></div>
+            <div class="row"><em>🕘</em><span>週六 11:30–13:30、17:30–20:30</span></div>
+          </div>
+          <span class="badge badge--warn">⚠️ 每週二、三公休；18:00 用餐時間 OK</span>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <span class="card__icon">🍪</span>
+            <div>
+              <h4 class="card__name">RT Baker House 雅特烘焙（府後店）</h4>
+              <span class="card__kind">Day 2 · 伴手禮</span>
+            </div>
+          </div>
+          <div class="card__rows">
+            <div class="row"><em>🏢</em><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%BA%9C%E5%BE%8C%E8%A1%9731%E8%99%9F" target="_blank" rel="noopener">新竹市東區府後街31號</a></div>
+            <div class="row"><em>📞</em><a href="tel:+88635254571">03-525-4571</a></div>
+            <div class="row"><em>🕘</em><span>週日 10:00–20:30</span></div>
+          </div>
+          <span class="badge">✅ 符合 10:10 採買時間</span>
+        </article>
+      </div>
+
+      <h3 style="font-size:16px;color:var(--muted);letter-spacing:.06em;margin:32px 0 14px;">🌊 景點與下榻飯店</h3>
+      <div class="cards">
+        <article class="card">
+          <div class="card__head">
+            <span class="card__icon">🏞️</span>
+            <div>
+              <h4 class="card__name">南寮魚鱗天梯</h4>
+              <span class="card__kind">Day 1 · 海岸地景</span>
+            </div>
+          </div>
+          <div class="card__rows">
+            <div class="row"><em>🏢</em><a href="https://www.google.com/maps/search/?api=1&query=%E5%8D%97%E5%AF%AE%E9%AD%9A%E9%B1%97%E5%A4%A9%E6%A2%AF" target="_blank" rel="noopener">新竹市北區新港路</a></div>
+            <div class="row"><em>📞</em><span>無（戶外開放空間）</span></div>
+            <div class="row"><em>🕘</em><span>24 小時開放</span></div>
+          </div>
+          <span class="badge">✅ 全年開放，無公休問題</span>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <span class="card__icon">🦀</span>
+            <div>
+              <h4 class="card__name">香山濕地賞蟹步道</h4>
+              <span class="card__kind">Day 1 · 生態體驗</span>
+            </div>
+          </div>
+          <div class="card__rows">
+            <div class="row"><em>🏢</em><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E9%A6%99%E5%B1%B1%E5%8D%80%E4%B8%AD%E8%8F%AF%E8%B7%AF%E4%BA%94%E6%AE%B5320%E5%B7%B735%E8%99%9F" target="_blank" rel="noopener">新竹市香山區中華路五段320巷35號</a></div>
+            <div class="row"><em>📞</em><span><a href="tel:+88635216121">03-521-6121</a><br><small style="color:var(--muted);font-size:12.5px;">（新竹市政府產發處生態保育科）</small></span></div>
+            <div class="row"><em>🕘</em><span>週六 09:00–18:00</span></div>
+          </div>
+          <span class="badge badge--warn">⚠️ 每週二公休；大雨、強風或漲潮期間封閉</span>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <span class="card__icon">🌉</span>
+            <div>
+              <h4 class="card__name">香山豎琴橋</h4>
+              <span class="card__kind">Day 1 · 午後地景</span>
+            </div>
+          </div>
+          <div class="card__rows">
+            <div class="row"><em>🏢</em><a href="https://www.google.com/maps/search/?api=1&query=%E9%A6%99%E5%B1%B1%E8%B1%8E%E7%90%B4%E6%A9%8B" target="_blank" rel="noopener">新竹市香山區西濱公路5號</a></div>
+            <div class="row"><em>📞</em><span>無（戶外開放地景）</span></div>
+            <div class="row"><em>🕘</em><span>24 小時開放</span></div>
+          </div>
+          <span class="badge">✅ 全年開放，無公休問題</span>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <span class="card__icon">🏨</span>
+            <div>
+              <h4 class="card__name">新竹芙洛麗大飯店</h4>
+              <span class="card__kind">Day 1 · 住宿</span>
+            </div>
+          </div>
+          <div class="card__rows">
+            <div class="row"><em>🏢</em><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E6%B0%91%E6%97%8F%E8%B7%AF69%E8%99%9F" target="_blank" rel="noopener">新竹市東區民族路69號</a></div>
+            <div class="row"><em>📞</em><a href="tel:+88636238899">03-623-8899</a></div>
+            <div class="row"><em>🕘</em><span>Check-in 20:00 起</span></div>
+          </div>
+          <span class="badge badge--warn">🛎️ 入住時再向櫃檯確認「高樓層、安靜、無菸」房型</span>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <span class="card__icon">🛍️</span>
+            <div>
+              <h4 class="card__name">Big City 遠東巨城購物中心</h4>
+              <span class="card__kind">Day 1 · 夜間逛街 / 雨天備案</span>
+            </div>
+          </div>
+          <div class="card__rows">
+            <div class="row"><em>🏢</em><a href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E4%B8%AD%E5%A4%AE%E8%B7%AF229%E8%99%9F" target="_blank" rel="noopener">新竹市東區中央路229號</a></div>
+            <div class="row"><em>📞</em><a href="tel:+88636238000">03-623-8000</a></div>
+            <div class="row"><em>🕘</em><span>週末 11:00–22:00</span></div>
+          </div>
+          <span class="badge">✅ 週末皆正常營業，距飯店步行 5 分鐘</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- TRAFFIC -->
+    <section class="section" id="traffic">
+      <div class="section__head">
+        <h2 class="section__title"><i>🚗</i>交通資訊與停車導航</h2>
+        <p class="section__sub">高速動線、西濱串接與兩個關鍵停車場，另附北返黃金時間提醒。</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3>🛣️ 高速動線</h3>
+          <div class="route">
+            <span>宜蘭市延平路</span><i>➔</i>
+            <span>國道5號</span><i>➔</i>
+            <span>國道3號</span><i>➔</i>
+            <span>國道1號</span><i>➔</i>
+            <span>新竹交流道</span>
+          </div>
+          <dl class="kv">
+            <dt>單程車程</dt><dd>約 2 ~ 2.5 小時（含雪山隧道）</dd>
+            <dt>ETC 通行費</dt><dd>單程預估約 $120 – $150</dd>
+            <dt>回程終點</dt><dd>宜蘭市延平路（原路折返）</dd>
+          </dl>
+        </div>
+
+        <div class="panel">
+          <h3>🌊 西濱動線</h3>
+          <p>市區前往南寮走「台68線東西向快速公路」最快；南寮南下香山濕地與豎琴橋則沿「台61線西濱快速公路」行駛。</p>
+          <div class="route" style="margin-top:14px;">
+            <span>市區</span><i>—台68—➔</i>
+            <span>南寮</span><i>—台61—➔</i>
+            <span>香山濕地</span><i>➔</i>
+            <span>豎琴橋</span>
+          </div>
+          <p>沿途車流順暢，各景點間車程約 <b>10–15 分鐘</b>。</p>
+        </div>
+
+        <div class="panel">
+          <h3>🅿️ 精準停車點推薦</h3>
+          <ol>
+            <li><b>早午餐停車：</b>直接導航至【北大路停車場】（新竹市北區大同里），停妥後步行至小稻甜 cafe 僅需 2–3 分鐘。</li>
+            <li><b>伴手禮臨停：</b>Day 2 採買 RT 餅乾時，導航至【府後地下停車場】（新竹市東區府後街），出站步行 1 分鐘即可抵達。</li>
+          </ol>
+        </div>
+
+        <div class="panel" style="border-color:rgba(192,141,60,.3);background:linear-gradient(135deg,var(--gold-soft),var(--panel));">
+          <h3>⏰ 北返黃金時間</h3>
+          <p>週日回程務必於 <b>10:30 準時從市區出發</b>、<b>11:30 前開上國道</b>。此時間點能完美避開國道5號週日下午 14:00 開始的北上高乘載管制與嚴重回堵，確保在 14:00 前輕鬆抵達宜蘭。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARGING -->
+    <section class="section" id="charging">
+      <div class="section__head">
+        <h2 class="section__title"><i>⚡</i>電動車充電規劃</h2>
+        <p class="section__sub">主線在南寮散步時順路補電；市區夜間備案分佈於四個商圈，皆為 CCS2 快充。</p>
+      </div>
+
+      <div class="ev-grid">
+        <div class="ev">
+          <span class="ev__tag">Day 1 · 主要</span>
+          <h4>南寮 Tesla Supercharger</h4>
+          <p>6 支 V3 超充槍，支援 CCS2。停妥後步行至魚鱗天梯，散步時間即可完成補電。</p>
+        </div>
+        <div class="ev ev--backup">
+          <span class="ev__tag">南寮備案</span>
+          <h4>南勢街 EVTail 充電站</h4>
+          <p>若南寮超充客滿，鄰近的 EVTail 提供 CCS2 規格快充。</p>
+        </div>
+        <div class="ev ev--backup">
+          <span class="ev__tag">夜間 · 國光街商圈</span>
+          <h4>U-POWER 新竹北區國光站</h4>
+          <p>配備高功率 CCS2 液冷槍，充電速度最快。</p>
+        </div>
+        <div class="ev ev--backup">
+          <span class="ev__tag">夜間 · 大魯閣 / 湳雅</span>
+          <h4>湳雅商圈充電群</h4>
+          <p>資源最豐富：大雅路 Tesla Supercharger、湳雅街 Tesla Supercharger，以及位置相近的新竹南亞大潤發超市充電站。</p>
+        </div>
+        <div class="ev ev--backup">
+          <span class="ev__tag">夜間 · 金雅商圈</span>
+          <h4>Evoasis Charging Station</h4>
+          <p>配備多支 CCS2 快充槍的優質備案。</p>
+        </div>
+        <div class="ev" style="border-top-color:var(--coral);">
+          <span class="ev__tag" style="color:var(--coral);">調度原則</span>
+          <h4>不必為排隊焦慮</h4>
+          <p>若南寮超充週末需排隊，直接保留電力至晚間返回市區，利用飯店與餐廳周邊快充站補電，確保行程流暢。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTES -->
+    <section class="section" id="notes">
+      <div class="section__head">
+        <h2 class="section__title"><i>💡</i>注意事項與緊急備案</h2>
+        <p class="section__sub">9 月中旬的新竹＝強紫外線 × 九降風 × 午後雷陣雨，穿搭與備案都先想好。</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3>👗 氣候與穿著打包</h3>
+          <ul>
+            <li><b>氣候與防曬：</b>9 月新竹均溫約 26–31°C，白天陽光與紫外線依舊強烈。開車與沿海漫步時，防曬乳、保濕噴霧與太陽眼鏡為必備物品。</li>
+            <li><b>九降風防護：</b>9 月起「九降風」開始盛行，南寮與香山海邊風勢極大。建議穿著<b>褲裝</b>，搭配薄透材質的長袖罩衫或防風外套（米色、摩卡色或海軍藍等質感色系），既能防曬防風，拍照又具層次感。</li>
+            <li><b>髮型：</b>海邊強風猛烈，建議準備髮圈將頭髮盤起，或配戴附有防風繩的帽子，避免長髮受風吹亂阻擋視線。</li>
+          </ul>
+        </div>
+
+        <div class="alert">
+          <h3>☔ 雨天切換備案</h3>
+          <p>9 月仍有午後雷陣雨機率。若 Day 1 下午沿海出現大雨，請立即取消海線行程，直接將車輛開回市區的
+          <b>【Big City 遠東巨城購物中心】</b>。室內空間極大，可愜意逛街採買日韓服飾、藥妝，或使用威秀 iShow 會員看場電影。</p>
+        </div>
+
+        <div class="panel">
+          <h3>🌊 潮汐留意</h3>
+          <p>香山濕地賞蟹步道若逢<b>大雨、強風特報或高潮漲潮期間會暫時封閉</b>。出發前一晚可先至中央氣象署官網查詢潮汐預報，<b>退潮時分前往</b>最能看見滿地招潮蟹。</p>
+        </div>
+
+        <div class="panel">
+          <h3>⚡ 充電調度</h3>
+          <p>若南寮 Tesla 超充站週末車流較多需排隊，請無須焦慮，直接保留電力至晚間返回市區時，利用飯店與餐廳周邊的
+          <b>U-POWER 國光站</b>或<b>湳雅大潤發</b>快充站補電，確保行程流暢。</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>🚘 新竹 2 天 1 夜深度旅遊攻略 ｜ 2026.09.12 – 09.13 ｜ 宜蘭市延平路 ⇄ 新竹市區</span>
+      <a class="to-top" href="#overview">↑ 回到頂端</a>
+    </footer>
+  </main>
+
+  <script>
+    // Day tabs
+    (function () {
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('.daytab'));
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          tabs.forEach(function (t) {
+            var selected = t === tab;
+            t.setAttribute('aria-selected', String(selected));
+            document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
+          });
+        });
+      });
+    })();
+
+    // Nav scroll-spy
+    (function () {
+      var links = Array.prototype.slice.call(document.querySelectorAll('#topnav a'));
+      var sections = links
+        .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+        .filter(Boolean);
+      if (!('IntersectionObserver' in window) || !sections.length) return;
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          links.forEach(function (a) {
+            a.classList.toggle('is-active', a.getAttribute('href') === '#' + entry.target.id);
+          });
+        });
+      }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+      sections.forEach(function (s) { observer.observe(s); });
+    })();
+  </script>
+</body>
+</html>
