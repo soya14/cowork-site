@@ -26,8 +26,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # enablement 讓 action 在 Pages 尚未啟用時自動開啟並設為 GitHub Actions 來源，
+      # 否則此步驟會以 "Get Pages site failed ... Not Found" 失敗。
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
