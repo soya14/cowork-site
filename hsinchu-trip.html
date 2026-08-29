@@ -8,35 +8,35 @@
     name="description"
     content="宜蘭出發的新竹 2 天 1 夜自駕行程：時刻表式排程、店家地址電話與營業檢核、國道動線與停車、電動車充電規劃、九降風穿搭與雨天備案。"
   >
-  <meta name="theme-color" content="#e9ebe6">
+  <meta name="theme-color" content="#e6eaf1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap"
     rel="stylesheet"
   >
   <style>
     /* ============================================================
-       Theme — Tidal Terrace 潮汐階地
-       ground 礦質灰綠 / ink 松墨 / accent 海圖群青 / sea 潮間帶青
+       Theme — Tidal Blue 潮藍
+       ground 海霧藍灰 / ink 深海墨 / accent 海圖群青 / sea 潮間帶鋼藍
        ============================================================ */
     :root {
       color-scheme: light;
-      --ground: #e9ebe6;
-      --paper: #f7f8f5;
-      --paper-2: #f1f3ee;
-      --ink: #14201e;
-      --ink-soft: #3c4b47;
-      --muted: #6e7c77;
-      --rule: rgba(20, 32, 30, 0.16);
-      --rule-soft: rgba(20, 32, 30, 0.08);
-      --accent: #1f4aa6;
-      --accent-soft: #e3e8f6;
-      --sea: #2c6b6f;
-      --sea-soft: #e0eae9;
-      --amber: #9d6a15;
-      --amber-soft: #f2ebda;
-      --good: #2f6b4f;
+      --ground: #e6eaf1;
+      --paper: #f4f7fb;
+      --paper-2: #eef2f8;
+      --ink: #0f1b2e;
+      --ink-soft: #33455f;
+      --muted: #5c6f88;
+      --rule: rgba(15, 27, 46, 0.16);
+      --rule-soft: rgba(15, 27, 46, 0.09);
+      --accent: #1a4bab;
+      --accent-soft: #dee7f8;
+      --sea: #2a6f96;
+      --sea-soft: #dfeaf2;
+      --amber: #8a6010;
+      --amber-soft: #f1ead7;
+      --good: #1f6b57;
 
       --shell: min(1160px, calc(100% - 44px));
       --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -47,41 +47,41 @@
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
         color-scheme: dark;
-        --ground: #0e1614;
-        --paper: #16211f;
-        --paper-2: #1b2725;
-        --ink: #e9ede8;
-        --ink-soft: #bcc7c2;
-        --muted: #8b9a95;
-        --rule: rgba(233, 237, 232, 0.2);
-        --rule-soft: rgba(233, 237, 232, 0.1);
-        --accent: #93b2ff;
-        --accent-soft: #1c2b48;
-        --sea: #7cc2c4;
-        --sea-soft: #16302f;
-        --amber: #d5a45c;
-        --amber-soft: #2a2318;
-        --good: #7cbf98;
+        --ground: #0b111c;
+        --paper: #121b2a;
+        --paper-2: #16202f;
+        --ink: #e8eef8;
+        --ink-soft: #b9c6d8;
+        --muted: #8496ac;
+        --rule: rgba(232, 238, 248, 0.2);
+        --rule-soft: rgba(232, 238, 248, 0.1);
+        --accent: #8ab0ff;
+        --accent-soft: #182742;
+        --sea: #74b8d6;
+        --sea-soft: #13293a;
+        --amber: #d7a55e;
+        --amber-soft: #29231a;
+        --good: #6fc0a4;
       }
     }
 
     :root[data-theme="dark"] {
       color-scheme: dark;
-      --ground: #0e1614;
-      --paper: #16211f;
-      --paper-2: #1b2725;
-      --ink: #e9ede8;
-      --ink-soft: #bcc7c2;
-      --muted: #8b9a95;
-      --rule: rgba(233, 237, 232, 0.2);
-      --rule-soft: rgba(233, 237, 232, 0.1);
-      --accent: #93b2ff;
-      --accent-soft: #1c2b48;
-      --sea: #7cc2c4;
-      --sea-soft: #16302f;
-      --amber: #d5a45c;
-      --amber-soft: #2a2318;
-      --good: #7cbf98;
+      --ground: #0b111c;
+      --paper: #121b2a;
+      --paper-2: #16202f;
+      --ink: #e8eef8;
+      --ink-soft: #b9c6d8;
+      --muted: #8496ac;
+      --rule: rgba(232, 238, 248, 0.2);
+      --rule-soft: rgba(232, 238, 248, 0.1);
+      --accent: #8ab0ff;
+      --accent-soft: #182742;
+      --sea: #74b8d6;
+      --sea-soft: #13293a;
+      --amber: #d7a55e;
+      --amber-soft: #29231a;
+      --good: #6fc0a4;
     }
 
     * { box-sizing: border-box; }
@@ -105,10 +105,15 @@
     h1, h2, h3, h4 {
       margin: 0;
       font-family: var(--serif);
-      font-weight: 700;
+      font-weight: 900;
       line-height: 1.28;
       text-wrap: balance;
     }
+
+    /* smaller headings hold the page better at 700 than at full black */
+    .stop h3,
+    .place-card h4,
+    .block h3 { font-weight: 700; }
 
     p { margin: 0; }
 
