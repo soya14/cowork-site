@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>嘉義 3 天 2 夜行程</title>
+  <title>嘉義三天兩夜</title>
+  <meta name="theme-color" content="#E4EDE6">
   <meta
     name="description"
     content="2026/10/03 - 10/05 嘉義三天兩夜自駕行程：嘉義市區光影、梅山茶園雲海與伴手禮掃貨，含店家資訊、購票提醒與特斯拉充電規劃。"
@@ -11,1782 +12,1549 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Outfit:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Quicksand:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
   <style>
     :root {
       color-scheme: light;
-      --panel: rgba(255, 251, 245, 0.9);
-      --panel-strong: #fffdf8;
-      --line: rgba(30, 41, 59, 0.1);
-      --line-strong: rgba(20, 76, 73, 0.2);
-      --text: #1e293b;
-      --muted: #5b6472;
-      --accent: #1f766c;
-      --accent-deep: #184e49;
-      --accent-soft: #dff2ee;
-      --gold: #c49b53;
-      --gold-soft: #f7efdf;
-      --alert: #a8481f;
-      --alert-soft: #fbeee6;
-      --shadow: 0 20px 50px rgba(58, 66, 86, 0.12);
-      --shadow-sm: 0 10px 26px rgba(58, 66, 86, 0.08);
-      --radius-xl: 30px;
-      --radius-lg: 24px;
-      --radius-md: 16px;
+      --bg-top: #E4EDE6;
+      --bg: #FBFAF6;
+      --card: #FFFFFF;
+      --ink: #2B2F2C;
+      --muted: #5E6A63;
+      --faint: #8D9891;
+      --accent: #3F6B57;
+      --accent-deep: #2A4A3C;
+      --accent-soft: #EAF2EC;
+      --accent-line: #DCE8DF;
+      --warn-soft: #FBF2E4;
+      --warn-ink: #8C5A1E;
+      --photo: #DDE8DF;
+      --shadow-xs: 0 4px 12px rgba(46, 74, 60, 0.07);
+      --shadow-sm: 0 8px 22px rgba(46, 74, 60, 0.08);
+      --shadow-md: 0 14px 34px rgba(46, 74, 60, 0.12);
+      --r-xl: 34px;
+      --r-lg: 28px;
+      --r-md: 22px;
+      --r-sm: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       min-height: 100vh;
-      color: var(--text);
+      color: var(--ink);
       font-family: "Noto Sans TC", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(196, 155, 83, 0.22), transparent 22%),
-        radial-gradient(circle at right 12%, rgba(31, 118, 108, 0.14), transparent 28%),
-        linear-gradient(180deg, #faf6ef 0%, #f3eee5 54%, #f8f5f0 100%);
+      background: var(--bg);
+      background-image: linear-gradient(180deg, var(--bg-top) 0%, var(--bg) 620px);
+      background-repeat: no-repeat;
     }
 
-    a {
-      color: inherit;
+    a { color: var(--accent); }
+    p { text-wrap: pretty; }
+
+    .num {
+      font-family: Quicksand, "Noto Sans TC", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
 
-    p {
-      text-wrap: pretty;
-    }
-
-    .page-shell {
-      width: min(1320px, calc(100% - 32px));
+    .shell {
+      width: min(1220px, calc(100% - 36px));
       margin: 0 auto;
-      padding: 24px 0 56px;
-      display: grid;
-      grid-template-columns: 270px minmax(0, 1fr);
-      gap: 24px;
-      align-items: start;
-    }
-
-    /* ---------- Sidebar ---------- */
-
-    .sidebar {
-      position: sticky;
-      top: 24px;
-      align-self: start;
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      background: rgba(255, 253, 248, 0.82);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
-    }
-
-    .sidebar__eyebrow,
-    .eyebrow,
-    .stop__tag,
-    .day-head__date {
-      margin: 0;
-      color: var(--accent);
-      font-size: 0.74rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .sidebar__brand h1 {
-      font-family: "Outfit", "Noto Sans TC", sans-serif;
-      margin: 8px 0 10px;
-      font-size: 1.7rem;
-      line-height: 1.12;
-    }
-
-    .sidebar__brand p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .sidebar__nav {
-      display: grid;
-      gap: 8px;
-      margin: 26px 0;
-    }
-
-    .sidebar__nav a {
-      padding: 11px 14px;
-      border: 1px solid transparent;
-      border-radius: 999px;
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 0.94rem;
-      transition: 180ms ease;
-    }
-
-    .sidebar__nav a:hover,
-    .sidebar__nav a:focus-visible,
-    .sidebar__nav a.is-active {
-      color: var(--accent-deep);
-      border-color: var(--line-strong);
-      background: rgba(31, 118, 108, 0.08);
-      outline: none;
-    }
-
-    .sidebar__meta {
-      display: grid;
-      gap: 8px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.86rem;
-      line-height: 1.6;
-    }
-
-    .sidebar__meta strong {
-      display: block;
-      color: var(--text);
-      font-size: 0.8rem;
-      letter-spacing: 0.04em;
-    }
-
-    /* ---------- Panels ---------- */
-
-    .content {
-      display: grid;
-      gap: 24px;
-      min-width: 0;
-    }
-
-    .panel {
-      padding: 32px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      background: var(--panel);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-    }
-
-    .hero h2 {
-      font-family: "Outfit", "Noto Sans TC", sans-serif;
-      margin: 14px 0 0;
-      font-size: clamp(2rem, 4.6vw, 3.4rem);
-      line-height: 1.08;
-    }
-
-    .hero .lead {
-      max-width: 58ch;
-      margin: 16px 0 0;
-      color: var(--muted);
-      line-height: 1.85;
-    }
-
-    .hero__chips {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 24px;
-    }
-
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      min-height: 34px;
-      padding: 0 14px;
-      border-radius: 999px;
-      border: 1px solid var(--line-strong);
-      background: var(--accent-soft);
-      color: var(--accent-deep);
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-
-    .chip--gold {
-      background: var(--gold-soft);
-      border-color: rgba(196, 155, 83, 0.4);
-      color: #7d5b1d;
-    }
-
-    .hero__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 14px;
-      margin-top: 28px;
-      padding-top: 24px;
-      border-top: 1px solid var(--line);
-    }
-
-    .stat__label {
-      margin: 0 0 6px;
-      color: var(--accent);
-      font-size: 0.74rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .stat__value {
-      margin: 0;
-      font-size: 1.05rem;
-      font-weight: 700;
-      line-height: 1.5;
-    }
-
-    .stat__value span {
-      display: block;
-      color: var(--muted);
-      font-size: 0.85rem;
-      font-weight: 400;
-    }
-
-    .section-heading h3 {
-      font-family: "Outfit", "Noto Sans TC", sans-serif;
-      margin: 10px 0 0;
-      font-size: clamp(1.5rem, 2.6vw, 2rem);
-      line-height: 1.2;
-    }
-
-    .section-heading p {
-      margin: 10px 0 0;
-      max-width: 62ch;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    /* ---------- Booking reminders ---------- */
-
-    .booking {
-      border-color: rgba(196, 155, 83, 0.38);
-      background: linear-gradient(180deg, #fffaf0 0%, var(--panel-strong) 60%);
-    }
-
-    .booking__list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .booking-card {
+      padding: 22px 0 64px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      padding: 20px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: var(--panel-strong);
+      gap: 24px;
+    }
+
+    /* ---------- top pill nav ---------- */
+
+    .topbar {
+      position: sticky;
+      top: 16px;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 11px 14px 11px 24px;
+      border-radius: 999px;
+      background: var(--card);
       box-shadow: var(--shadow-sm);
     }
 
-    .booking-card__head {
+    .topbar__brand {
+      font-family: Quicksand, "Noto Sans TC", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .topbar__nav {
+      flex-grow: 1;
       display: flex;
+      gap: 4px;
+      overflow: hidden;
+    }
+
+    .topbar__nav a {
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: 180ms ease;
+    }
+
+    .topbar__nav a:hover,
+    .topbar__nav a:focus-visible {
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      outline: none;
+    }
+
+    .topbar__nav a.is-active {
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-weight: 700;
+    }
+
+    .topbar__date {
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* ---------- generic surfaces ---------- */
+
+    .panel {
+      padding: 36px 38px;
+      border-radius: var(--r-xl);
+      background: var(--card);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .panel--plain {
+      background: transparent;
+      box-shadow: none;
+      padding: 8px 0 0;
+    }
+
+    .eyebrow {
+      margin: 0;
+      font-family: Quicksand, "Noto Sans TC", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+    }
+
+    .section-head h2 {
+      margin: 14px 0 0;
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      font-weight: 900;
+      line-height: 1.34;
+    }
+
+    .section-head p {
+      margin: 12px 0 0;
+      max-width: 60ch;
+      font-size: 15px;
+      line-height: 2;
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-flex;
       align-items: center;
+      min-height: 38px;
+      padding: 0 16px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .pill--warn {
+      background: var(--warn-soft);
+      color: var(--warn-ink);
+    }
+
+    /* ---------- hero ---------- */
+
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .hero__card {
+      grid-column: span 3;
+      display: flex;
+      flex-direction: column;
+      padding: 44px 46px;
+      border-radius: var(--r-xl);
+      background: var(--card);
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero__card h1 {
+      margin: 18px 0 0;
+      font-size: clamp(2rem, 4.4vw, 2.9rem);
+      font-weight: 900;
+      line-height: 1.28;
+    }
+
+    .hero__card p {
+      margin: 18px 0 0;
+      max-width: 42ch;
+      font-size: 15px;
+      line-height: 2;
+      color: var(--muted);
+    }
+
+    .hero__chips {
+      margin-top: auto;
+      padding-top: 28px;
+      display: flex;
       gap: 10px;
       flex-wrap: wrap;
     }
 
-    .booking-card h4 {
-      font-family: "Outfit", "Noto Sans TC", sans-serif;
-      margin: 0;
-      font-size: 1.05rem;
+    .hero__aside {
+      grid-column: span 2;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
-    .badge {
+    .photo {
+      flex-grow: 1;
+      min-height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--r-xl);
+      background: var(--photo);
+      color: #7E8D84;
+      font-size: 13px;
+      text-align: center;
+      padding: 16px;
+    }
+
+    .hero__facts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .fact {
+      padding: 18px 20px;
+      border-radius: var(--r-md);
+      background: var(--card);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .fact__label {
+      margin: 0;
+      font-size: 12px;
+      color: var(--faint);
+    }
+
+    .fact__value {
+      margin: 6px 0 0;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    /* ---------- booking ---------- */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .bcard {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 24px 24px 26px;
+      border-radius: var(--r-lg);
+      background: var(--card);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .bcard__top {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .icon-tile {
+      flex-shrink: 0;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-tile--warn { background: var(--warn-soft); }
+
+    .bcard h3 {
+      margin: 0;
+      flex-grow: 1;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .tag {
       display: inline-flex;
       align-items: center;
-      height: 24px;
-      padding: 0 10px;
+      height: 26px;
+      padding: 0 11px;
       border-radius: 999px;
       background: var(--accent-soft);
       color: var(--accent-deep);
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
+      font-size: 12px;
+      font-weight: 700;
       white-space: nowrap;
     }
 
-    .badge--urgent {
-      background: var(--alert-soft);
-      color: var(--alert);
+    .tag--warn {
+      background: var(--warn-soft);
+      color: var(--warn-ink);
     }
 
-    .badge--gold {
-      background: var(--gold-soft);
-      color: #7d5b1d;
-    }
-
-    .booking-card p {
+    .bcard p {
       margin: 0;
+      font-size: 13.5px;
+      line-height: 1.9;
       color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.75;
     }
 
-    .booking-card p strong {
-      color: var(--text);
-    }
+    .bcard p strong { color: var(--ink); }
 
-    /* ---------- Day timeline ---------- */
+    /* ---------- day sections ---------- */
 
-    .day-head {
+    .day {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .day__head {
+      display: flex;
+      align-items: center;
       gap: 20px;
       flex-wrap: wrap;
-      padding-bottom: 22px;
-      border-bottom: 1px solid var(--line);
+      padding: 28px 34px;
+      border-radius: var(--r-xl);
+      background: var(--card);
+      box-shadow: var(--shadow-sm);
     }
 
-    .day-head h3 {
-      font-family: "Outfit", "Noto Sans TC", sans-serif;
-      margin: 10px 0 0;
-      font-size: clamp(1.5rem, 2.8vw, 2.1rem);
-      line-height: 1.16;
+    .day__badge {
+      flex-shrink: 0;
+      width: 58px;
+      height: 58px;
+      border-radius: 20px;
+      background: var(--accent);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Quicksand, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
     }
 
-    .day-head__note {
+    .day__title {
+      flex-grow: 1;
+      min-width: 240px;
+    }
+
+    .day__title h2 {
+      margin: 0;
+      font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+      font-weight: 900;
+      line-height: 1.4;
+    }
+
+    .day__title p {
       margin: 8px 0 0;
-      color: var(--muted);
-      line-height: 1.75;
-      max-width: 60ch;
-    }
-
-    .day-head__hotel {
-      min-width: 220px;
-      padding: 16px 18px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      background: var(--panel-strong);
-      font-size: 0.88rem;
-      line-height: 1.7;
+      font-size: 14px;
+      line-height: 1.85;
       color: var(--muted);
     }
 
-    .day-head__hotel strong {
+    .day__hotel {
+      flex-shrink: 0;
+      max-width: 270px;
+      padding: 16px 20px;
+      border-radius: var(--r-md);
+      background: var(--accent-soft);
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--accent-deep);
+    }
+
+    .day__hotel strong {
       display: block;
-      color: var(--text);
-      font-size: 0.95rem;
-      margin-bottom: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      opacity: 0.75;
+      margin-bottom: 3px;
     }
 
-    .timeline {
-      display: grid;
-      gap: 0;
-      margin-top: 8px;
+    .day__hotel a { color: var(--accent-deep); }
+
+    .stops {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
     .stop {
-      display: grid;
-      grid-template-columns: 110px minmax(0, 1fr);
-      gap: 22px;
-      padding: 26px 0;
-      border-bottom: 1px solid var(--line);
+      padding: 26px 30px 28px;
+      border-radius: var(--r-lg);
+      background: var(--card);
+      box-shadow: var(--shadow-xs);
+      transition: box-shadow 200ms ease, transform 200ms ease;
     }
 
-    .stop:last-child {
-      border-bottom: none;
-      padding-bottom: 4px;
+    .stop:hover {
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-1px);
+    }
+
+    .stop__top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .stop__time {
-      position: relative;
-      padding-left: 18px;
-      font-family: "Outfit", "Noto Sans TC", sans-serif;
-      font-size: 0.98rem;
-      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 14px;
+      background: var(--accent-soft);
       color: var(--accent-deep);
-      line-height: 1.5;
+      font-family: Quicksand, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
       white-space: nowrap;
     }
 
-    .stop__time::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 8px;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(31, 118, 108, 0.14);
-    }
-
-    .stop__body h4 {
-      font-family: "Outfit", "Noto Sans TC", sans-serif;
-      margin: 8px 0 0;
-      font-size: 1.22rem;
-      line-height: 1.35;
+    .stop h3 {
+      margin: 14px 0 0;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.45;
     }
 
     .stop__desc {
       margin: 10px 0 0;
+      font-size: 14.5px;
+      line-height: 1.95;
       color: var(--muted);
-      line-height: 1.8;
     }
 
-    .stop__meta {
+    .meta {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px 20px;
-      margin: 16px 0 0;
-      padding: 16px 18px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      background: var(--panel-strong);
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px 22px;
+      margin: 18px 0 0;
+      padding: 18px 20px;
+      border-radius: var(--r-md);
+      background: #F7FAF8;
     }
 
-    .stop__meta > div {
+    .meta > div {
       display: grid;
-      grid-template-columns: 52px minmax(0, 1fr);
+      grid-template-columns: 46px minmax(0, 1fr);
       gap: 10px;
       align-items: baseline;
     }
 
-    .stop__meta dt {
+    .meta dt {
+      font-size: 12px;
+      font-weight: 700;
       color: var(--accent);
-      font-size: 0.76rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
     }
 
-    .stop__meta dd {
+    .meta dd {
       margin: 0;
-      font-size: 0.9rem;
-      line-height: 1.65;
+      font-size: 13.5px;
+      line-height: 1.7;
       word-break: break-word;
     }
 
-    .stop__meta a {
+    .meta a {
       color: var(--accent-deep);
-      text-decoration-color: rgba(31, 118, 108, 0.35);
       text-underline-offset: 3px;
-      transition: 160ms ease;
+      text-decoration-color: rgba(63, 107, 87, 0.35);
       border-radius: 4px;
     }
 
-    .stop__meta a:hover,
-    .stop__meta a:focus-visible {
-      color: var(--accent);
-      text-decoration-color: var(--accent);
-      outline: none;
-    }
+    .meta a:hover { text-decoration-color: var(--accent); }
 
-    .stop__meta a:focus-visible {
+    .meta a:focus-visible,
+    .topbar__nav a:focus-visible,
+    .botbar a:focus-visible,
+    .sources a:focus-visible,
+    .day__hotel a:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 2px;
+      border-radius: 6px;
     }
 
     .note {
+      display: flex;
+      gap: 11px;
       margin: 14px 0 0;
-      padding: 13px 16px;
-      border-radius: var(--radius-md);
+      padding: 14px 17px;
+      border-radius: var(--r-sm);
       background: var(--accent-soft);
       color: var(--accent-deep);
-      font-size: 0.9rem;
-      line-height: 1.75;
+      font-size: 13.5px;
+      line-height: 1.85;
     }
 
-    .note--alert {
-      background: var(--alert-soft);
-      color: var(--alert);
-    }
+    .note svg { flex-shrink: 0; margin-top: 3px; }
+    .note--warn { background: var(--warn-soft); color: var(--warn-ink); }
+    .note--plain { background: #F1F3F1; color: var(--ink); }
+    .note strong { font-weight: 700; }
 
-    .note--drive {
-      background: rgba(30, 41, 59, 0.05);
-      color: var(--text);
-    }
-
-    .note strong {
-      font-weight: 800;
-    }
-
-    /* ---------- Option pair (二選一) ---------- */
+    /* ---------- 二選一 ---------- */
 
     .options {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
       gap: 14px;
-      margin-top: 16px;
+      margin-top: 18px;
     }
 
     .option {
-      padding: 18px 20px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: var(--panel-strong);
-      box-shadow: var(--shadow-sm);
+      padding: 20px 22px 22px;
+      border-radius: var(--r-md);
+      background: #F7FAF8;
     }
 
     .option--primary {
-      border-color: var(--line-strong);
-      background: linear-gradient(180deg, #f4fbf9 0%, var(--panel-strong) 70%);
+      background: var(--accent-soft);
     }
 
-    .option h5 {
-      font-family: "Outfit", "Noto Sans TC", sans-serif;
+    .option h4 {
       margin: 10px 0 0;
-      font-size: 1.05rem;
-      line-height: 1.4;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.45;
     }
 
     .option dl {
       display: grid;
-      gap: 6px;
+      gap: 7px;
       margin: 12px 0 0;
     }
 
     .option dl > div {
       display: grid;
-      grid-template-columns: 52px minmax(0, 1fr);
+      grid-template-columns: 46px minmax(0, 1fr);
       gap: 10px;
       align-items: baseline;
     }
 
     .option dt {
+      font-size: 12px;
+      font-weight: 700;
       color: var(--accent);
-      font-size: 0.74rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
     }
 
     .option dd {
       margin: 0;
-      font-size: 0.88rem;
-      line-height: 1.6;
+      font-size: 13px;
+      line-height: 1.7;
       color: var(--muted);
       word-break: break-word;
     }
 
-    .option dd a {
-      color: var(--accent-deep);
-      text-underline-offset: 3px;
-    }
+    .option dd a { color: var(--accent-deep); }
+    .option dd a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 
-    .option dd a:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-      border-radius: 4px;
-    }
+    /* ---------- changelog ---------- */
 
-    /* ---------- Changelog ---------- */
-
-    .changelog__list {
+    .changes {
       display: grid;
       gap: 12px;
-      margin: 24px 0 0;
+      margin: 28px 0 0;
       padding: 0;
       list-style: none;
     }
 
-    .changelog__list li {
+    .changes li {
       display: grid;
-      grid-template-columns: 96px minmax(0, 1fr);
-      gap: 16px;
-      align-items: baseline;
-      padding: 16px 18px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      background: var(--panel-strong);
-      line-height: 1.75;
-      font-size: 0.93rem;
+      grid-template-columns: 82px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+      padding: 18px 22px;
+      border-radius: var(--r-md);
+      background: #F7FAF8;
+      font-size: 14px;
+      line-height: 1.9;
       color: var(--muted);
     }
 
-    .changelog__list b {
-      color: var(--text);
-    }
+    .changes b { color: var(--ink); }
 
-    .changelog__tag {
-      color: var(--accent);
-      font-size: 0.74rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
+    .changes .tag { justify-self: start; }
 
     .sources {
-      margin: 22px 0 0;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.84rem;
-      line-height: 1.85;
+      margin: 26px 0 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--accent-line);
+      font-size: 13px;
+      line-height: 1.95;
+      color: var(--faint);
     }
 
-    .sources a {
-      color: var(--accent-deep);
-      text-underline-offset: 3px;
-    }
+    .sources a { color: var(--accent); text-underline-offset: 3px; }
 
-    .sources a:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-      border-radius: 4px;
-    }
-
-    footer.page-footer {
-      color: var(--muted);
-      font-size: 0.84rem;
+    .foot {
+      padding-bottom: 8px;
       text-align: center;
-      line-height: 1.8;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--faint);
     }
 
-    /* ---------- Responsive ---------- */
+    /* ---------- mobile bottom nav ---------- */
 
-    @media (max-width: 1040px) {
-      .page-shell {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    .botbar { display: none; }
 
-      .sidebar {
-        position: static;
-      }
+    /* ---------- responsive ---------- */
 
-      .sidebar__nav {
-        grid-auto-flow: column;
-        grid-auto-columns: max-content;
-        overflow-x: auto;
-        padding-bottom: 6px;
-        margin: 20px 0;
-      }
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .hero__card,
+      .hero__aside { grid-column: auto; }
+      .photo { min-height: 170px; }
     }
 
-    @media (max-width: 720px) {
-      .page-shell {
+    @media (max-width: 760px) {
+      .shell {
         width: calc(100% - 24px);
-        padding-top: 16px;
+        padding: 14px 0 108px;
+        gap: 18px;
       }
 
-      .panel {
-        padding: 24px 20px;
+      .topbar {
+        top: 10px;
+        gap: 12px;
+        padding: 12px 18px;
       }
 
-      .stop {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 10px;
+      .topbar__nav { display: none; }
+      .topbar__date { margin-left: auto; }
+
+      .panel { padding: 28px 22px; border-radius: var(--r-lg); }
+      .hero__card { padding: 32px 24px; border-radius: var(--r-lg); }
+      .hero__facts { grid-template-columns: minmax(0, 1fr); }
+
+      .day__head {
+        padding: 24px 22px;
+        gap: 16px;
+        border-radius: var(--r-lg);
       }
 
-      .stop__time {
-        padding-left: 0;
+      .day__hotel { max-width: none; width: 100%; }
+
+      .stop { padding: 22px 20px 24px; border-radius: var(--r-md); }
+      .meta { padding: 16px; gap: 10px 14px; }
+      .meta > div,
+      .option dl > div { grid-template-columns: 42px minmax(0, 1fr); }
+
+      .changes li { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+
+      .botbar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 30;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 12px 6px calc(16px + env(safe-area-inset-bottom, 0px));
+        border-radius: 28px 28px 0 0;
+        background: var(--card);
+        box-shadow: 0 -10px 30px rgba(46, 74, 60, 0.12);
       }
 
-      .stop__time::before {
-        display: none;
+      .botbar a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        min-width: 64px;
+        min-height: 44px;
+        color: var(--faint);
+        text-decoration: none;
+        font-size: 11px;
       }
 
-      .stop__meta > div,
-      .option dl > div {
-        grid-template-columns: 46px minmax(0, 1fr);
-      }
-
-      .changelog__list li {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 4px;
+      .botbar a.is-active {
+        color: var(--accent);
+        font-weight: 700;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      * {
-        transition-duration: 0.01ms !important;
-      }
+      html { scroll-behavior: auto; }
+      * { transition-duration: 0.01ms !important; }
+      .stop:hover { transform: none; }
     }
   </style>
 </head>
 <body>
-  <div class="page-shell">
-    <aside class="sidebar">
-      <div class="sidebar__brand">
-        <p class="sidebar__eyebrow">Chiayi · 3D2N</p>
-        <h1>嘉義三天兩夜<br>自駕行程</h1>
-        <p>2026/10/03（六）— 10/05（一）</p>
-      </div>
 
-      <nav class="sidebar__nav" aria-label="行程導覽">
+  <div class="shell">
+
+    <header class="topbar">
+      <span class="topbar__brand">Chiayi 3D2N</span>
+      <nav class="topbar__nav" aria-label="頁面導覽">
         <a href="#overview">行程總覽</a>
-        <a href="#booking">購票與預訂提醒</a>
-        <a href="#day1">Day 1 · 市區光影</a>
-        <a href="#day2">Day 2 · 茶園雲海</a>
-        <a href="#day3">Day 3 · 伴手禮與返程</a>
-        <a href="#changelog">行程調整說明</a>
+        <a href="#booking">購票提醒</a>
+        <a href="#day1">Day 1</a>
+        <a href="#day2">Day 2</a>
+        <a href="#day3">Day 3</a>
+        <a href="#changes">行程調整</a>
       </nav>
+      <span class="topbar__date">2026 / 10 / 03 – 05</span>
+    </header>
 
-      <div class="sidebar__meta">
-        <div>
-          <strong>路線</strong>
-          宜蘭市 ↔ 板橋江子翠 ↔ 嘉義
-        </div>
-        <div>
-          <strong>住宿</strong>
-          嘉義市蘭桂坊花園酒店（兩晚）
-        </div>
-        <div>
-          <strong>飲食限制</strong>
-          無海鮮、不吃辣
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="overview">
+      <div class="hero__card">
+        <p class="eyebrow">CHIAYI · OCT 2026</p>
+        <h1>三天兩夜<br>走一趟嘉義山與城</h1>
+        <p>
+          美術館的午後光影、梅山的茶園雲海，與三天份的火雞肉飯。
+          以嘉義市區為據點的自駕行程，沿途安排特斯拉超級充電站補電。
+        </p>
+        <div class="hero__chips">
+          <span class="pill">3 天 2 夜</span>
+          <span class="pill">特斯拉自駕</span>
+          <span class="pill">含板橋接駁</span>
+          <span class="pill pill--warn">無海鮮 · 不吃辣</span>
         </div>
       </div>
-    </aside>
 
-    <main class="content">
+      <div class="hero__aside">
+        <div class="photo">[ 太平雲梯 / 茶園 主視覺照片 ]</div>
+        <div class="hero__facts">
+          <div class="fact">
+            <p class="fact__label">路線</p>
+            <p class="fact__value">宜蘭 ↔ 板橋 ↔ 嘉義</p>
+          </div>
+          <div class="fact">
+            <p class="fact__label">住宿</p>
+            <p class="fact__value">蘭桂坊花園酒店 ×2 晚</p>
+          </div>
+          <div class="fact">
+            <p class="fact__label">交通備註</p>
+            <p class="fact__value">非國慶連假</p>
+          </div>
+          <div class="fact">
+            <p class="fact__label">飲食限制</p>
+            <p class="fact__value">無海鮮 · 不吃辣</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <!-- ===================== OVERVIEW ===================== -->
-      <section class="panel hero" id="overview">
-        <p class="eyebrow">2026.10.03 – 10.05</p>
-        <h2>美術館光影、梅山雲海，<br>與三天份的火雞肉飯</h2>
-        <p class="lead">
-          以嘉義市區為據點的三天兩夜自駕行程。Day 1 走市區古蹟與老宅咖啡，Day 2 上梅山看茶園與雲海，
-          Day 3 掃嘉義伴手禮後經彰化鹿港北上返家。全程以特斯拉自駕，沿途安排超級充電站補電。
+    <!-- ========== BOOKING ========== -->
+    <section class="panel" id="booking">
+      <div class="section-head">
+        <p class="eyebrow">BEFORE YOU GO</p>
+        <h2>購票與預訂提醒</h2>
+        <p>
+          以下七項需要在出發前處理完畢，或在當天特定時間內完成，其中前三項漏掉會直接影響行程。
+          所有營業時間與售票方式請在出發前一週再上官方管道複查一次。
         </p>
+      </div>
 
-        <div class="hero__chips">
-          <span class="chip">3 天 2 夜</span>
-          <span class="chip">特斯拉自駕</span>
-          <span class="chip">含板橋接駁</span>
-          <span class="chip chip--gold">無海鮮 · 不吃辣</span>
-        </div>
+      <div class="cards">
 
-        <div class="hero__grid">
-          <div class="stat">
-            <p class="stat__label">Day 1 · 10/03 六</p>
-            <p class="stat__value">市區光影與老宅<span>嘉美館 · 老宅咖啡 · 森林之歌</span></p>
+        <article class="bcard">
+          <div class="bcard__top">
+            <span class="icon-tile icon-tile--warn">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#8C5A1E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 6v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-6Z"></path><path d="M14 5v14"></path></svg>
+            </span>
+            <h3>太平雲梯</h3>
+            <span class="tag tag--warn">前一天購票</span>
           </div>
-          <div class="stat">
-            <p class="stat__label">Day 2 · 10/04 日</p>
-            <p class="stat__value">梅山茶園與雲梯<span>二尖山 · 碧湖山 · 太平雲梯</span></p>
-          </div>
-          <div class="stat">
-            <p class="stat__label">Day 3 · 10/05 一</p>
-            <p class="stat__value">伴手禮與返程<span>嘉義名產 · 鹿港蛋黃酥</span></p>
-          </div>
-          <div class="stat">
-            <p class="stat__label">交通備註</p>
-            <p class="stat__value">非國慶連假<span>連假為 10/09–10/11</span></p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== BOOKING ===================== -->
-      <section class="panel booking" id="booking">
-        <div class="section-heading">
-          <p class="eyebrow">Before You Go</p>
-          <h3>購票與預訂提醒</h3>
           <p>
-            以下七項需要在出發前處理完畢，或在當天特定時間內完成，其中前三項漏掉會直接影響行程。
-            所有營業時間與售票方式請在出發前一週再上官方管道複查一次。
+            全票 <strong>TWD 100</strong>。須於<strong>登梯前一天</strong>透過阿里山國家風景區線上票務系統完成購票，
+            當日不接受退費。票券<strong>不限梯次時段</strong>，現場僅做橋面安全承載量管控。
+            10 月屬夏令期間，比照假日 09:00–17:30，<strong>最後入場 17:00</strong>；每週三固定公休。
           </p>
-        </div>
+        </article>
 
-        <div class="booking__list">
-          <article class="booking-card">
-            <div class="booking-card__head">
-              <h4>太平雲梯</h4>
-              <span class="badge badge--urgent">前一天購票</span>
-            </div>
-            <p>
-              全票 <strong>TWD 100</strong>。須於<strong>登梯前一天</strong>透過阿里山國家風景區線上票務系統完成購票，
-              當日不接受退費。票券<strong>不限梯次時段</strong>，現場僅做橋面安全承載量管控，不需預約特定時段。
-              10 月屬夏令期間，比照假日 09:00–17:30，<strong>最後入場 17:00</strong>；每週三固定公休。
-            </p>
-          </article>
-
-          <article class="booking-card">
-            <div class="booking-card__head">
-              <h4>新口味蛋黃酥</h4>
-              <span class="badge badge--urgent">出發前確認</span>
-            </div>
-            <p>
-              鹿港頂番婆總店屬<strong>不固定公休</strong>，旺季期間僅開放官網線上預訂、不開放現場購買。
-              出發前 2 週請上官網或臉書粉專確認當期購買方式，並指定 <strong>10/05（一）中午時段</strong>取貨。
-              備案：<strong>鹿港中山路 381 號分店</strong>（11:00–18:00，週二公休，10/05 有營業）。
-            </p>
-          </article>
-
-          <article class="booking-card">
-            <div class="booking-card__head">
-              <h4>榮興茶行（民族店）</h4>
-              <span class="badge badge--urgent">10/03 當天 18:00</span>
-            </div>
-            <p>
-              營業至 <strong>19:30</strong>、<strong>週日公休</strong>，全程只有 10/03 晚上買得到。
-              行程已安排在 <strong>17:50–18:10</strong> 晚餐前先去買招牌鍋煮奶茶，切勿延到宵夜時段。
-            </p>
-          </article>
-
-          <article class="booking-card">
-            <div class="booking-card__head">
-              <h4>蘭桂坊花園酒店</h4>
-              <span class="badge">停車位</span>
-            </div>
-            <p>
-              飯店自有車位有限。Check-in 時<strong>先向櫃檯確認特約停車場位置與收費</strong>，
-              晚間市區停車不易，安頓好車再出門走行程。
-            </p>
-          </article>
-
-          <article class="booking-card">
-            <div class="booking-card__head">
-              <h4>嘉義市立美術館</h4>
-              <span class="badge badge--gold">現場售票</span>
-            </div>
-            <p>
-              <strong>無網路售票</strong>，僅提供現場購票，全票 TWD 50。
-              可用現金、悠遊卡、LINE Pay、全支付與信用卡。假日免費定時導覽為 10:30／13:30／15:30，
-              需於開場前 15 分鐘至服務台報名，每場限額 20 名。
-            </p>
-          </article>
-
-          <article class="booking-card">
-            <div class="booking-card__head">
-              <h4>福義軒（成功門市）</h4>
-              <span class="badge badge--gold">限購 · 現金</span>
-            </div>
-            <p>
-              手工蛋捲<strong>一人每日限購 2 包</strong>，且<strong>只收現金</strong>不能刷卡。
-              要多買請分人排隊並事先備妥足夠現金。
-            </p>
-          </article>
-
-          <article class="booking-card">
-            <div class="booking-card__head">
-              <h4>梅山景觀餐廳</h4>
-              <span class="badge">建議訂位</span>
-            </div>
-            <p>
-              雲境山城與空氣圖書館假日用餐人潮多，建議出發前一天<strong>先電話訂位</strong>並告知
-              <strong>不吃辣、不吃海鮮</strong>，避免上山後久候或需改點。
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- ===================== DAY 1 ===================== -->
-      <section class="panel" id="day1">
-        <div class="day-head">
-          <div>
-            <p class="day-head__date">Day 1 · 2026/10/03（六）</p>
-            <h3>光影美術館、老宅咖啡與神級排骨火雞肉飯</h3>
-            <p class="day-head__note">
-              南下移動日。午後抵達嘉義後，動線集中在市區，全程步行或短程開車即可完成。
-            </p>
+        <article class="bcard">
+          <div class="bcard__top">
+            <span class="icon-tile icon-tile--warn">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#8C5A1E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h12l-1 5H7Z"></path><path d="M7 7h10l1 12a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3Z"></path></svg>
+            </span>
+            <h3>新口味蛋黃酥</h3>
+            <span class="tag tag--warn">出發前確認</span>
           </div>
-          <div class="day-head__hotel">
-            <strong>今晚住宿</strong>
-            嘉義市蘭桂坊花園酒店<br>
-            嘉義市東區延平街 250 號<br>
-            <a href="tel:+88652288228">(05) 228-8228</a>・24 小時櫃檯
-          </div>
-        </div>
-
-        <div class="timeline">
-
-          <article class="stop">
-            <p class="stop__time">08:00<br>– 09:30</p>
-            <div class="stop__body">
-              <p class="stop__tag">交通</p>
-              <h4>宜蘭出發，板橋江子翠接駁</h4>
-              <p class="stop__desc">
-                宜蘭市出發 ➔ 國道 5 號 ➔ 板橋江子翠接人 ➔ 轉國道 3 號南下。
-              </p>
-              <p class="note note--drive">
-                <strong>行前提醒：</strong>雖然 10/03 不是國慶連假首日，但不少人會請 10/05–10/08 的假串成長假，
-                10/03 上午雪隧與國 3 桃園–新竹路段仍可能出現車潮。請 <strong>08:00 準時發車</strong>，
-                並請友人在江子翠路邊定點等候，縮短接駁時間。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">09:30<br>– 13:30</p>
-            <div class="stop__body">
-              <p class="stop__tag">交通 · 補電</p>
-              <h4>國道南下與能源補給｜清水服務區 Supercharger</h4>
-              <p class="stop__desc">
-                於清水服務區休息用餐，同時使用超級充電站補電 20–25 分鐘，充至 80% 以上後直奔嘉義。
-                預計 14:00 前抵達嘉義市區。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9C%8B%E9%81%933%E8%99%9F%E6%B8%85%E6%B0%B4%E6%9C%8D%E5%8B%99%E5%8D%80" target="_blank" rel="noopener">台中市清水區吳厝二街 89 號</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+886426203281">(04) 2620-3281</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>24 小時開放（免門票）</dd>
-                </div>
-                <div>
-                  <dt>充電</dt>
-                  <dd>V3 · 最高 250kW · 3 個車位</dd>
-                </div>
-              </dl>
-              <p class="note">
-                清水服務區超充只有 <strong>3 個車位</strong>，週末尖峰可能需要排隊。
-                若抵達時已滿，可續行至南投或改在嘉義市耐斯廣場補電（Day 2 早上原本就會去）。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">14:00<br>– 15:30</p>
-            <div class="stop__body">
-              <p class="stop__tag">景點 01</p>
-              <h4>嘉義市立美術館</h4>
-              <p class="stop__desc">
-                日治時期菸酒公賣局嘉義分局改建，古蹟與現代建築交疊。湖水綠窗框在午後光線下極美，非常適合拍照。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%98%89%E7%BE%A9%E5%B8%82%E7%AB%8B%E7%BE%8E%E8%A1%93%E9%A4%A8" target="_blank" rel="noopener">嘉義市西區廣寧街 101 號</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+88652270016">(05) 227-0016</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>09:00–17:00（週一休館，10/03 正常開館）</dd>
-                </div>
-                <div>
-                  <dt>門票</dt>
-                  <dd>全票 TWD 50（僅現場售票）</dd>
-                </div>
-              </dl>
-              <p class="note">
-                想聽導覽可把參觀時間往後挪一點，趕上 <strong>15:30 的假日定時導覽</strong>，
-                開場前 15 分鐘到服務台報名，每場限額 20 名。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">15:45<br>– 16:30</p>
-            <div class="stop__body">
-              <p class="stop__tag">住宿</p>
-              <h4>飯店 Check-in 與休息</h4>
-              <p class="stop__desc">
-                回飯店辦理入住、安置行李與停車，稍作休息後再步行或短程開車展開晚間行程。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%98%89%E7%BE%A9%E5%B8%82%E8%98%AD%E6%A1%82%E5%9D%8A%E8%8A%B1%E5%9C%92%E9%85%92%E5%BA%97" target="_blank" rel="noopener">嘉義市東區延平街 250 號</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+88652288228">(05) 228-8228</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>24 小時櫃檯服務</dd>
-                </div>
-                <div>
-                  <dt>停車</dt>
-                  <dd>自有車位有限，入住時先確認特約停車場</dd>
-                </div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">16:45<br>– 17:40</p>
-            <div class="stop__body">
-              <p class="stop__tag">景點 02 · 二選一</p>
-              <h4>市區老宅咖啡</h4>
-              <p class="stop__desc">
-                在老屋裡喝杯咖啡休息，接著銜接晚間的伴手禮與晚餐動線。
-              </p>
-
-              <div class="options">
-                <div class="option option--primary">
-                  <span class="badge">首選</span>
-                  <h5>秘密客咖啡館 Mimico Cafe</h5>
-                  <dl>
-                    <div>
-                      <dt>地址</dt>
-                      <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A7%98%E5%AF%86%E5%AE%A2%E5%92%96%E5%95%A1%E9%A4%A8%20%E5%98%89%E7%BE%A9" target="_blank" rel="noopener">嘉義市東區興中街 200 號</a></dd>
-                    </div>
-                    <div>
-                      <dt>電話</dt>
-                      <dd><a href="tel:+88652755866">(05) 275-5866</a></dd>
-                    </div>
-                    <div>
-                      <dt>時間</dt>
-                      <dd>週六 10:00–21:00</dd>
-                    </div>
-                    <div>
-                      <dt>低消</dt>
-                      <dd>每人一杯飲料（約 TWD 130–170）</dd>
-                    </div>
-                  </dl>
-                </div>
-
-                <div class="option">
-                  <span class="badge badge--gold">備選</span>
-                  <h5>木更咖啡 Mugeneration</h5>
-                  <dl>
-                    <div>
-                      <dt>地址</dt>
-                      <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9C%A8%E6%9B%B4%E5%92%96%E5%95%A1%20%E5%98%89%E7%BE%A9" target="_blank" rel="noopener">嘉義市東區成仁街 189 號</a></dd>
-                    </div>
-                    <div>
-                      <dt>電話</dt>
-                      <dd><a href="tel:+88652232288">(05) 223-2288</a></dd>
-                    </div>
-                    <div>
-                      <dt>時間</dt>
-                      <dd>10:00–18:00（週三、四休，10/03 營業）</dd>
-                    </div>
-                    <div>
-                      <dt>低消</dt>
-                      <dd>每人一款飲品或餐點</dd>
-                    </div>
-                  </dl>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">17:50<br>– 18:10</p>
-            <div class="stop__body">
-              <p class="stop__tag">伴手禮</p>
-              <h4>榮興茶行（民族店）｜招牌鍋煮奶茶</h4>
-              <p class="stop__desc">
-                行程中唯一買得到的時段。從咖啡店開車約 8 分鐘，買完直接續往晚餐地點。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A6%AE%E8%88%88%E8%8C%B6%E8%A1%8C%20%E5%98%89%E7%BE%A9%E6%B0%91%E6%97%8F%E8%B7%AF" target="_blank" rel="noopener">嘉義市西區民族路 601 號</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>10:00–19:30（週日公休）</dd>
-                </div>
-                <div>
-                  <dt>推薦</dt>
-                  <dd>招牌鍋煮奶茶</dd>
-                </div>
-              </dl>
-              <p class="note note--alert">
-                <strong>時間關鍵：</strong>19:30 打烊、週日公休，Day 2 與 Day 3 都買不到，務必在今晚晚餐前完成採買。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">18:20<br>– 19:30</p>
-            <div class="stop__body">
-              <p class="stop__tag">晚餐</p>
-              <h4>蕭老師火雞肉飯</h4>
-              <p class="stop__desc">
-                嘉義在地人激推的名店。除了油香滑嫩的火雞肉飯，<strong>炸排骨</strong>與便當配菜更是老饕必點。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E8%95%AD%E8%80%81%E5%B8%AB%E7%81%AB%E9%9B%9E%E8%82%89%E9%A3%AF" target="_blank" rel="noopener">嘉義市西區自由路 101 號</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+88652326836">(05) 232-6836</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>10:00–14:00、16:00–20:00</dd>
-                </div>
-                <div>
-                  <dt>預算</dt>
-                  <dd>約 TWD 80–120 / 人</dd>
-                </div>
-              </dl>
-              <p class="note">
-                網路上對公休日的說法不一（有標示週五公休、也有標示無公休），<strong>10/03 為週六不受影響</strong>，
-                但仍建議出發前一天先致電確認。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">19:45<br>– 20:30</p>
-            <div class="stop__body">
-              <p class="stop__tag">景點 03</p>
-              <h4>森林之歌（夜間點燈攝影）</h4>
-              <p class="stop__desc">
-                以漂流木與廢棄鐵軌打造的穹頂地景，夜間點燈後極具科技感，是嘉義市區代表性的夜拍點。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%98%89%E7%BE%A9%E6%A3%AE%E6%9E%97%E4%B9%8B%E6%AD%8C" target="_blank" rel="noopener">嘉義市東區文化路與林森西路地下道旁</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+88652254321">(05) 225-4321</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>24 小時開放（免門票）</dd>
-                </div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">20:45<br>– 21:30</p>
-            <div class="stop__body">
-              <p class="stop__tag">宵夜</p>
-              <h4>阿娥豆花</h4>
-              <p class="stop__desc">
-                文化路周邊小吃收尾，招牌花生湯豆花溫和不辣、無海鮮，距飯店步行可達。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%98%BF%E5%A8%A5%E8%B1%86%E8%8A%B1%20%E5%98%89%E7%BE%A9%E5%BB%B6%E5%B9%B3%E8%A1%97" target="_blank" rel="noopener">嘉義市東區延平街 233 號</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>14:00–23:00</dd>
-                </div>
-                <div>
-                  <dt>推薦</dt>
-                  <dd>花生湯豆花</dd>
-                </div>
-              </dl>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ===================== DAY 2 ===================== -->
-      <section class="panel" id="day2">
-        <div class="day-head">
-          <div>
-            <p class="day-head__date">Day 2 · 2026/10/04（日）</p>
-            <h3>抹茶山茶園、高空雲海與山城饗宴</h3>
-            <p class="day-head__note">
-              全天山區行程：梅山茶園景觀、太平雲梯高空漫步，傍晚下山吃排隊名店火雞肉飯。
-            </p>
-          </div>
-          <div class="day-head__hotel">
-            <strong>今晚住宿</strong>
-            嘉義市蘭桂坊花園酒店<br>
-            （同 Day 1，不需換房）
-          </div>
-        </div>
-
-        <div class="timeline">
-
-          <article class="stop">
-            <p class="stop__time">08:30<br>– 09:15</p>
-            <div class="stop__body">
-              <p class="stop__tag">補電</p>
-              <h4>飯店早餐與能源補給｜耐斯廣場 Supercharger</h4>
-              <p class="stop__desc">
-                上梅山前先快充約 10 分鐘，<strong>電量確保大於 60%</strong> 以應對長時間爬坡與山區無充電站。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E8%80%90%E6%96%AF%E5%BB%A3%E5%A0%B4%20%E5%98%89%E7%BE%A9" target="_blank" rel="noopener">嘉義市東區忠孝路 600 號（B4 停車場）</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+88652767888">(05) 276-7888</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>商場 11:00–22:00；充電站 24 小時</dd>
-                </div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">09:15<br>– 10:45</p>
-            <div class="stop__body">
-              <p class="stop__tag">交通</p>
-              <h4>梅山三十六彎 ➔ 二尖山步道</h4>
-              <p class="stop__desc">
-                嘉義市區經梅山三十六彎上山，全程彎道多、車速慢，實際車程約 1.5 小時。
-              </p>
-              <p class="note note--drive">
-                <strong>山路駕駛：</strong>下坡務必開啟特斯拉<strong>動能回收（Regenerative Braking）</strong>，
-                以電機制動取代連續踩煞車，避免煞車過熱。彎道多時請提前減速、不要壓線。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">10:45<br>– 11:45</p>
-            <div class="stop__body">
-              <p class="stop__tag">景點 01</p>
-              <h4>二尖山步道（南部抹茶山）</h4>
-              <p class="stop__desc">
-                茶園沿山稜線延伸，坡度平緩好走，上午順光時拍起來層次最漂亮。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%8C%E5%B0%96%E5%B1%B1%E6%AD%A5%E9%81%93" target="_blank" rel="noopener">嘉義縣梅山鄉龍眼村二尖山步道</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+88652593900">(05) 259-3900</a>（阿里山風管處）</dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>24 小時開放（免門票）</dd>
-                </div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">12:00<br>– 12:45</p>
-            <div class="stop__body">
-              <p class="stop__tag">景點 02</p>
-              <h4>碧湖山觀光茶園</h4>
-              <p class="stop__desc">
-                海拔約 1200 公尺，360 度山嵐景觀，翠綠茶園梯田層次分明，觀景平台免費開放參觀。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A2%A7%E6%B9%96%E5%B1%B1%E8%A7%80%E5%85%89%E8%8C%B6%E5%9C%92" target="_blank" rel="noopener">嘉義縣梅山鄉碧湖村 38 之 9 號</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+88652571569">(05) 257-1569</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>07:30–16:30（週二不開放，10/04 正常開放）</dd>
-                </div>
-                <div>
-                  <dt>門票</dt>
-                  <dd>免費參觀</dd>
-                </div>
-              </dl>
-              <p class="note">
-                現場另設茶園餐廳與伴手禮區，假日供餐點餐時間為 10:30–15:30；若中午想在此用餐可直接接續，
-                不必再趕往太平。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">13:00<br>– 13:45</p>
-            <div class="stop__body">
-              <p class="stop__tag">景點 03</p>
-              <h4>海鼠山 1314 觀景台</h4>
-              <p class="stop__desc">
-                白色愛情塔搭配 360 度零死角茶園景觀，是梅山一帶視野最開闊的觀景點之一。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B5%B7%E9%BC%A0%E5%B1%B11314%E8%A7%80%E6%99%AF%E5%8F%B0" target="_blank" rel="noopener">嘉義縣梅山鄉瑞峰村 1314 觀景台</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+88652593900">(05) 259-3900</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>24 小時開放（免門票）</dd>
-                </div>
-              </dl>
-              <p class="note note--drive">
-                最後 2 公里道路狹窄、會車不易，請放慢車速並留意對向來車。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">14:30<br>– 15:20</p>
-            <div class="stop__body">
-              <p class="stop__tag">午餐 · 二選一</p>
-              <h4>太平雲梯周邊景觀餐廳</h4>
-              <p class="stop__desc">
-                從瑞峰到太平村約 35–45 分鐘山路，抵達後用餐，餐後步行前往太平雲梯。
-              </p>
-
-              <div class="options">
-                <div class="option option--primary">
-                  <span class="badge">首選</span>
-                  <h5>雲境山城</h5>
-                  <dl>
-                    <div>
-                      <dt>地址</dt>
-                      <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%9B%B2%E5%A2%83%E5%B1%B1%E5%9F%8E%20%E6%A2%85%E5%B1%B1" target="_blank" rel="noopener">嘉義縣梅山鄉太平村下坑仔 2-7 號</a></dd>
-                    </div>
-                    <div>
-                      <dt>電話</dt>
-                      <dd><a href="tel:+88652571126">(05) 257-1126</a></dd>
-                    </div>
-                    <div>
-                      <dt>時間</dt>
-                      <dd>週日 09:00–19:00</dd>
-                    </div>
-                    <div>
-                      <dt>推薦</dt>
-                      <dd>溫和無辣的苦茶油雞、高山筍片</dd>
-                    </div>
-                  </dl>
-                </div>
-
-                <div class="option">
-                  <span class="badge badge--gold">備選</span>
-                  <h5>空氣圖書館 Air Library</h5>
-                  <dl>
-                    <div>
-                      <dt>地址</dt>
-                      <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A9%BA%E6%B0%A3%E5%9C%96%E6%9B%B8%E9%A4%A8%20%E6%A2%85%E5%B1%B1" target="_blank" rel="noopener">嘉義縣梅山鄉太平村下坑仔 2 號附 12</a></dd>
-                    </div>
-                    <div>
-                      <dt>電話</dt>
-                      <dd><a href="tel:+88652572366">(05) 257-2366</a></dd>
-                    </div>
-                    <div>
-                      <dt>時間</dt>
-                      <dd>09:00–18:00</dd>
-                    </div>
-                  </dl>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">15:30<br>– 16:45</p>
-            <div class="stop__body">
-              <p class="stop__tag">景點 04</p>
-              <h4>太平雲梯（高空漫步賞雲海）</h4>
-              <p class="stop__desc">
-                海拔約 1000 公尺的高空景觀吊橋，是嘉義海拔最高的天空步道，午後常有雲海與山嵐。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%AA%E5%B9%B3%E9%9B%B2%E6%A2%AF" target="_blank" rel="noopener">嘉義縣梅山鄉太平村下坑仔 5 號</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+88652571215">(05) 257-1215</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>09:00–17:30（最後入場 17:00，週三公休）</dd>
-                </div>
-                <div>
-                  <dt>門票</dt>
-                  <dd>全票 TWD 100（須前一天線上購票）</dd>
-                </div>
-              </dl>
-              <p class="note note--alert">
-                <strong>購票方式：</strong>票券不限梯次時段，但<strong>必須在 10/03 之前完成線上購票</strong>，
-                當日不接受退費。到場直接走上階梯至驗票口感應 QR code 入場。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">17:00<br>– 18:00</p>
-            <div class="stop__body">
-              <p class="stop__tag">交通</p>
-              <h4>下山返回嘉義市區</h4>
-              <p class="stop__desc">
-                沿原路下山返回市區，約 1 小時車程。
-              </p>
-              <p class="note note--drive">
-                山區午後容易起霧，請<strong>提早開啟大燈與霧燈</strong>、加大車距，並持續使用動能回收控制下坡車速。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">18:30<br>– 19:45</p>
-            <div class="stop__body">
-              <p class="stop__tag">晚餐 · 二選一</p>
-              <h4>在地排隊火雞肉飯名店</h4>
-              <p class="stop__desc">
-                兩家都在市區、翻桌快，依當下排隊狀況選擇即可。
-              </p>
-
-              <div class="options">
-                <div class="option option--primary">
-                  <span class="badge">首選</span>
-                  <h5>民主火雞肉飯</h5>
-                  <dl>
-                    <div>
-                      <dt>地址</dt>
-                      <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B0%91%E4%B8%BB%E7%81%AB%E9%9B%9E%E8%82%89%E9%A3%AF" target="_blank" rel="noopener">嘉義市東區民族路 149 號</a></dd>
-                    </div>
-                    <div>
-                      <dt>電話</dt>
-                      <dd><a href="tel:+88652162666">(05) 216-2666</a></dd>
-                    </div>
-                    <div>
-                      <dt>時間</dt>
-                      <dd>10:00–20:40</dd>
-                    </div>
-                    <div>
-                      <dt>特色</dt>
-                      <dd>醬汁香濃、翻桌速度快</dd>
-                    </div>
-                  </dl>
-                </div>
-
-                <div class="option">
-                  <span class="badge badge--gold">備選</span>
-                  <h5>可口火雞肉飯</h5>
-                  <dl>
-                    <div>
-                      <dt>地址</dt>
-                      <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8F%AF%E5%8F%A3%E7%81%AB%E9%9B%9E%E8%82%89%E9%A3%AF%20%E5%98%89%E7%BE%A9" target="_blank" rel="noopener">嘉義市東區公明路 90 號</a></dd>
-                    </div>
-                    <div>
-                      <dt>電話</dt>
-                      <dd><a href="tel:+88652779208">(05) 277-9208</a></dd>
-                    </div>
-                    <div>
-                      <dt>時間</dt>
-                      <dd>07:30–19:30</dd>
-                    </div>
-                  </dl>
-                </div>
-              </div>
-              <p class="note">
-                可口火雞肉飯 19:30 打烊，若選它建議提早到 18:15 前入座。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">20:15<br>– 21:00</p>
-            <div class="stop__body">
-              <p class="stop__tag">宵夜</p>
-              <h4>小老闆甜品店</h4>
-              <p class="stop__desc">
-                手作芋圓甜湯，距飯店步行極近，走完一天山路後的收尾很剛好。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E8%80%81%E9%97%86%E7%94%9C%E5%93%81%E5%BA%97%20%E5%98%89%E7%BE%A9" target="_blank" rel="noopener">嘉義市東區延平街 242 號</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+886911400038">0911-400-038</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>週末 13:00–23:00（免門票）</dd>
-                </div>
-              </dl>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ===================== DAY 3 ===================== -->
-      <section class="panel" id="day3">
-        <div class="day-head">
-          <div>
-            <p class="day-head__date">Day 3 · 2026/10/05（一）</p>
-            <h3>嘉義名產掃貨與彰化神級蛋黃酥（回程）</h3>
-            <p class="day-head__note">
-              上午集中掃嘉義伴手禮，中午於彰化鹿港取蛋黃酥，下午沿國道 3 號北上，傍晚回到宜蘭。
-            </p>
-          </div>
-          <div class="day-head__hotel">
-            <strong>返程總里程</strong>
-            嘉義 ➔ 鹿港 ➔ 板橋 ➔ 宜蘭<br>
-            含充電與用餐，約 7 小時
-          </div>
-        </div>
-
-        <div class="timeline">
-
-          <article class="stop">
-            <p class="stop__time">08:00<br>– 09:00</p>
-            <div class="stop__body">
-              <p class="stop__tag">住宿</p>
-              <h4>飯店早餐、Check-out</h4>
-              <p class="stop__desc">
-                用完早餐後辦理退房，行李先上車。今天上午行程較密，請把握時間。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">09:05<br>– 09:25</p>
-            <div class="stop__body">
-              <p class="stop__tag">伴手禮 01</p>
-              <h4>日日好農脆蛋捲（垂楊店）</h4>
-              <p class="stop__desc">
-                全國首創夾心切段一口脆蛋捲，門口好停車，適合當第一站快速採買。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%A5%E6%97%A5%E5%A5%BD%E8%BE%B2%20%E5%98%89%E7%BE%A9%E5%9E%82%E6%A5%8A%E8%B7%AF" target="_blank" rel="noopener">嘉義市東區垂楊路 120 號</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+88652715755">(05) 271-5755</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>09:00–18:00（10/05 週一有營業）</dd>
-                </div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">09:35<br>– 09:55</p>
-            <div class="stop__body">
-              <p class="stop__tag">伴手禮 02</p>
-              <h4>福義軒（成功門市 · 總店）</h4>
-              <p class="stop__desc">
-                必買經典手工芝麻蛋捲與福椒蘇打餅，60 年老牌餅乾工廠。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A6%8F%E7%BE%A9%E8%BB%92%20%E6%88%90%E5%8A%9F%E8%A1%97" target="_blank" rel="noopener">嘉義市西區成功街 98 號</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+88652223107">(05) 222-3107</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>週一至六 08:00–20:00（10/05 有營業）</dd>
-                </div>
-                <div>
-                  <dt>限制</dt>
-                  <dd>蛋捲一人限購 2 包・只收現金</dd>
-                </div>
-              </dl>
-              <p class="note">
-                想多帶幾包蛋捲請<strong>分人排隊</strong>，並先備妥現金；現場不接受刷卡。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">10:00<br>– 11:10</p>
-            <div class="stop__body">
-              <p class="stop__tag">交通</p>
-              <h4>嘉義 ➔ 彰化鹿港頂番婆</h4>
-              <p class="stop__desc">
-                嘉義市區 ➔ 國道 1 號北上 ➔ 彰化交流道／鹿港方向，車程約 1 小時 10 分。
-              </p>
-              <p class="note note--drive">
-                刻意提早出發，是為了避開新口味蛋黃酥 <strong>12:00–13:00 的中午休息時段</strong>，
-                預留約 50 分鐘緩衝。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">11:10<br>– 11:40</p>
-            <div class="stop__body">
-              <p class="stop__tag">伴手禮 03</p>
-              <h4>新口味蛋黃酥（彰化頂番婆）</h4>
-              <p class="stop__desc">
-                鹿港開業 30 餘年的蛋黃酥名店，2024 年獲 ITI 風味絕佳獎，是當地老饕評價極高的伴手禮。
-              </p>
-              <dl class="stop__meta">
-                <div>
-                  <dt>地址</dt>
-                  <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%8F%A3%E5%91%B3%E9%A3%9F%E5%93%81%E8%A1%8C%20%E9%A0%82%E7%95%AA%E5%A9%86" target="_blank" rel="noopener">彰化縣鹿港鎮頂草路一段 36 號</a></dd>
-                </div>
-                <div>
-                  <dt>電話</dt>
-                  <dd><a href="tel:+88647713482">(04) 771-3482</a></dd>
-                </div>
-                <div>
-                  <dt>時間</dt>
-                  <dd>10:00–12:00、13:00–18:00（不固定公休）</dd>
-                </div>
-                <div>
-                  <dt>備案</dt>
-                  <dd>鹿港中山路 381 號分店（11:00–18:00）</dd>
-                </div>
-              </dl>
-              <p class="note note--alert">
-                <strong>購買方式須先確認：</strong>旺季期間僅開放官網線上預訂、不開放現場購買，且公休日偶有變動。
-                請於出發前 2 週上官網或臉書粉專確認，並指定 10/05 中午時段取貨。
-                若總店當日休息，可改往鹿港中山路分店（週二公休，10/05 有營業）。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">11:40<br>– 12:50</p>
-            <div class="stop__body">
-              <p class="stop__tag">交通</p>
-              <h4>鹿港 ➔ 國道 3 號西湖服務區</h4>
-              <p class="stop__desc">
-                自鹿港接國道 3 號北上，約 70–80 公里。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">12:50<br>– 13:40</p>
-            <div class="stop__body">
-              <p class="stop__tag">午餐 · 補電</p>
-              <h4>西湖服務區｜午餐與 Supercharger 補電</h4>
-              <p class="stop__desc">
-                用午餐並同步補電，補足後半段北上與回宜蘭的電量。若西湖充電位滿，可續行至關西服務區。
-              </p>
-              <p class="note">
-                建議補至可支撐「西湖 ➔ 板橋 ➔ 宜蘭市」全程並保留餘裕的電量，回程後半段沿線快充選項較少。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">13:40<br>– 15:10</p>
-            <div class="stop__body">
-              <p class="stop__tag">交通</p>
-              <h4>西湖服務區 ➔ 板橋江子翠（放下友人）</h4>
-              <p class="stop__desc">
-                沿國道 3 號北上至土城／中和轉接，抵達板橋江子翠送友人下車。
-              </p>
-            </div>
-          </article>
-
-          <article class="stop">
-            <p class="stop__time">15:10<br>– 16:10</p>
-            <div class="stop__body">
-              <p class="stop__tag">交通</p>
-              <h4>板橋 ➔ 宜蘭市（返家）</h4>
-              <p class="stop__desc">
-                板橋 ➔ 國道 3 號 ➔ 國道 5 號 ➔ 抵達宜蘭市，行程圓滿結束。
-              </p>
-              <p class="note note--drive">
-                10/05 為週一，雪隧南下車流較少，但北返時段仍請預留彈性。
-              </p>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ===================== CHANGELOG ===================== -->
-      <section class="panel" id="changelog">
-        <div class="section-heading">
-          <p class="eyebrow">Revision Notes</p>
-          <h3>行程調整說明</h3>
           <p>
-            本頁與最初版本的差異整理如下，方便對照確認。
+            鹿港頂番婆總店屬<strong>不固定公休</strong>，旺季期間僅開放官網線上預訂、不開放現場購買。
+            出發前 2 週請上官網或臉書粉專確認當期購買方式，並指定 <strong>10/05（一）中午時段</strong>取貨。
+            備案：<strong>鹿港中山路 381 號分店</strong>（11:00–18:00，週二公休，10/05 有營業）。
           </p>
+        </article>
+
+        <article class="bcard">
+          <div class="bcard__top">
+            <span class="icon-tile icon-tile--warn">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#8C5A1E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            </span>
+            <h3>榮興茶行（民族店）</h3>
+            <span class="tag tag--warn">10/03 當天</span>
+          </div>
+          <p>
+            營業至 <strong>19:30</strong>、<strong>週日公休</strong>，全程只有 10/03 晚上買得到。
+            行程已安排在 <strong>17:50–18:10</strong> 晚餐前先去買招牌鍋煮奶茶，切勿延到宵夜時段。
+          </p>
+        </article>
+
+        <article class="bcard">
+          <div class="bcard__top">
+            <span class="icon-tile">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#3F6B57" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14"></path><path d="M6 17v-4l1.6-4.2A2 2 0 0 1 9.5 7.5h5a2 2 0 0 1 1.9 1.3L18 13v4"></path><circle cx="8" cy="17.5" r="1.6"></circle><circle cx="16" cy="17.5" r="1.6"></circle></svg>
+            </span>
+            <h3>蘭桂坊花園酒店</h3>
+            <span class="tag">停車位</span>
+          </div>
+          <p>
+            飯店自有車位有限。Check-in 時<strong>先向櫃檯確認特約停車場位置與收費</strong>，
+            晚間市區停車不易，安頓好車再出門走行程。
+          </p>
+        </article>
+
+        <article class="bcard">
+          <div class="bcard__top">
+            <span class="icon-tile">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#3F6B57" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"></path><path d="M5 20V9l7-5 7 5v11"></path><path d="M10 20v-6h4v6"></path></svg>
+            </span>
+            <h3>嘉義市立美術館</h3>
+            <span class="tag">現場售票</span>
+          </div>
+          <p>
+            <strong>無網路售票</strong>，僅提供現場購票，全票 TWD 50。
+            可用現金、悠遊卡、LINE Pay、全支付與信用卡。假日免費定時導覽為 10:30／13:30／15:30，
+            需於開場前 15 分鐘至服務台報名，每場限額 20 名。
+          </p>
+        </article>
+
+        <article class="bcard">
+          <div class="bcard__top">
+            <span class="icon-tile">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#3F6B57" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M3 11h18M12 7V4"></path></svg>
+            </span>
+            <h3>福義軒（成功門市）</h3>
+            <span class="tag">限購 · 現金</span>
+          </div>
+          <p>
+            手工蛋捲<strong>一人每日限購 2 包</strong>，且<strong>只收現金</strong>不能刷卡。
+            要多買請分人排隊並事先備妥足夠現金。
+          </p>
+        </article>
+
+        <article class="bcard">
+          <div class="bcard__top">
+            <span class="icon-tile">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#3F6B57" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v8a3 3 0 0 0 6 0V3"></path><path d="M9 11v10"></path><path d="M18 3c-1.5 2-2 4-2 6v3h2v9"></path></svg>
+            </span>
+            <h3>梅山景觀餐廳</h3>
+            <span class="tag">建議訂位</span>
+          </div>
+          <p>
+            雲境山城與空氣圖書館假日用餐人潮多，建議出發前一天<strong>先電話訂位</strong>並告知
+            <strong>不吃辣、不吃海鮮</strong>，避免上山後久候或需改點。
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== DAY 1 ========== -->
+    <section class="day" id="day1">
+      <div class="day__head">
+        <span class="day__badge">01</span>
+        <div class="day__title">
+          <p class="eyebrow">10 / 03（六）</p>
+          <h2>光影美術館、老宅咖啡與神級排骨火雞肉飯</h2>
+          <p>南下移動日。午後抵達嘉義後，動線集中在市區，全程步行或短程開車即可完成。</p>
         </div>
+        <div class="day__hotel">
+          <strong>今晚住宿</strong>
+          嘉義市蘭桂坊花園酒店<br>
+          東區延平街 250 號<br>
+          <a href="tel:+88652288228">(05) 228-8228</a>・24 小時櫃檯
+        </div>
+      </div>
 
-        <ul class="changelog__list">
-          <li>
-            <span class="changelog__tag">已移除</span>
-            <span><b>溢香手工蛋捲</b>：依指示整段移除，Day 1 原先的伴手禮取貨改為<b>飯店 Check-in 與休息</b>。</span>
-          </li>
-          <li>
-            <span class="changelog__tag">時間修正</span>
-            <span><b>榮興茶行</b>：原排在 20:45–21:30 宵夜時段，但該店 <b>19:30 打烊</b>、週日公休，當時已買不到。改排 <b>17:50–18:10</b>，晚餐前先買。</span>
-          </li>
-          <li>
-            <span class="changelog__tag">時間修正</span>
-            <span><b>Day 3 回程</b>：原「12:00–14:00 鹿港 ➔ 充電用餐 ➔ 板橋」僅 2 小時，實際約需 3.5 小時。整日行程前移並重排為 08:00 早餐、11:10 取蛋黃酥、15:10 抵板橋、16:10 回宜蘭。</span>
-          </li>
-          <li>
-            <span class="changelog__tag">已新增</span>
-            <span><b>購票與預訂提醒</b>專區：集中列出太平雲梯、新口味蛋黃酥、榮興茶行、嘉美館、福義軒、飯店停車與山區餐廳訂位事項。</span>
-          </li>
-          <li>
-            <span class="changelog__tag">資訊修正</span>
-            <span><b>碧湖山觀光茶園</b>：營業時間由 08:00–16:00 更正為 <b>07:30–16:30</b>，公休日為<b>週二不開放</b>（10/04 週日正常開放）。</span>
-          </li>
-          <li>
-            <span class="changelog__tag">資訊修正</span>
-            <span><b>太平雲梯</b>：非「預約午後時段」，而是<b>不限梯次時段、須前一天完成線上購票</b>；10 月比照假日 09:00–17:30、最後入場 17:00。</span>
-          </li>
-          <li>
-            <span class="changelog__tag">資訊修正</span>
-            <span><b>連假說法</b>：2026 年國慶日 10/10 為週六、補假 10/09，<b>國慶連假為 10/09–10/11</b>。10/03–10/05 屬一般週末，但仍可能遇到請假串長假的車潮。</span>
-          </li>
-          <li>
-            <span class="changelog__tag">時間微調</span>
-            <span><b>Day 2</b>：上山出發提前至 09:15（梅山三十六彎實際約 1.5 小時）；海鼠山至太平村預留 45 分鐘車程，午餐改為 14:30。</span>
-          </li>
-        </ul>
+      <div class="stops">
 
-        <p class="sources">
-          查證日期 2026/09/19，資料來源：
-          <a href="https://www.dgpa.gov.tw/information?uid=82&amp;pid=12574" target="_blank" rel="noopener">行政院人事行政總處 115 年辦公日曆表</a>、
-          <a href="https://chiayiartmuseum.chiayi.gov.tw/Visit/Info.html" target="_blank" rel="noopener">嘉義市立美術館參觀資訊</a>、
-          <a href="https://alishan.welcometw.com/taipingbridge" target="_blank" rel="noopener">阿里山國家風景區太平雲梯票務</a>、
-          <a href="https://www.greenlake.com.tw/" target="_blank" rel="noopener">碧湖山觀光茶園官網</a>。
-          其餘店家營業時間為網路公開資訊，出發前請再以店家官方管道複查。
-        </p>
-      </section>
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">08:00 – 09:30</span>
+            <span class="tag">交通</span>
+          </div>
+          <h3>宜蘭出發，板橋江子翠接駁</h3>
+          <p class="stop__desc">宜蘭市出發 ➔ 國道 5 號 ➔ 板橋江子翠接人 ➔ 轉國道 3 號南下。</p>
+          <p class="note note--plain">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span>雖然 10/03 不是國慶連假首日，但不少人會請 10/05–10/08 的假串成長假，上午雪隧與國 3 桃園–新竹路段仍可能出現車潮。請 <strong>08:00 準時發車</strong>，並請友人在江子翠路邊定點等候。</span>
+          </p>
+        </article>
 
-      <footer class="page-footer">
-        嘉義三天兩夜行程 · 2026/10/03 – 10/05 · 頁面更新於 2026/09/19
-      </footer>
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">09:30 – 13:30</span>
+            <span class="tag">交通 · 補電</span>
+          </div>
+          <h3>國道南下與能源補給｜清水服務區 Supercharger</h3>
+          <p class="stop__desc">
+            於清水服務區休息用餐，同時使用超級充電站補電 20–25 分鐘，充至 80% 以上後直奔嘉義，預計 14:00 前抵達市區。
+          </p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9C%8B%E9%81%933%E8%99%9F%E6%B8%85%E6%B0%B4%E6%9C%8D%E5%8B%99%E5%8D%80" target="_blank" rel="noopener">台中市清水區吳厝二街 89 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+886426203281">(04) 2620-3281</a></dd></div>
+            <div><dt>時間</dt><dd>24 小時開放（免門票）</dd></div>
+            <div><dt>充電</dt><dd>V3 · 最高 250kW · 3 個車位</dd></div>
+          </dl>
+          <p class="note">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13H11l-1 9 8.5-11H12Z"></path></svg>
+            <span>清水服務區超充只有 <strong>3 個車位</strong>，週末尖峰可能需要排隊。若抵達時已滿，可續行至南投，或改在嘉義市耐斯廣場補電。</span>
+          </p>
+        </article>
 
-    </main>
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">14:00 – 15:30</span>
+            <span class="tag">景點</span>
+          </div>
+          <h3>嘉義市立美術館</h3>
+          <p class="stop__desc">
+            日治時期菸酒公賣局嘉義分局改建，古蹟與現代建築交疊。湖水綠窗框在午後光線下極美，非常適合拍照。
+          </p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%98%89%E7%BE%A9%E5%B8%82%E7%AB%8B%E7%BE%8E%E8%A1%93%E9%A4%A8" target="_blank" rel="noopener">嘉義市西區廣寧街 101 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652270016">(05) 227-0016</a></dd></div>
+            <div><dt>時間</dt><dd>09:00–17:00（週一休館）</dd></div>
+            <div><dt>門票</dt><dd>全票 TWD 50（僅現場售票）</dd></div>
+          </dl>
+          <p class="note">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            <span>想聽導覽可把參觀時間往後挪一點，趕上 <strong>15:30 的假日定時導覽</strong>，開場前 15 分鐘到服務台報名，每場限額 20 名。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">15:45 – 16:30</span>
+            <span class="tag">住宿</span>
+          </div>
+          <h3>飯店 Check-in 與休息</h3>
+          <p class="stop__desc">回飯店辦理入住、安置行李與停車，稍作休息後再步行或短程開車展開晚間行程。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%98%89%E7%BE%A9%E5%B8%82%E8%98%AD%E6%A1%82%E5%9D%8A%E8%8A%B1%E5%9C%92%E9%85%92%E5%BA%97" target="_blank" rel="noopener">嘉義市東區延平街 250 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652288228">(05) 228-8228</a></dd></div>
+            <div><dt>時間</dt><dd>24 小時櫃檯服務</dd></div>
+            <div><dt>停車</dt><dd>自有車位有限，先確認特約停車場</dd></div>
+          </dl>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">16:45 – 17:40</span>
+            <span class="tag">景點 · 二選一</span>
+          </div>
+          <h3>市區老宅咖啡</h3>
+          <p class="stop__desc">在老屋裡喝杯咖啡休息，接著銜接晚間的伴手禮與晚餐動線。</p>
+
+          <div class="options">
+            <div class="option option--primary">
+              <span class="tag">首選</span>
+              <h4>秘密客咖啡館 Mimico Cafe</h4>
+              <dl>
+                <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A7%98%E5%AF%86%E5%AE%A2%E5%92%96%E5%95%A1%E9%A4%A8%20%E5%98%89%E7%BE%A9" target="_blank" rel="noopener">嘉義市東區興中街 200 號</a></dd></div>
+                <div><dt>電話</dt><dd><a href="tel:+88652755866">(05) 275-5866</a></dd></div>
+                <div><dt>時間</dt><dd>週六 10:00–21:00</dd></div>
+                <div><dt>低消</dt><dd>每人一杯飲料（約 130–170 元）</dd></div>
+              </dl>
+            </div>
+            <div class="option">
+              <span class="tag tag--warn">備選</span>
+              <h4>木更咖啡 Mugeneration</h4>
+              <dl>
+                <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9C%A8%E6%9B%B4%E5%92%96%E5%95%A1%20%E5%98%89%E7%BE%A9" target="_blank" rel="noopener">嘉義市東區成仁街 189 號</a></dd></div>
+                <div><dt>電話</dt><dd><a href="tel:+88652232288">(05) 223-2288</a></dd></div>
+                <div><dt>時間</dt><dd>10:00–18:00（週三、四休）</dd></div>
+                <div><dt>低消</dt><dd>每人一款飲品或餐點</dd></div>
+              </dl>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">17:50 – 18:10</span>
+            <span class="tag tag--warn">伴手禮 · 限今晚</span>
+          </div>
+          <h3>榮興茶行（民族店）｜招牌鍋煮奶茶</h3>
+          <p class="stop__desc">行程中唯一買得到的時段。從咖啡店開車約 8 分鐘，買完直接續往晚餐地點。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A6%AE%E8%88%88%E8%8C%B6%E8%A1%8C%20%E5%98%89%E7%BE%A9%E6%B0%91%E6%97%8F%E8%B7%AF" target="_blank" rel="noopener">嘉義市西區民族路 601 號</a></dd></div>
+            <div><dt>時間</dt><dd>10:00–19:30（週日公休）</dd></div>
+            <div><dt>推薦</dt><dd>招牌鍋煮奶茶</dd></div>
+          </dl>
+          <p class="note note--warn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span><strong>時間關鍵：</strong>19:30 打烊、週日公休，Day 2 與 Day 3 都買不到，務必在今晚晚餐前完成採買。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">18:20 – 19:30</span>
+            <span class="tag">晚餐</span>
+          </div>
+          <h3>蕭老師火雞肉飯</h3>
+          <p class="stop__desc">
+            嘉義在地人激推的名店。除了油香滑嫩的火雞肉飯，<strong>炸排骨</strong>與便當配菜更是老饕必點。
+          </p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E8%95%AD%E8%80%81%E5%B8%AB%E7%81%AB%E9%9B%9E%E8%82%89%E9%A3%AF" target="_blank" rel="noopener">嘉義市西區自由路 101 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652326836">(05) 232-6836</a></dd></div>
+            <div><dt>時間</dt><dd>10:00–14:00、16:00–20:00</dd></div>
+            <div><dt>預算</dt><dd>約 TWD 80–120 / 人</dd></div>
+          </dl>
+          <p class="note">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span>網路上對公休日的說法不一（有標示週五公休、也有標示無公休），<strong>10/03 為週六不受影響</strong>，但仍建議出發前一天先致電確認。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">19:45 – 20:30</span>
+            <span class="tag">景點</span>
+          </div>
+          <h3>森林之歌（夜間點燈攝影）</h3>
+          <p class="stop__desc">以漂流木與廢棄鐵軌打造的穹頂地景，夜間點燈後極具科技感，是嘉義市區代表性的夜拍點。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%98%89%E7%BE%A9%E6%A3%AE%E6%9E%97%E4%B9%8B%E6%AD%8C" target="_blank" rel="noopener">嘉義市東區文化路與林森西路地下道旁</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652254321">(05) 225-4321</a></dd></div>
+            <div><dt>時間</dt><dd>24 小時開放（免門票）</dd></div>
+          </dl>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">20:45 – 21:30</span>
+            <span class="tag">宵夜</span>
+          </div>
+          <h3>阿娥豆花</h3>
+          <p class="stop__desc">文化路周邊小吃收尾，招牌花生湯豆花溫和不辣、無海鮮，距飯店步行可達。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%98%BF%E5%A8%A5%E8%B1%86%E8%8A%B1%20%E5%98%89%E7%BE%A9%E5%BB%B6%E5%B9%B3%E8%A1%97" target="_blank" rel="noopener">嘉義市東區延平街 233 號</a></dd></div>
+            <div><dt>時間</dt><dd>14:00–23:00</dd></div>
+            <div><dt>推薦</dt><dd>花生湯豆花</dd></div>
+          </dl>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== DAY 2 ========== -->
+    <section class="day" id="day2">
+      <div class="day__head">
+        <span class="day__badge">02</span>
+        <div class="day__title">
+          <p class="eyebrow">10 / 04（日）</p>
+          <h2>抹茶山茶園、高空雲海與山城饗宴</h2>
+          <p>全天山區行程：梅山茶園景觀、太平雲梯高空漫步，傍晚下山吃排隊名店火雞肉飯。</p>
+        </div>
+        <div class="day__hotel">
+          <strong>今晚住宿</strong>
+          嘉義市蘭桂坊花園酒店<br>
+          同 Day 1，不需換房
+        </div>
+      </div>
+
+      <div class="stops">
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">08:30 – 09:15</span>
+            <span class="tag">補電</span>
+          </div>
+          <h3>飯店早餐與能源補給｜耐斯廣場 Supercharger</h3>
+          <p class="stop__desc">上梅山前先快充約 10 分鐘，<strong>電量確保大於 60%</strong>，以應對長時間爬坡與山區無充電站。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E8%80%90%E6%96%AF%E5%BB%A3%E5%A0%B4%20%E5%98%89%E7%BE%A9" target="_blank" rel="noopener">嘉義市東區忠孝路 600 號（B4 停車場）</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652767888">(05) 276-7888</a></dd></div>
+            <div><dt>時間</dt><dd>商場 11:00–22:00；充電站 24 小時</dd></div>
+          </dl>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">09:15 – 10:45</span>
+            <span class="tag">交通</span>
+          </div>
+          <h3>梅山三十六彎 ➔ 二尖山步道</h3>
+          <p class="stop__desc">嘉義市區經梅山三十六彎上山，全程彎道多、車速慢，實際車程約 1.5 小時。</p>
+          <p class="note note--plain">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14"></path><path d="M6 17v-4l1.6-4.2A2 2 0 0 1 9.5 7.5h5a2 2 0 0 1 1.9 1.3L18 13v4"></path><circle cx="8" cy="17.5" r="1.6"></circle><circle cx="16" cy="17.5" r="1.6"></circle></svg>
+            <span><strong>山路駕駛：</strong>下坡務必開啟特斯拉<strong>動能回收（Regenerative Braking）</strong>，以電機制動取代連續踩煞車，避免煞車過熱。彎道多時請提前減速、不要壓線。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">10:45 – 11:45</span>
+            <span class="tag">景點</span>
+          </div>
+          <h3>二尖山步道（南部抹茶山）</h3>
+          <p class="stop__desc">茶園沿山稜線延伸，坡度平緩好走，上午順光時拍起來層次最漂亮。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%8C%E5%B0%96%E5%B1%B1%E6%AD%A5%E9%81%93" target="_blank" rel="noopener">嘉義縣梅山鄉龍眼村二尖山步道</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652593900">(05) 259-3900</a>（阿里山風管處）</dd></div>
+            <div><dt>時間</dt><dd>24 小時開放（免門票）</dd></div>
+          </dl>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">12:00 – 12:45</span>
+            <span class="tag">景點</span>
+          </div>
+          <h3>碧湖山觀光茶園</h3>
+          <p class="stop__desc">海拔約 1200 公尺，360 度山嵐景觀，翠綠茶園梯田層次分明，觀景平台免費開放參觀。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A2%A7%E6%B9%96%E5%B1%B1%E8%A7%80%E5%85%89%E8%8C%B6%E5%9C%92" target="_blank" rel="noopener">嘉義縣梅山鄉碧湖村 38 之 9 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652571569">(05) 257-1569</a></dd></div>
+            <div><dt>時間</dt><dd>07:30–16:30（週二不開放）</dd></div>
+            <div><dt>門票</dt><dd>免費參觀</dd></div>
+          </dl>
+          <p class="note">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v8a3 3 0 0 0 6 0V3"></path><path d="M9 11v10"></path><path d="M18 3c-1.5 2-2 4-2 6v3h2v9"></path></svg>
+            <span>現場另設茶園餐廳與伴手禮區，假日供餐點餐時間為 10:30–15:30；若中午想在此用餐可直接接續，不必再趕往太平。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">13:00 – 13:45</span>
+            <span class="tag">景點</span>
+          </div>
+          <h3>海鼠山 1314 觀景台</h3>
+          <p class="stop__desc">白色愛情塔搭配 360 度零死角茶園景觀，是梅山一帶視野最開闊的觀景點之一。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B5%B7%E9%BC%A0%E5%B1%B11314%E8%A7%80%E6%99%AF%E5%8F%B0" target="_blank" rel="noopener">嘉義縣梅山鄉瑞峰村 1314 觀景台</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652593900">(05) 259-3900</a></dd></div>
+            <div><dt>時間</dt><dd>24 小時開放（免門票）</dd></div>
+          </dl>
+          <p class="note note--plain">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span>最後 2 公里道路狹窄、會車不易，請放慢車速並留意對向來車。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">14:30 – 15:20</span>
+            <span class="tag">午餐 · 二選一</span>
+          </div>
+          <h3>太平雲梯周邊景觀餐廳</h3>
+          <p class="stop__desc">從瑞峰到太平村約 35–45 分鐘山路，抵達後用餐，餐後步行前往太平雲梯。</p>
+
+          <div class="options">
+            <div class="option option--primary">
+              <span class="tag">首選</span>
+              <h4>雲境山城</h4>
+              <dl>
+                <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%9B%B2%E5%A2%83%E5%B1%B1%E5%9F%8E%20%E6%A2%85%E5%B1%B1" target="_blank" rel="noopener">嘉義縣梅山鄉太平村下坑仔 2-7 號</a></dd></div>
+                <div><dt>電話</dt><dd><a href="tel:+88652571126">(05) 257-1126</a></dd></div>
+                <div><dt>時間</dt><dd>週日 09:00–19:00</dd></div>
+                <div><dt>推薦</dt><dd>溫和無辣的苦茶油雞、高山筍片</dd></div>
+              </dl>
+            </div>
+            <div class="option">
+              <span class="tag tag--warn">備選</span>
+              <h4>空氣圖書館 Air Library</h4>
+              <dl>
+                <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A9%BA%E6%B0%A3%E5%9C%96%E6%9B%B8%E9%A4%A8%20%E6%A2%85%E5%B1%B1" target="_blank" rel="noopener">嘉義縣梅山鄉太平村下坑仔 2 號附 12</a></dd></div>
+                <div><dt>電話</dt><dd><a href="tel:+88652572366">(05) 257-2366</a></dd></div>
+                <div><dt>時間</dt><dd>09:00–18:00</dd></div>
+              </dl>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">15:30 – 16:45</span>
+            <span class="tag tag--warn">景點 · 需購票</span>
+          </div>
+          <h3>太平雲梯（高空漫步賞雲海）</h3>
+          <p class="stop__desc">海拔約 1000 公尺的高空景觀吊橋，是嘉義海拔最高的天空步道，午後常有雲海與山嵐。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%AA%E5%B9%B3%E9%9B%B2%E6%A2%AF" target="_blank" rel="noopener">嘉義縣梅山鄉太平村下坑仔 5 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652571215">(05) 257-1215</a></dd></div>
+            <div><dt>時間</dt><dd>09:00–17:30（最後入場 17:00，週三公休）</dd></div>
+            <div><dt>門票</dt><dd>全票 TWD 100（須前一天線上購票）</dd></div>
+          </dl>
+          <p class="note note--warn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 6v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-6Z"></path><path d="M14 5v14"></path></svg>
+            <span><strong>購票方式：</strong>票券不限梯次時段，但<strong>必須在 10/03 之前完成線上購票</strong>，當日不接受退費。到場直接走上階梯至驗票口感應 QR code 入場。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">17:00 – 18:00</span>
+            <span class="tag">交通</span>
+          </div>
+          <h3>下山返回嘉義市區</h3>
+          <p class="stop__desc">沿原路下山返回市區，約 1 小時車程。</p>
+          <p class="note note--plain">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14"></path><path d="M6 17v-4l1.6-4.2A2 2 0 0 1 9.5 7.5h5a2 2 0 0 1 1.9 1.3L18 13v4"></path><circle cx="8" cy="17.5" r="1.6"></circle><circle cx="16" cy="17.5" r="1.6"></circle></svg>
+            <span>山區午後容易起霧，請<strong>提早開啟大燈與霧燈</strong>、加大車距，並持續使用動能回收控制下坡車速。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">18:30 – 19:45</span>
+            <span class="tag">晚餐 · 二選一</span>
+          </div>
+          <h3>在地排隊火雞肉飯名店</h3>
+          <p class="stop__desc">兩家都在市區、翻桌快，依當下排隊狀況選擇即可。</p>
+
+          <div class="options">
+            <div class="option option--primary">
+              <span class="tag">首選</span>
+              <h4>民主火雞肉飯</h4>
+              <dl>
+                <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B0%91%E4%B8%BB%E7%81%AB%E9%9B%9E%E8%82%89%E9%A3%AF" target="_blank" rel="noopener">嘉義市東區民族路 149 號</a></dd></div>
+                <div><dt>電話</dt><dd><a href="tel:+88652162666">(05) 216-2666</a></dd></div>
+                <div><dt>時間</dt><dd>10:00–20:40</dd></div>
+                <div><dt>特色</dt><dd>醬汁香濃、翻桌速度快</dd></div>
+              </dl>
+            </div>
+            <div class="option">
+              <span class="tag tag--warn">備選</span>
+              <h4>可口火雞肉飯</h4>
+              <dl>
+                <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8F%AF%E5%8F%A3%E7%81%AB%E9%9B%9E%E8%82%89%E9%A3%AF%20%E5%98%89%E7%BE%A9" target="_blank" rel="noopener">嘉義市東區公明路 90 號</a></dd></div>
+                <div><dt>電話</dt><dd><a href="tel:+88652779208">(05) 277-9208</a></dd></div>
+                <div><dt>時間</dt><dd>07:30–19:30</dd></div>
+              </dl>
+            </div>
+          </div>
+          <p class="note">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            <span>可口火雞肉飯 19:30 打烊，若選它建議提早到 18:15 前入座。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">20:15 – 21:00</span>
+            <span class="tag">宵夜</span>
+          </div>
+          <h3>小老闆甜品店</h3>
+          <p class="stop__desc">手作芋圓甜湯，距飯店步行極近，走完一天山路後的收尾很剛好。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E8%80%81%E9%97%86%E7%94%9C%E5%93%81%E5%BA%97%20%E5%98%89%E7%BE%A9" target="_blank" rel="noopener">嘉義市東區延平街 242 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+886911400038">0911-400-038</a></dd></div>
+            <div><dt>時間</dt><dd>週末 13:00–23:00（免門票）</dd></div>
+          </dl>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== DAY 3 ========== -->
+    <section class="day" id="day3">
+      <div class="day__head">
+        <span class="day__badge">03</span>
+        <div class="day__title">
+          <p class="eyebrow">10 / 05（一）</p>
+          <h2>嘉義名產掃貨與彰化神級蛋黃酥（回程）</h2>
+          <p>上午集中掃嘉義伴手禮，中午於彰化鹿港取蛋黃酥，下午沿國道 3 號北上，傍晚回到宜蘭。</p>
+        </div>
+        <div class="day__hotel">
+          <strong>返程總里程</strong>
+          嘉義 ➔ 鹿港 ➔ 板橋 ➔ 宜蘭<br>
+          含充電與用餐，約 8 小時
+        </div>
+      </div>
+
+      <div class="stops">
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">08:00 – 09:00</span>
+            <span class="tag">住宿</span>
+          </div>
+          <h3>飯店早餐、Check-out</h3>
+          <p class="stop__desc">用完早餐後辦理退房，行李先上車。今天上午行程較密，請把握時間。</p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">09:05 – 09:25</span>
+            <span class="tag">伴手禮</span>
+          </div>
+          <h3>日日好農脆蛋捲（垂楊店）</h3>
+          <p class="stop__desc">全國首創夾心切段一口脆蛋捲，門口好停車，適合當第一站快速採買。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%A5%E6%97%A5%E5%A5%BD%E8%BE%B2%20%E5%98%89%E7%BE%A9%E5%9E%82%E6%A5%8A%E8%B7%AF" target="_blank" rel="noopener">嘉義市東區垂楊路 120 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652715755">(05) 271-5755</a></dd></div>
+            <div><dt>時間</dt><dd>09:00–18:00（10/05 有營業）</dd></div>
+          </dl>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">09:35 – 09:55</span>
+            <span class="tag">伴手禮</span>
+          </div>
+          <h3>福義軒（成功門市 · 總店）</h3>
+          <p class="stop__desc">必買經典手工芝麻蛋捲與福椒蘇打餅，60 年老牌餅乾工廠。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A6%8F%E7%BE%A9%E8%BB%92%20%E6%88%90%E5%8A%9F%E8%A1%97" target="_blank" rel="noopener">嘉義市西區成功街 98 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652223107">(05) 222-3107</a></dd></div>
+            <div><dt>時間</dt><dd>週一至六 08:00–20:00</dd></div>
+            <div><dt>限制</dt><dd>蛋捲一人限購 2 包・只收現金</dd></div>
+          </dl>
+          <p class="note note--warn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span>想多帶幾包蛋捲請<strong>分人排隊</strong>，並先備妥現金；現場不接受刷卡。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">10:00 – 11:10</span>
+            <span class="tag">交通</span>
+          </div>
+          <h3>嘉義 ➔ 彰化鹿港頂番婆</h3>
+          <p class="stop__desc">嘉義市區 ➔ 國道 1 號北上 ➔ 彰化交流道／鹿港方向，車程約 1 小時 10 分。</p>
+          <p class="note note--plain">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            <span>刻意提早出發，是為了避開新口味蛋黃酥 <strong>12:00–13:00 的中午休息時段</strong>，預留約 50 分鐘緩衝。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">11:10 – 11:40</span>
+            <span class="tag tag--warn">伴手禮 · 需預訂</span>
+          </div>
+          <h3>新口味蛋黃酥（彰化頂番婆）</h3>
+          <p class="stop__desc">鹿港開業 30 餘年的蛋黃酥名店，2024 年獲 ITI 風味絕佳獎，是當地老饕評價極高的伴手禮。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%8F%A3%E5%91%B3%E9%A3%9F%E5%93%81%E8%A1%8C%20%E9%A0%82%E7%95%AA%E5%A9%86" target="_blank" rel="noopener">彰化縣鹿港鎮頂草路一段 36 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88647713482">(04) 771-3482</a></dd></div>
+            <div><dt>時間</dt><dd>10:00–12:00、13:00–18:00（不固定公休）</dd></div>
+            <div><dt>備案</dt><dd>鹿港中山路 381 號分店（11:00–18:00）</dd></div>
+          </dl>
+          <p class="note note--warn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span><strong>購買方式須先確認：</strong>旺季期間僅開放官網線上預訂、不開放現場購買，且公休日偶有變動。請於出發前 2 週上官網或臉書粉專確認，並指定 10/05 中午時段取貨。若總店當日休息，可改往鹿港中山路分店（週二公休，10/05 有營業）。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">11:40 – 12:50</span>
+            <span class="tag">交通</span>
+          </div>
+          <h3>鹿港 ➔ 國道 3 號西湖服務區</h3>
+          <p class="stop__desc">自鹿港接國道 3 號北上，約 70–80 公里。</p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">12:50 – 13:40</span>
+            <span class="tag">午餐 · 補電</span>
+          </div>
+          <h3>西湖服務區｜午餐與 Supercharger 補電</h3>
+          <p class="stop__desc">用午餐並同步補電，補足後半段北上與回宜蘭的電量。若西湖充電位滿，可續行至關西服務區。</p>
+          <p class="note">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13H11l-1 9 8.5-11H12Z"></path></svg>
+            <span>建議補至可支撐「西湖 ➔ 板橋 ➔ 宜蘭市」全程並保留餘裕的電量，回程後半段沿線快充選項較少。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">13:40 – 15:10</span>
+            <span class="tag">交通</span>
+          </div>
+          <h3>西湖服務區 ➔ 板橋江子翠（放下友人）</h3>
+          <p class="stop__desc">沿國道 3 號北上至土城／中和轉接，抵達板橋江子翠送友人下車。</p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">15:10 – 16:10</span>
+            <span class="tag">交通</span>
+          </div>
+          <h3>板橋 ➔ 宜蘭市（返家）</h3>
+          <p class="stop__desc">板橋 ➔ 國道 3 號 ➔ 國道 5 號 ➔ 抵達宜蘭市，行程圓滿結束。</p>
+          <p class="note note--plain">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span>10/05 為週一，雪隧車流較少，但北返時段仍請預留彈性。</span>
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== CHANGELOG ========== -->
+    <section class="panel" id="changes">
+      <div class="section-head">
+        <p class="eyebrow">REVISION NOTES</p>
+        <h2>行程調整說明</h2>
+        <p>本頁與最初版本的差異整理如下，方便對照確認。</p>
+      </div>
+
+      <ul class="changes">
+        <li>
+          <span class="tag">已移除</span>
+          <span><b>溢香手工蛋捲</b>：依指示整段移除，Day 1 原先的伴手禮取貨改為<b>飯店 Check-in 與休息</b>。</span>
+        </li>
+        <li>
+          <span class="tag tag--warn">時間修正</span>
+          <span><b>榮興茶行</b>：原排在 20:45–21:30 宵夜時段，但該店 <b>19:30 打烊</b>、週日公休，當時已買不到。改排 <b>17:50–18:10</b>，晚餐前先買。</span>
+        </li>
+        <li>
+          <span class="tag tag--warn">時間修正</span>
+          <span><b>Day 3 回程</b>：原「12:00–14:00 鹿港 ➔ 充電用餐 ➔ 板橋」僅 2 小時，實際約需 3.5 小時。整日行程前移並重排為 08:00 早餐、11:10 取蛋黃酥、15:10 抵板橋、16:10 回宜蘭。</span>
+        </li>
+        <li>
+          <span class="tag">已新增</span>
+          <span><b>購票與預訂提醒</b>專區：集中列出太平雲梯、新口味蛋黃酥、榮興茶行、嘉美館、福義軒、飯店停車與山區餐廳訂位事項。</span>
+        </li>
+        <li>
+          <span class="tag">資訊修正</span>
+          <span><b>碧湖山觀光茶園</b>：營業時間由 08:00–16:00 更正為 <b>07:30–16:30</b>，公休日為<b>週二不開放</b>（10/04 週日正常開放）。</span>
+        </li>
+        <li>
+          <span class="tag">資訊修正</span>
+          <span><b>太平雲梯</b>：非「預約午後時段」，而是<b>不限梯次時段、須前一天完成線上購票</b>；10 月比照假日 09:00–17:30、最後入場 17:00。</span>
+        </li>
+        <li>
+          <span class="tag">資訊修正</span>
+          <span><b>連假說法</b>：2026 年國慶日 10/10 為週六、補假 10/09，<b>國慶連假為 10/09–10/11</b>。10/03–10/05 屬一般週末，但仍可能遇到請假串長假的車潮。</span>
+        </li>
+        <li>
+          <span class="tag">時間微調</span>
+          <span><b>Day 2</b>：上山出發提前至 09:15（梅山三十六彎實際約 1.5 小時）；海鼠山至太平村預留 45 分鐘車程，午餐改為 14:30。</span>
+        </li>
+      </ul>
+
+      <p class="sources">
+        查證日期 2026/09/19，資料來源：
+        <a href="https://www.dgpa.gov.tw/information?uid=82&amp;pid=12574" target="_blank" rel="noopener">行政院人事行政總處 115 年辦公日曆表</a>、
+        <a href="https://chiayiartmuseum.chiayi.gov.tw/Visit/Info.html" target="_blank" rel="noopener">嘉義市立美術館參觀資訊</a>、
+        <a href="https://alishan.welcometw.com/taipingbridge" target="_blank" rel="noopener">阿里山國家風景區太平雲梯票務</a>、
+        <a href="https://www.greenlake.com.tw/" target="_blank" rel="noopener">碧湖山觀光茶園官網</a>。
+        其餘店家營業時間為網路公開資訊，出發前請再以店家官方管道複查。
+      </p>
+    </section>
+
+    <footer class="foot">
+      嘉義三天兩夜 · 2026/10/03 – 10/05 · 頁面更新於 2026/09/19
+    </footer>
+
   </div>
+
+  <nav class="botbar" aria-label="快速導覽">
+    <a href="#overview" data-section="overview">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>
+      <span>總覽</span>
+    </a>
+    <a href="#booking" data-section="booking">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 6v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-6Z"></path><path d="M14 5v14"></path></svg>
+      <span>購票</span>
+    </a>
+    <a href="#day1" data-section="day1">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+      <span>行程</span>
+    </a>
+    <a href="#changes" data-section="changes">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"></path></svg>
+      <span>調整</span>
+    </a>
+  </nav>
 
   <script>
     (function () {
       var links = Array.prototype.slice.call(
-        document.querySelectorAll('.sidebar__nav a')
+        document.querySelectorAll('.topbar__nav a, .botbar a')
       );
-      var sections = links
-        .map(function (link) {
-          return document.querySelector(link.getAttribute('href'));
-        })
+      var ids = ['overview', 'booking', 'day1', 'day2', 'day3', 'changes'];
+      var sections = ids
+        .map(function (id) { return document.getElementById(id); })
         .filter(Boolean);
 
       if (!('IntersectionObserver' in window) || !sections.length) {
         return;
       }
 
+      function mark(id) {
+        links.forEach(function (link) {
+          var href = link.getAttribute('href');
+          link.classList.toggle('is-active', href === '#' + id);
+        });
+      }
+
       var observer = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
-            if (!entry.isIntersecting) {
-              return;
+            if (entry.isIntersecting) {
+              mark(entry.target.id);
             }
-            links.forEach(function (link) {
-              link.classList.toggle(
-                'is-active',
-                link.getAttribute('href') === '#' + entry.target.id
-              );
-            });
           });
         },
-        { rootMargin: '-20% 0px -70% 0px' }
+        { rootMargin: '-25% 0px -65% 0px' }
       );
 
       sections.forEach(function (section) {
@@ -1794,5 +1562,6 @@
       });
     })();
   </script>
+
 </body>
 </html>
