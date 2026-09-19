@@ -30,7 +30,6 @@
       --accent-line: #DCE8DF;
       --warn-soft: #FBF2E4;
       --warn-ink: #8C5A1E;
-      --photo: #DDE8DF;
       --shadow-xs: 0 4px 12px rgba(46, 74, 60, 0.07);
       --shadow-sm: 0 8px 22px rgba(46, 74, 60, 0.08);
       --shadow-md: 0 14px 34px rgba(46, 74, 60, 0.12);
@@ -190,89 +189,32 @@
     /* ---------- hero ---------- */
 
     .hero {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .hero__card {
-      grid-column: span 3;
-      display: flex;
-      flex-direction: column;
-      padding: 44px 46px;
+      padding: 52px 46px 46px;
       border-radius: var(--r-xl);
       background: var(--card);
       box-shadow: var(--shadow-md);
     }
 
-    .hero__card h1 {
+    .hero h1 {
       margin: 18px 0 0;
-      font-size: clamp(2rem, 4.4vw, 2.9rem);
+      font-size: clamp(2rem, 4.8vw, 3.1rem);
       font-weight: 900;
-      line-height: 1.28;
+      line-height: 1.26;
     }
 
-    .hero__card p {
-      margin: 18px 0 0;
-      max-width: 42ch;
-      font-size: 15px;
-      line-height: 2;
+    .hero p {
+      margin: 20px 0 0;
+      max-width: 48ch;
+      font-size: 15.5px;
+      line-height: 2.05;
       color: var(--muted);
     }
 
     .hero__chips {
-      margin-top: auto;
-      padding-top: 28px;
+      padding-top: 30px;
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-    }
-
-    .hero__aside {
-      grid-column: span 2;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .photo {
-      flex-grow: 1;
-      min-height: 190px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: var(--r-xl);
-      background: var(--photo);
-      color: #7E8D84;
-      font-size: 13px;
-      text-align: center;
-      padding: 16px;
-    }
-
-    .hero__facts {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .fact {
-      padding: 18px 20px;
-      border-radius: var(--r-md);
-      background: var(--card);
-      box-shadow: var(--shadow-xs);
-    }
-
-    .fact__label {
-      margin: 0;
-      font-size: 12px;
-      color: var(--faint);
-    }
-
-    .fact__value {
-      margin: 6px 0 0;
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.6;
     }
 
     /* ---------- booking ---------- */
@@ -649,13 +591,6 @@
 
     /* ---------- responsive ---------- */
 
-    @media (max-width: 960px) {
-      .hero { grid-template-columns: minmax(0, 1fr); }
-      .hero__card,
-      .hero__aside { grid-column: auto; }
-      .photo { min-height: 170px; }
-    }
-
     @media (max-width: 760px) {
       .shell {
         width: calc(100% - 24px);
@@ -673,8 +608,7 @@
       .topbar__date { margin-left: auto; }
 
       .panel { padding: 28px 22px; border-radius: var(--r-lg); }
-      .hero__card { padding: 32px 24px; border-radius: var(--r-lg); }
-      .hero__facts { grid-template-columns: minmax(0, 1fr); }
+      .hero { padding: 34px 24px 30px; border-radius: var(--r-lg); }
 
       .day__head {
         padding: 24px 22px;
@@ -751,41 +685,17 @@
 
     <!-- ========== HERO ========== -->
     <section class="hero" id="overview">
-      <div class="hero__card">
-        <p class="eyebrow">CHIAYI · OCT 2026</p>
-        <h1>三天兩夜<br>走一趟嘉義山與城</h1>
-        <p>
-          美術館的午後光影、梅山的茶園雲海，與三天份的火雞肉飯。
-          以嘉義市區為據點的自駕行程，沿途安排特斯拉超級充電站補電。
-        </p>
-        <div class="hero__chips">
-          <span class="pill">3 天 2 夜</span>
-          <span class="pill">特斯拉自駕</span>
-          <span class="pill">含板橋接駁</span>
-          <span class="pill pill--warn">無海鮮 · 不吃辣</span>
-        </div>
-      </div>
-
-      <div class="hero__aside">
-        <div class="photo">[ 太平雲梯 / 茶園 主視覺照片 ]</div>
-        <div class="hero__facts">
-          <div class="fact">
-            <p class="fact__label">路線</p>
-            <p class="fact__value">宜蘭 ↔ 板橋 ↔ 嘉義</p>
-          </div>
-          <div class="fact">
-            <p class="fact__label">住宿</p>
-            <p class="fact__value">蘭桂坊花園酒店 ×2 晚</p>
-          </div>
-          <div class="fact">
-            <p class="fact__label">交通備註</p>
-            <p class="fact__value">非國慶連假</p>
-          </div>
-          <div class="fact">
-            <p class="fact__label">飲食限制</p>
-            <p class="fact__value">無海鮮 · 不吃辣</p>
-          </div>
-        </div>
+      <p class="eyebrow">CHIAYI · OCT 2026</p>
+      <h1>三天兩夜<br>走一趟嘉義山與城</h1>
+      <p>
+        老宅咖啡的午後、文化路夜市的熱鬧、梅山的茶園雲海，與三天份的火雞肉飯。
+        以嘉義市區為據點的自駕行程，沿途安排特斯拉超級充電站補電。
+      </p>
+      <div class="hero__chips">
+        <span class="pill">3 天 2 夜</span>
+        <span class="pill">特斯拉自駕</span>
+        <span class="pill">含板橋接駁</span>
+        <span class="pill pill--warn">無海鮮 · 不吃辣</span>
       </div>
     </section>
 
@@ -795,7 +705,7 @@
         <p class="eyebrow">BEFORE YOU GO</p>
         <h2>購票與預訂提醒</h2>
         <p>
-          以下七項需要在出發前處理完畢，或在當天特定時間內完成，其中前三項漏掉會直接影響行程。
+          以下五項需要在出發前處理完畢，或在當天特定時間內完成，其中前三項漏掉會直接影響行程。
           所有營業時間與售票方式請在出發前一週再上官方管道複查一次。
         </p>
       </div>
@@ -875,34 +785,6 @@
           </p>
         </article>
 
-        <article class="bcard">
-          <div class="bcard__top">
-            <span class="icon-tile">
-              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#3F6B57" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M3 11h18M12 7V4"></path></svg>
-            </span>
-            <h3>福義軒（成功門市）</h3>
-            <span class="tag">限購 · 現金</span>
-          </div>
-          <p>
-            手工蛋捲<strong>一人每日限購 2 包</strong>，且<strong>只收現金</strong>不能刷卡。
-            要多買請分人排隊並事先備妥足夠現金。
-          </p>
-        </article>
-
-        <article class="bcard">
-          <div class="bcard__top">
-            <span class="icon-tile">
-              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#3F6B57" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v8a3 3 0 0 0 6 0V3"></path><path d="M9 11v10"></path><path d="M18 3c-1.5 2-2 4-2 6v3h2v9"></path></svg>
-            </span>
-            <h3>梅山景觀餐廳</h3>
-            <span class="tag">建議訂位</span>
-          </div>
-          <p>
-            雲境山城與空氣圖書館假日用餐人潮多，建議出發前一天<strong>先電話訂位</strong>並告知
-            <strong>不吃辣、不吃海鮮</strong>，避免上山後久候或需改點。
-          </p>
-        </article>
-
       </div>
     </section>
 
@@ -912,8 +794,8 @@
         <span class="day__badge">01</span>
         <div class="day__title">
           <p class="eyebrow">10 / 03（六）</p>
-          <h2>光影美術館、老宅咖啡與神級排骨火雞肉飯</h2>
-          <p>南下移動日。午後抵達嘉義後，動線集中在市區，全程步行或短程開車即可完成。</p>
+          <h2>老宅咖啡、機動美術館與文化路夜市</h2>
+          <p>南下移動日。午後抵達嘉義先喝咖啡，有時間再加美術館，晚上直接逛夜市，不排硬行程。</p>
         </div>
         <div class="day__hotel">
           <strong>今晚住宿</strong>
@@ -961,47 +843,13 @@
 
         <article class="stop">
           <div class="stop__top">
-            <span class="stop__time">14:00 – 15:30</span>
-            <span class="tag">景點</span>
-          </div>
-          <h3>嘉義市立美術館</h3>
-          <p class="stop__desc">
-            日治時期菸酒公賣局嘉義分局改建，古蹟與現代建築交疊。湖水綠窗框在午後光線下極美，非常適合拍照。
-          </p>
-          <dl class="meta">
-            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%98%89%E7%BE%A9%E5%B8%82%E7%AB%8B%E7%BE%8E%E8%A1%93%E9%A4%A8" target="_blank" rel="noopener">嘉義市西區廣寧街 101 號</a></dd></div>
-            <div><dt>電話</dt><dd><a href="tel:+88652270016">(05) 227-0016</a></dd></div>
-            <div><dt>時間</dt><dd>09:00–17:00（週一休館）</dd></div>
-            <div><dt>門票</dt><dd>全票 TWD 50（僅現場售票）</dd></div>
-          </dl>
-          <p class="note">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
-            <span>想聽導覽可把參觀時間往後挪一點，趕上 <strong>15:30 的假日定時導覽</strong>，開場前 15 分鐘到服務台報名，每場限額 20 名。</span>
-          </p>
-        </article>
-
-        <article class="stop">
-          <div class="stop__top">
-            <span class="stop__time">15:45 – 16:30</span>
-            <span class="tag">住宿</span>
-          </div>
-          <h3>飯店 Check-in 與休息</h3>
-          <p class="stop__desc">回飯店辦理入住、安置行李與停車，稍作休息後再步行或短程開車展開晚間行程。</p>
-          <dl class="meta">
-            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%98%89%E7%BE%A9%E5%B8%82%E8%98%AD%E6%A1%82%E5%9D%8A%E8%8A%B1%E5%9C%92%E9%85%92%E5%BA%97" target="_blank" rel="noopener">嘉義市東區延平街 250 號</a></dd></div>
-            <div><dt>電話</dt><dd><a href="tel:+88652288228">(05) 228-8228</a></dd></div>
-            <div><dt>時間</dt><dd>24 小時櫃檯服務</dd></div>
-            <div><dt>停車</dt><dd>自有車位有限，先確認特約停車場</dd></div>
-          </dl>
-        </article>
-
-        <article class="stop">
-          <div class="stop__top">
-            <span class="stop__time">16:45 – 17:40</span>
-            <span class="tag">景點 · 二選一</span>
+            <span class="stop__time">14:00 – 15:15</span>
+            <span class="tag">咖啡 · 二選一</span>
           </div>
           <h3>市區老宅咖啡</h3>
-          <p class="stop__desc">在老屋裡喝杯咖啡休息，接著銜接晚間的伴手禮與晚餐動線。</p>
+          <p class="stop__desc">
+            抵達嘉義的第一站。先在老屋裡喝杯咖啡、把長途車程的疲勞放掉，再看時間決定要不要加美術館。
+          </p>
 
           <div class="options">
             <div class="option option--primary">
@@ -1029,11 +877,52 @@
 
         <article class="stop">
           <div class="stop__top">
+            <span class="stop__time">15:30 – 16:45</span>
+            <span class="tag tag--warn">機動 · 有時間再去</span>
+          </div>
+          <h3>嘉義市立美術館</h3>
+          <p class="stop__desc">
+            日治時期菸酒公賣局嘉義分局改建，古蹟與現代建築交疊，湖水綠窗框在午後光線下極美。
+            若前面行程延誤或不想趕，這站可以直接跳過，改為提早回飯店休息。
+          </p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%98%89%E7%BE%A9%E5%B8%82%E7%AB%8B%E7%BE%8E%E8%A1%93%E9%A4%A8" target="_blank" rel="noopener">嘉義市西區廣寧街 101 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652270016">(05) 227-0016</a></dd></div>
+            <div><dt>時間</dt><dd>09:00–17:00（週一休館）</dd></div>
+            <div><dt>門票</dt><dd>全票 TWD 50（僅現場售票）</dd></div>
+          </dl>
+          <p class="note">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            <span>17:00 閉館，建議 <strong>16:30 前</strong> 入館才逛得完。想聽導覽可趕 15:30 的假日定時導覽，開場前 15 分鐘到服務台報名，每場限額 20 名。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
+            <span class="stop__time">17:00 – 17:40</span>
+            <span class="tag">住宿</span>
+          </div>
+          <h3>飯店 Check-in 與休息</h3>
+          <p class="stop__desc">辦理入住、安置行李與停車，稍作休息後再出門走晚上的行程。</p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%98%89%E7%BE%A9%E5%B8%82%E8%98%AD%E6%A1%82%E5%9D%8A%E8%8A%B1%E5%9C%92%E9%85%92%E5%BA%97" target="_blank" rel="noopener">嘉義市東區延平街 250 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652288228">(05) 228-8228</a></dd></div>
+            <div><dt>時間</dt><dd>24 小時櫃檯服務</dd></div>
+            <div><dt>停車</dt><dd>自有車位有限，先確認特約停車場</dd></div>
+          </dl>
+          <p class="note">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+            <span>飯店就在延平街，<strong>步行到文化路夜市約 5 分鐘</strong>。晚上把車停好、走路去逛最輕鬆。</span>
+          </p>
+        </article>
+
+        <article class="stop">
+          <div class="stop__top">
             <span class="stop__time">17:50 – 18:10</span>
             <span class="tag tag--warn">伴手禮 · 限今晚</span>
           </div>
           <h3>榮興茶行（民族店）｜招牌鍋煮奶茶</h3>
-          <p class="stop__desc">行程中唯一買得到的時段。從咖啡店開車約 8 分鐘，買完直接續往晚餐地點。</p>
+          <p class="stop__desc">行程中唯一買得到的時段，開車去買完再回夜市區。</p>
           <dl class="meta">
             <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A6%AE%E8%88%88%E8%8C%B6%E8%A1%8C%20%E5%98%89%E7%BE%A9%E6%B0%91%E6%97%8F%E8%B7%AF" target="_blank" rel="noopener">嘉義市西區民族路 601 號</a></dd></div>
             <div><dt>時間</dt><dd>10:00–19:30（週日公休）</dd></div>
@@ -1041,57 +930,40 @@
           </dl>
           <p class="note note--warn">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9"></circle></svg>
-            <span><strong>時間關鍵：</strong>19:30 打烊、週日公休，Day 2 與 Day 3 都買不到，務必在今晚晚餐前完成採買。</span>
+            <span><strong>時間關鍵：</strong>19:30 打烊、週日公休，Day 2 與 Day 3 都買不到，務必在今晚逛夜市前先買。</span>
           </p>
         </article>
 
         <article class="stop">
           <div class="stop__top">
-            <span class="stop__time">18:20 – 19:30</span>
-            <span class="tag">晚餐</span>
+            <span class="stop__time">18:30 – 21:00</span>
+            <span class="tag">晚餐 · 宵夜</span>
           </div>
-          <h3>蕭老師火雞肉飯</h3>
+          <h3>文化路夜市（晚餐加宵夜一次解決）</h3>
           <p class="stop__desc">
-            嘉義在地人激推的名店。除了油香滑嫩的火雞肉飯，<strong>炸排骨</strong>與便當配菜更是老饕必點。
+            嘉義最熱鬧的夜市，就在噴水圓環旁，距離飯店步行約 5 分鐘。
+            不用排固定餐廳，邊逛邊吃，想吃什麼就停下來。
           </p>
           <dl class="meta">
-            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E8%95%AD%E8%80%81%E5%B8%AB%E7%81%AB%E9%9B%9E%E8%82%89%E9%A3%AF" target="_blank" rel="noopener">嘉義市西區自由路 101 號</a></dd></div>
-            <div><dt>電話</dt><dd><a href="tel:+88652326836">(05) 232-6836</a></dd></div>
-            <div><dt>時間</dt><dd>10:00–14:00、16:00–20:00</dd></div>
-            <div><dt>預算</dt><dd>約 TWD 80–120 / 人</dd></div>
+            <div><dt>位置</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%98%89%E7%BE%A9%E6%96%87%E5%8C%96%E8%B7%AF%E5%A4%9C%E5%B8%82" target="_blank" rel="noopener">嘉義市文化路（噴水圓環一帶）</a></dd></div>
+            <div><dt>時間</dt><dd>約 17:00 後陸續開攤，熱鬧到深夜</dd></div>
+            <div><dt>交通</dt><dd>自飯店步行約 5 分鐘</dd></div>
+            <div><dt>預算</dt><dd>約 TWD 200–350 / 人（吃個幾攤）</dd></div>
           </dl>
           <p class="note">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9"></circle></svg>
-            <span>網路上對公休日的說法不一（有標示週五公休、也有標示無公休），<strong>10/03 為週六不受影響</strong>，但仍建議出發前一天先致電確認。</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v8a3 3 0 0 0 6 0V3"></path><path d="M9 11v10"></path><path d="M18 3c-1.5 2-2 4-2 6v3h2v9"></path></svg>
+            <span>
+              <strong>無海鮮、不吃辣的口袋名單：</strong>
+              郭家雞肉飯（文化路 148 號，12:00–00:00）、
+              黃毛ㄚ頭東山鴨頭（文化路 77 號，13:15–23:30）、
+              嘉義豆奶攤（文化路 103 號，17:30 起）、
+              阿娥豆花（延平街 233 號，14:00–23:00，招牌花生湯豆花）。
+            </span>
           </p>
-        </article>
-
-        <article class="stop">
-          <div class="stop__top">
-            <span class="stop__time">19:45 – 20:30</span>
-            <span class="tag">景點</span>
-          </div>
-          <h3>森林之歌（夜間點燈攝影）</h3>
-          <p class="stop__desc">以漂流木與廢棄鐵軌打造的穹頂地景，夜間點燈後極具科技感，是嘉義市區代表性的夜拍點。</p>
-          <dl class="meta">
-            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%98%89%E7%BE%A9%E6%A3%AE%E6%9E%97%E4%B9%8B%E6%AD%8C" target="_blank" rel="noopener">嘉義市東區文化路與林森西路地下道旁</a></dd></div>
-            <div><dt>電話</dt><dd><a href="tel:+88652254321">(05) 225-4321</a></dd></div>
-            <div><dt>時間</dt><dd>24 小時開放（免門票）</dd></div>
-          </dl>
-        </article>
-
-        <article class="stop">
-          <div class="stop__top">
-            <span class="stop__time">20:45 – 21:30</span>
-            <span class="tag">宵夜</span>
-          </div>
-          <h3>阿娥豆花</h3>
-          <p class="stop__desc">文化路周邊小吃收尾，招牌花生湯豆花溫和不辣、無海鮮，距飯店步行可達。</p>
-          <dl class="meta">
-            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%98%BF%E5%A8%A5%E8%B1%86%E8%8A%B1%20%E5%98%89%E7%BE%A9%E5%BB%B6%E5%B9%B3%E8%A1%97" target="_blank" rel="noopener">嘉義市東區延平街 233 號</a></dd></div>
-            <div><dt>時間</dt><dd>14:00–23:00</dd></div>
-            <div><dt>推薦</dt><dd>花生湯豆花</dd></div>
-          </dl>
+          <p class="note note--warn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span><strong>要避開的：</strong>夜市最有名的林聰明沙鍋魚頭是魚料理，另有炭烤魷魚、海產粥等攤位，不吃海鮮請跳過。</span>
+          </p>
         </article>
 
       </div>
@@ -1259,35 +1131,26 @@
         <article class="stop">
           <div class="stop__top">
             <span class="stop__time">18:30 – 19:45</span>
-            <span class="tag">晚餐 · 二選一</span>
+            <span class="tag">晚餐</span>
           </div>
-          <h3>在地排隊火雞肉飯名店</h3>
-          <p class="stop__desc">兩家都在市區、翻桌快，依當下排隊狀況選擇即可。</p>
-
-          <div class="options">
-            <div class="option option--primary">
-              <span class="tag">首選</span>
-              <h4>民主火雞肉飯</h4>
-              <dl>
-                <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B0%91%E4%B8%BB%E7%81%AB%E9%9B%9E%E8%82%89%E9%A3%AF" target="_blank" rel="noopener">嘉義市東區民族路 149 號</a></dd></div>
-                <div><dt>電話</dt><dd><a href="tel:+88652162666">(05) 216-2666</a></dd></div>
-                <div><dt>時間</dt><dd>10:00–20:40</dd></div>
-                <div><dt>特色</dt><dd>醬汁香濃、翻桌速度快</dd></div>
-              </dl>
-            </div>
-            <div class="option">
-              <span class="tag tag--warn">備選</span>
-              <h4>可口火雞肉飯</h4>
-              <dl>
-                <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8F%AF%E5%8F%A3%E7%81%AB%E9%9B%9E%E8%82%89%E9%A3%AF%20%E5%98%89%E7%BE%A9" target="_blank" rel="noopener">嘉義市東區公明路 90 號</a></dd></div>
-                <div><dt>電話</dt><dd><a href="tel:+88652779208">(05) 277-9208</a></dd></div>
-                <div><dt>時間</dt><dd>07:30–19:30</dd></div>
-              </dl>
-            </div>
-          </div>
+          <h3>蕭老師火雞肉飯</h3>
+          <p class="stop__desc">
+            嘉義在地人激推的名店。除了油香滑嫩的火雞肉飯，<strong>炸排骨</strong>與便當配菜更是老饕必點。
+            下山後開車前往約 15 分鐘。
+          </p>
+          <dl class="meta">
+            <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E8%95%AD%E8%80%81%E5%B8%AB%E7%81%AB%E9%9B%9E%E8%82%89%E9%A3%AF" target="_blank" rel="noopener">嘉義市西區自由路 101 號</a></dd></div>
+            <div><dt>電話</dt><dd><a href="tel:+88652326836">(05) 232-6836</a></dd></div>
+            <div><dt>時間</dt><dd>10:00–14:00、16:00–20:00</dd></div>
+            <div><dt>預算</dt><dd>約 TWD 80–120 / 人</dd></div>
+          </dl>
           <p class="note">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
-            <span>可口火雞肉飯 19:30 打烊，若選它建議提早到 18:15 前入座。</span>
+            <span><strong>20:00 打烊</strong>，山上若耽擱請提早下山。網路上對公休日說法不一（有標示週五公休、也有標示無公休），10/04 為週日不受影響，仍建議前一天先致電確認。</span>
+          </p>
+          <p class="note note--plain">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v8a3 3 0 0 0 6 0V3"></path><path d="M9 11v10"></path><path d="M18 3c-1.5 2-2 4-2 6v3h2v9"></path></svg>
+            <span><strong>備案：</strong>民主火雞肉飯（東區民族路 149 號，10:00–20:40）、可口火雞肉飯（東區公明路 90 號，07:30–19:30）。</span>
           </p>
         </article>
 
@@ -1352,19 +1215,22 @@
         <article class="stop">
           <div class="stop__top">
             <span class="stop__time">09:35 – 09:55</span>
-            <span class="tag">伴手禮</span>
+            <span class="tag tag--warn">伴手禮 · 選擇性</span>
           </div>
           <h3>福義軒（成功門市 · 總店）</h3>
-          <p class="stop__desc">必買經典手工芝麻蛋捲與福椒蘇打餅，60 年老牌餅乾工廠。</p>
+          <p class="stop__desc">
+            60 年老牌餅乾工廠，經典手工芝麻蛋捲與福椒蘇打餅。
+            限購規定較麻煩，不一定要排，想省時間可以直接跳過往鹿港前進。
+          </p>
           <dl class="meta">
             <div><dt>地址</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A6%8F%E7%BE%A9%E8%BB%92%20%E6%88%90%E5%8A%9F%E8%A1%97" target="_blank" rel="noopener">嘉義市西區成功街 98 號</a></dd></div>
             <div><dt>電話</dt><dd><a href="tel:+88652223107">(05) 222-3107</a></dd></div>
             <div><dt>時間</dt><dd>週一至六 08:00–20:00</dd></div>
             <div><dt>限制</dt><dd>蛋捲一人限購 2 包・只收現金</dd></div>
           </dl>
-          <p class="note note--warn">
+          <p class="note note--plain">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9"></circle></svg>
-            <span>想多帶幾包蛋捲請<strong>分人排隊</strong>，並先備妥現金；現場不接受刷卡。</span>
+            <span>要買的話：蛋捲<strong>一人限購 2 包</strong>、<strong>只收現金</strong>，想多帶需分人排隊。</span>
           </p>
         </article>
 
@@ -1470,7 +1336,23 @@
         </li>
         <li>
           <span class="tag">已新增</span>
-          <span><b>購票與預訂提醒</b>專區：集中列出太平雲梯、新口味蛋黃酥、榮興茶行、嘉美館、福義軒、飯店停車與山區餐廳訂位事項。</span>
+          <span><b>購票與預訂提醒</b>專區：集中列出太平雲梯、新口味蛋黃酥、榮興茶行、飯店停車與嘉美館五項。</span>
+        </li>
+        <li>
+          <span class="tag">順序調整</span>
+          <span><b>Day 1 下午</b>：改為<b>先去老宅咖啡</b>（14:00），有時間再加美術館（15:30，可跳過），最後 17:00 回飯店 Check-in。</span>
+        </li>
+        <li>
+          <span class="tag">已移除</span>
+          <span><b>森林之歌</b>不去了；<b>主視覺照片</b>與首頁的路線／住宿／飲食備註區塊一併移除。</span>
+        </li>
+        <li>
+          <span class="tag">餐飲調整</span>
+          <span><b>Day 1 晚上改逛文化路夜市</b>（18:30–21:00，晚餐宵夜一次解決，步行 5 分鐘可到）；<b>蕭老師火雞肉飯移到 Day 2 當晚餐</b>，民主與可口改列備案。</span>
+        </li>
+        <li>
+          <span class="tag">改為選擇性</span>
+          <span><b>福義軒</b>與<b>梅山景觀餐廳</b>不再列入必辦提醒，Day 3 的福義軒標示為可跳過。</span>
         </li>
         <li>
           <span class="tag">資訊修正</span>
