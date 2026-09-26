@@ -559,6 +559,189 @@
       outline-offset: 2px;
     }
 
+    /* ---------- day maps ---------- */
+
+    .daymap {
+      margin: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 24px;
+      padding: 22px;
+      border-radius: var(--r-xl);
+      background: var(--card);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .daymap__map,
+    .daymap__inset {
+      overflow: hidden;
+      border-radius: var(--r-lg);
+      background: #EEF3EF;
+    }
+
+    .daymap__inset { border-radius: var(--r-md); }
+
+    .daymap__svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .daymap__side {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 6px 4px;
+    }
+
+    .daymap__side h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.4;
+    }
+
+    .daymap__side p {
+      margin: 0;
+      font-size: 13.5px;
+      line-height: 1.85;
+      color: var(--muted);
+    }
+
+    .daymap__side .daymap__sub {
+      margin-top: 4px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-deep);
+    }
+
+    .daymap__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .daymap__list li {
+      display: grid;
+      grid-template-columns: 26px 42px minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .dm-dot {
+      width: 26px;
+      height: 26px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Quicksand, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .dm-dot--home {
+      border-radius: 8px;
+      background: var(--accent-deep);
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 11px;
+    }
+
+    .dm-dot--alt {
+      background: #FFFFFF;
+      color: var(--muted);
+      border: 2px solid var(--faint);
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 11px;
+    }
+
+    .dm-dot--go {
+      background: var(--warn-soft);
+      color: var(--warn-ink);
+    }
+
+    .dm-t {
+      font-family: Quicksand, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .dm-n {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .dm-d {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .daymap__legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: auto;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .daymap__legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .daymap__side .daymap__note {
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    /* SVG 內部樣式 */
+    .dm-grid { stroke: #DDE6E0; stroke-width: 1; }
+    .dm-road-edge { stroke: #D3DDD6; }
+    .dm-road { stroke: #FFFFFF; }
+    .dm-drive { fill: none; stroke: #C27C2E; stroke-width: 3.5; stroke-linecap: round; }
+    .dm-walk { fill: none; stroke: var(--accent-deep); stroke-width: 3; stroke-dasharray: 2 7; stroke-linecap: round; }
+    .dm-out { stroke-dasharray: 10 7; }
+    .dm-drive-fill { fill: #C27C2E; }
+    .dm-walk-fill { fill: var(--accent-deep); }
+    .dm-chip-walk { fill: var(--accent-soft); }
+    .dm-chip-drive { fill: var(--warn-soft); }
+    .dm-chip-t { font-size: 11.5px; font-weight: 700; }
+    .dm-chip-t-walk { fill: var(--accent-deep); }
+    .dm-chip-t-drive { fill: var(--warn-ink); }
+    .dm-labbox { fill: rgba(255, 255, 255, 0.95); stroke: #DCE8DF; }
+    .dm-lab-t { font-family: Quicksand, "Noto Sans TC", sans-serif; font-size: 12px; font-weight: 700; fill: var(--accent); }
+    .dm-lab-n { font-size: 14px; font-weight: 700; fill: var(--ink); }
+    .dm-mark { fill: var(--faint); stroke: #FFFFFF; stroke-width: 2; }
+    .dm-lm { font-size: 12px; font-weight: 500; fill: var(--muted); }
+    .dm-lm-out { font-weight: 700; fill: var(--warn-ink); }
+    .dm-roadlab { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; fill: var(--faint); }
+    .dm-pin { fill: var(--accent); stroke: #FFFFFF; stroke-width: 2.5; }
+    .dm-pin-home { fill: var(--accent-deep); }
+    .dm-pin-alt { fill: #FFFFFF; stroke: var(--faint); }
+    .dm-pin-t { fill: #FFFFFF; font-family: Quicksand, sans-serif; font-size: 15px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+    .dm-pin-t-cjk { font-family: "Noto Sans TC", sans-serif; font-size: 13px; }
+    .dm-pin-t-alt { fill: var(--muted); }
+    .dm-pin-t-sm { font-size: 10px; }
+    .dm-north { fill: var(--accent-deep); }
+    .dm-north-t { font-family: Quicksand, sans-serif; font-size: 12px; font-weight: 700; fill: var(--accent-deep); text-anchor: middle; }
+    .dm-scale { stroke: var(--accent-deep); stroke-width: 2; }
+    .dm-scale-t { font-family: Quicksand, "Noto Sans TC", sans-serif; font-size: 12px; font-weight: 700; fill: var(--accent-deep); }
+
+    @media (max-width: 1000px) {
+      .daymap { grid-template-columns: 1fr; }
+    }
+
     /* ---------- mobile bottom nav ---------- */
 
     .botbar { display: none; }
@@ -591,6 +774,15 @@
       }
 
       .day__hotel { max-width: none; width: 100%; }
+
+      /* 手機：地圖在上、清單在下；地圖上的名稱標籤收起，改看下方清單 */
+      .daymap { padding: 14px; gap: 18px; border-radius: var(--r-lg); }
+      .daymap__map .dm-lab { display: none; }
+      .daymap__map .dm-lm { font-size: 22px; }
+      .daymap__map .dm-pin-t { font-size: 20px; }
+      .daymap__map .dm-pin-t-cjk { font-size: 17px; }
+      .daymap__map .dm-scale-t,
+      .daymap__map .dm-north-t { font-size: 22px; }
 
       .stop { padding: 22px 20px 24px; border-radius: var(--r-md); }
       .meta { padding: 16px; gap: 10px 14px; }
@@ -807,6 +999,28 @@
         </div>
       </div>
 
+      <figure class="daymap" aria-labelledby="day1-map-title">
+        <div class="daymap__map">
+          <svg class="daymap__svg" viewBox="0 0 760 696" role="img" aria-label="Day 1 嘉義市區地點相對位置圖：秘密客咖啡館在噴水圓環北邊，美術館在最西邊靠近嘉義車站，飯店在文化路上，弄來小餐桌在東南方。"><defs><pattern id="g1" width="94.4" height="94.4" patternUnits="userSpaceOnUse"><path d="M 94.4 0 L 0 0 0 94.4" fill="none" class="dm-grid"/></pattern></defs><rect width="760" height="696" fill="url(#g1)"/><defs><marker id="m1d" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="dm-drive-fill"/></marker><marker id="m1w" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="dm-walk-fill"/></marker></defs><g fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="89,367 499,325 692,267 760,247" class="dm-road-edge" stroke-width="13"/><polyline points="89,367 499,325 692,267 760,247" class="dm-road" stroke-width="9"/><polyline points="499,325 505,696" class="dm-road-edge" stroke-width="13"/><polyline points="499,325 505,696" class="dm-road" stroke-width="9"/><polyline points="499,325 760,325" class="dm-road-edge" stroke-width="11"/><polyline points="499,325 760,325" class="dm-road" stroke-width="7"/></g><g fill="none" stroke-linecap="round"><polyline points="516,143 538,306" class="dm-walk" marker-end="url(#m1w)"/><polyline points="540,323 85,483" class="dm-drive" marker-end="url(#m1d)"/><polyline points="86,488 478,484" class="dm-drive" marker-end="url(#m1d)"/><polyline points="479,490 330,546" class="dm-drive" marker-end="url(#m1d)" marker-start="url(#m1d)"/><polyline points="509,491 675,562" class="dm-walk" marker-end="url(#m1w)" marker-start="url(#m1w)"/></g><text x="250" y="345" class="dm-roadlab dm-lab" transform="rotate(-5.9 250 345)">中山路</text><g class="dm-lab"><text x="516" y="610" class="dm-roadlab">文</text><text x="516" y="625" class="dm-roadlab">化</text><text x="516" y="640" class="dm-roadlab">路</text></g><text x="696" y="318" class="dm-roadlab dm-lab">公明路</text><rect x="84" y="362" width="10" height="10" transform="rotate(45 89 367)" class="dm-mark"/><text x="60" y="392" class="dm-lm">嘉義車站</text><rect x="494" y="320" width="10" height="10" transform="rotate(45 499 325)" class="dm-mark"/><text x="424" y="312" class="dm-lm">噴水圓環</text><g class="dm-lab"><rect x="540" y="215" width="82" height="21" rx="10.5" class="dm-chip-walk"/><text x="549" y="230" class="dm-chip-t dm-chip-t-walk">步行 420 m</text></g><g class="dm-lab"><rect x="262" y="382" width="89" height="21" rx="10.5" class="dm-chip-drive"/><text x="271" y="397" class="dm-chip-t dm-chip-t-drive">車程 1.1 km</text></g><g class="dm-lab"><rect x="180" y="456" width="94" height="21" rx="10.5" class="dm-chip-drive"/><text x="189" y="471" class="dm-chip-t dm-chip-t-drive">回飯店 900 m</text></g><g class="dm-lab"><rect x="604" y="500" width="154" height="21" rx="10.5" class="dm-chip-walk"/><text x="613" y="515" class="dm-chip-t dm-chip-t-walk">步行 450 m · 約 10 分</text></g><g><circle cx="514" cy="127" r="18" class="dm-pin"/><text x="514" y="127" class="dm-pin-t">1</text></g><g><circle cx="614" cy="293" r="15" class="dm-pin dm-pin-alt"/><text x="614" y="293" class="dm-pin-t dm-pin-t-alt dm-pin-t-cjk">備</text></g><g><circle cx="540" cy="323" r="18" class="dm-pin"/><text x="540" y="323" class="dm-pin-t">2</text></g><g><circle cx="70" cy="488" r="18" class="dm-pin"/><text x="70" y="488" class="dm-pin-t">3</text></g><g><rect x="476" y="466" width="36" height="36" rx="11" class="dm-pin dm-pin-home"/><text x="494" y="484" class="dm-pin-t dm-pin-t-cjk">宿</text></g><g><circle cx="315" cy="552" r="18" class="dm-pin"/><text x="315" y="552" class="dm-pin-t">4</text></g><g><circle cx="690" cy="569" r="18" class="dm-pin"/><text x="690" y="569" class="dm-pin-t">5</text></g><g class="dm-lab"><rect x="536" y="106" width="104" height="46" rx="10" class="dm-labbox"/><text x="546" y="124" class="dm-lab-t">14:00 咖啡</text><text x="546" y="143" class="dm-lab-n">秘密客咖啡館</text></g><g class="dm-lab"><rect x="634" y="250" width="76" height="46" rx="10" class="dm-labbox"/><text x="644" y="268" class="dm-lab-t">備選</text><text x="644" y="287" class="dm-lab-n">木更咖啡</text></g><g class="dm-lab"><rect x="562" y="334" width="111" height="46" rx="10" class="dm-labbox"/><text x="572" y="352" class="dm-lab-t">15:10 售完為止</text><text x="572" y="371" class="dm-lab-n">純情專売所</text></g><g class="dm-lab"><rect x="30" y="512" width="118" height="46" rx="10" class="dm-labbox"/><text x="40" y="530" class="dm-lab-t">15:40 可跳過</text><text x="40" y="549" class="dm-lab-n">嘉義市立美術館</text></g><g class="dm-lab"><rect x="372" y="414" width="121" height="46" rx="10" class="dm-labbox"/><text x="382" y="432" class="dm-lab-t">17:00 Check-in</text><text x="382" y="451" class="dm-lab-n">蘭桂坊花園酒店</text></g><g class="dm-lab"><rect x="260" y="576" width="146" height="46" rx="10" class="dm-labbox"/><text x="270" y="594" class="dm-lab-t">17:50 開車來回</text><text x="270" y="613" class="dm-lab-n">榮興茶行（民族店）</text></g><g class="dm-lab"><rect x="612" y="594" width="104" height="46" rx="10" class="dm-labbox"/><text x="622" y="612" class="dm-lab-t">18:30 晚餐</text><text x="622" y="631" class="dm-lab-n">弄，來小餐桌</text></g><g transform="translate(708 24)"><path d="M10 0L18 26L10 20L2 26Z" class="dm-north"/><text x="10" y="42" class="dm-north-t">N</text></g><g><path d="M28 640 V648 H264 V640" fill="none" class="dm-scale"/><text x="28" y="666" class="dm-scale-t">0 — 500 m（直線）</text></g></svg>
+        </div>
+        <figcaption class="daymap__side">
+          <p class="eyebrow">MAP · 相對位置</p>
+          <h3 id="day1-map-title">市區步行圈</h3>
+          <p>全部在嘉義市區約 1.3 × 1 km 內。最遠的是美術館（900 m）與噴水圓環北邊的秘密客（760 m），其餘都在飯店 500 m 內。</p>
+          <ol class="daymap__list">
+            <li><span class="dm-dot">1</span><span class="dm-t">14:00</span><span class="dm-n">秘密客咖啡館</span><span class="dm-d">760 m</span></li>
+            <li><span class="dm-dot dm-dot--alt">備</span><span class="dm-t"></span><span class="dm-n">木更咖啡（備選）</span><span class="dm-d">480 m</span></li>
+            <li><span class="dm-dot">2</span><span class="dm-t">15:10</span><span class="dm-n">純情專売所</span><span class="dm-d">360 m</span></li>
+            <li><span class="dm-dot">3</span><span class="dm-t">15:40</span><span class="dm-n">嘉義市立美術館</span><span class="dm-d">900 m</span></li>
+            <li><span class="dm-dot dm-dot--home">宿</span><span class="dm-t">17:00</span><span class="dm-n">蘭桂坊花園酒店</span><span class="dm-d">—</span></li>
+            <li><span class="dm-dot">4</span><span class="dm-t">17:50</span><span class="dm-n">榮興茶行</span><span class="dm-d">410 m</span></li>
+            <li><span class="dm-dot">5</span><span class="dm-t">18:30</span><span class="dm-n">弄，來小餐桌</span><span class="dm-d">450 m</span></li>
+          </ol>
+          <div class="daymap__legend"><span><svg width="26" height="6" aria-hidden="true"><line x1="1" y1="3" x2="25" y2="3" class="dm-walk"></line></svg>步行</span><span><svg width="26" height="6" aria-hidden="true"><line x1="1" y1="3" x2="25" y2="3" class="dm-drive"></line></svg>開車</span></div>
+          <p class="daymap__note">店家座標取自 Google Maps（2026/09/26 查詢）。路線為直線示意，距離為離飯店的直線距離，實際路程會再長一些。</p>
+        </figcaption>
+      </figure>
+
       <div class="stops">
 
         <article class="stop">
@@ -1016,6 +1230,37 @@
           車停「停六停車場」
         </div>
       </div>
+
+      <figure class="daymap" aria-labelledby="day2-map-title">
+        <div class="daymap__map">
+          <svg class="daymap__svg" viewBox="0 0 760 696" role="img" aria-label="Day 2 梅山山線相對位置圖：從嘉義市區往東北經梅山、36 彎到太平雲梯，再到碧湖山茶園與太興岩步道，三站彼此很近，但距市區約 18 到 20 公里，回程經竹崎下山。"><defs><pattern id="g2" width="67.8" height="67.8" patternUnits="userSpaceOnUse"><path d="M 67.8 0 L 0 0 0 67.8" fill="none" class="dm-grid"/></pattern></defs><rect width="760" height="696" fill="url(#g2)"/><defs><marker id="m2d" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="dm-drive-fill"/></marker><marker id="m2w" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="dm-walk-fill"/></marker></defs><g fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="60,542 436,157 490,203 557,222" class="dm-drive" marker-end="url(#m2d)"/><polyline points="573,226 643,196" class="dm-drive" marker-end="url(#m2d)"/><path d="M 658 189 Q 590 269 684 293" class="dm-drive" marker-end="url(#m2d)"/><polyline points="700,296 422,354 76,533" class="dm-drive" marker-end="url(#m2d)"/></g><g class="dm-lab"><rect x="96" y="313" width="260" height="21" rx="10.5" class="dm-chip-drive"/><text x="105" y="328" class="dm-chip-t dm-chip-t-drive">市區 → 梅山 → 162 甲 36 彎 · 約 1 小時</text></g><g class="dm-lab"><rect x="232" y="461" width="232" height="21" rx="10.5" class="dm-chip-drive"/><text x="241" y="476" class="dm-chip-t dm-chip-t-drive">166 縣道 → 竹崎 → 市區 · 約 1 小時</text></g><rect x="431" y="152" width="10" height="10" transform="rotate(45 436 157)" class="dm-mark"/><text x="390" y="142" class="dm-lm">梅山</text><rect x="485" y="198" width="10" height="10" transform="rotate(45 490 203)" class="dm-mark"/><text x="458" y="186" class="dm-lm">梅山 36 彎</text><rect x="417" y="349" width="10" height="10" transform="rotate(45 422 354)" class="dm-mark"/><text x="408" y="378" class="dm-lm">竹崎</text><g><rect x="42" y="524" width="36" height="36" rx="11" class="dm-pin dm-pin-home"/><text x="60" y="542" class="dm-pin-t dm-pin-t-cjk">宿</text></g><g><circle cx="573" cy="226" r="18" class="dm-pin"/><text x="573" y="226" class="dm-pin-t">1</text></g><g><circle cx="658" cy="189" r="18" class="dm-pin"/><text x="658" y="189" class="dm-pin-t">2</text></g><g><circle cx="700" cy="296" r="18" class="dm-pin"/><text x="700" y="296" class="dm-pin-t">3</text></g><g class="dm-lab"><rect x="86" y="547" width="164" height="46" rx="10" class="dm-labbox"/><text x="96" y="565" class="dm-lab-t">09:30 出發 · 17:30 回</text><text x="96" y="584" class="dm-lab-n">嘉義市區（飯店）</text></g><g class="dm-lab"><rect x="444" y="251" width="188" height="46" rx="10" class="dm-labbox"/><text x="454" y="269" class="dm-lab-t">10:30 需購票 · 12:00 午餐</text><text x="454" y="288" class="dm-lab-n">太平雲梯＋太平老街</text></g><g class="dm-lab"><rect x="560" y="117" width="200" height="46" rx="10" class="dm-labbox"/><text x="570" y="135" class="dm-lab-t">13:45 · 太平出發約 25–30 分</text><text x="570" y="154" class="dm-lab-n">碧湖山觀光茶園</text></g><g class="dm-lab"><rect x="590" y="327" width="178" height="46" rx="10" class="dm-labbox"/><text x="600" y="345" class="dm-lab-t">15:30 · 碧湖出發約 50 分</text><text x="600" y="364" class="dm-lab-n">太興岩步道（泰興巖）</text></g><g transform="translate(708 24)"><path d="M10 0L18 26L10 20L2 26Z" class="dm-north"/><text x="10" y="42" class="dm-north-t">N</text></g><g><path d="M28 650 V658 H198 V650" fill="none" class="dm-scale"/><text x="28" y="676" class="dm-scale-t">0 — 5 km（直線）</text></g></svg>
+        </div>
+        <figcaption class="daymap__side">
+          <p class="eyebrow">MAP · 相對位置</p>
+          <h3 id="day2-map-title">梅山山線＋市區晚餐</h3>
+          <p>山上三站彼此直線只有 2.7–3.4 km，但離市區約 18–20 km。晚上把車停好，小吃都在飯店附近步行可到。</p>
+          <ol class="daymap__list">
+            <li><span class="dm-dot">1</span><span class="dm-t">10:30</span><span class="dm-n">太平雲梯＋太平老街</span><span class="dm-d">17.7 km</span></li>
+            <li><span class="dm-dot">2</span><span class="dm-t">13:45</span><span class="dm-n">碧湖山觀光茶園</span><span class="dm-d">20.5 km</span></li>
+            <li><span class="dm-dot">3</span><span class="dm-t">15:30</span><span class="dm-n">太興岩步道</span><span class="dm-d">20.2 km</span></li>
+          </ol>
+          <p class="daymap__sub">傍晚回市區（放大約 9 倍）</p>
+          <div class="daymap__inset">
+            <svg class="daymap__svg" viewBox="0 0 344 250" role="img" aria-label="Day 2 晚上市區放大圖：郭家雞肉飯、方櫃仔魯味、品安豆花都在飯店旁邊，民主火雞肉飯與一手私藏在東邊約 800 公尺。"><defs><pattern id="g2i" width="60.6" height="60.6" patternUnits="userSpaceOnUse"><path d="M 60.6 0 L 0 0 0 60.6" fill="none" class="dm-grid"/></pattern></defs><rect width="344" height="250" fill="url(#g2i)"/><defs><marker id="m2id" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="dm-drive-fill"/></marker><marker id="m2iw" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="dm-walk-fill"/></marker></defs><g fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="0,31 47,26 171,-11" class="dm-road-edge" stroke-width="9"/><polyline points="0,31 47,26 171,-11" class="dm-road" stroke-width="6"/><polyline points="47,26 53,250" class="dm-road-edge" stroke-width="9"/><polyline points="47,26 53,250" class="dm-road" stroke-width="6"/><polyline points="47,26 344,26" class="dm-road-edge" stroke-width="9"/><polyline points="47,26 344,26" class="dm-road" stroke-width="6"/></g><g fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="114,38 283,124" class="dm-drive" marker-end="url(#m2id)"/><polyline points="283,140 60,219" class="dm-drive" marker-end="url(#m2id)"/><polyline points="58,128 275,134" class="dm-walk" marker-end="url(#m2iw)" marker-start="url(#m2iw)"/><polyline points="44,128 53,73 57,105 87,61 44,128" class="dm-walk"/></g><text x="180" y="20" class="dm-roadlab dm-lab">公明路</text><rect x="42" y="21" width="10" height="10" transform="rotate(45 47 26)" class="dm-mark"/><text x="4" y="52" class="dm-lm">噴水圓環</text><g class="dm-lab"><rect x="140" y="108" width="94" height="21" rx="10.5" class="dm-chip-walk"/><text x="149" y="123" class="dm-chip-t dm-chip-t-walk">6 · 7 二選一</text></g><g><rect x="33" y="117" width="22" height="22" rx="7" class="dm-pin dm-pin-home"/><text x="44" y="128" class="dm-pin-t dm-pin-t-cjk dm-pin-t-sm">宿</text></g><g><circle cx="47" cy="224" r="8" class="dm-pin dm-pin-alt"/><text x="47" y="224" class="dm-pin-t dm-pin-t-alt dm-pin-t-cjk dm-pin-t-sm">P</text></g><g><circle cx="102" cy="32" r="11" class="dm-pin"/><text x="102" y="32" class="dm-pin-t dm-pin-t-sm">4</text></g><g><rect x="277" y="121" width="35" height="22" rx="11" class="dm-pin"/><text x="295" y="132" class="dm-pin-t dm-pin-t-sm">5·6</text></g><g><circle cx="53" cy="73" r="11" class="dm-pin"/><text x="53" y="73" class="dm-pin-t dm-pin-t-sm">7</text></g><g><circle cx="57" cy="105" r="11" class="dm-pin"/><text x="57" y="105" class="dm-pin-t dm-pin-t-sm">8</text></g><g><circle cx="87" cy="61" r="11" class="dm-pin"/><text x="87" y="61" class="dm-pin-t dm-pin-t-sm">9</text></g><g><path d="M200 214 V222 H276 V214" fill="none" class="dm-scale"/><text x="200" y="240" class="dm-scale-t">250 m</text></g></svg>
+          </div>
+          <ol class="daymap__list">
+            <li><span class="dm-dot">4</span><span class="dm-t">17:30</span><span class="dm-n">巴倫司康（有開才去）</span><span class="dm-d">370 m</span></li>
+            <li><span class="dm-dot">5</span><span class="dm-t">17:50</span><span class="dm-n">一手私藏世界紅茶</span><span class="dm-d">850 m</span></li>
+            <li><span class="dm-dot dm-dot--alt">P</span><span class="dm-t">18:05</span><span class="dm-n">停六停車場</span><span class="dm-d">320 m</span></li>
+            <li><span class="dm-dot">6</span><span class="dm-t">19:00</span><span class="dm-n">民主火雞肉飯 · 二選一</span><span class="dm-d">810 m</span></li>
+            <li><span class="dm-dot">7</span><span class="dm-t">19:45</span><span class="dm-n">郭家雞肉飯 · 二選一</span><span class="dm-d">180 m</span></li>
+            <li><span class="dm-dot">8</span><span class="dm-t">20:15</span><span class="dm-n">方櫃仔魯味</span><span class="dm-d">90 m</span></li>
+            <li><span class="dm-dot">9</span><span class="dm-t">20:50</span><span class="dm-n">品安豆漿豆花</span><span class="dm-d">260 m</span></li>
+          </ol>
+          <div class="daymap__legend"><span><svg width="26" height="6" aria-hidden="true"><line x1="1" y1="3" x2="25" y2="3" class="dm-walk"></line></svg>步行</span><span><svg width="26" height="6" aria-hidden="true"><line x1="1" y1="3" x2="25" y2="3" class="dm-drive"></line></svg>開車</span></div>
+          <p class="daymap__note">店家座標取自 Google Maps（2026/09/26 查詢）。路線為直線示意，距離為離飯店的直線距離，實際路程會再長一些。</p>
+        </figcaption>
+      </figure>
 
       <div class="stops">
 
@@ -1343,6 +1588,25 @@
           含充電與用餐，約 8 小時
         </div>
       </div>
+
+      <figure class="daymap" aria-labelledby="day3-map-title">
+        <div class="daymap__map">
+          <svg class="daymap__svg" viewBox="0 0 760 696" role="img" aria-label="Day 3 嘉義市區相對位置圖：從飯店往東南到日日好農，再往西北到噴水圓環旁的老楊方塊酥，之後往西北接國道 1 號嘉義交流道前往鹿港。"><defs><pattern id="g3" width="66.6" height="66.6" patternUnits="userSpaceOnUse"><path d="M 66.6 0 L 0 0 0 66.6" fill="none" class="dm-grid"/></pattern></defs><rect width="760" height="696" fill="url(#g3)"/><defs><marker id="m3d" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="dm-drive-fill"/></marker><marker id="m3w" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="dm-walk-fill"/></marker></defs><g fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="90,295 379,266 515,225 760,151" class="dm-road-edge" stroke-width="13"/><polyline points="90,295 379,266 515,225 760,151" class="dm-road" stroke-width="9"/><polyline points="379,266 387,696" class="dm-road-edge" stroke-width="13"/><polyline points="379,266 387,696" class="dm-road" stroke-width="9"/><polyline points="379,266 760,266" class="dm-road-edge" stroke-width="11"/><polyline points="379,266 760,266" class="dm-road" stroke-width="7"/></g><g fill="none" stroke-linecap="round"><polyline points="392,382 654,450" class="dm-drive" marker-end="url(#m3d)"/><polyline points="658,443 452,253" class="dm-drive" marker-end="url(#m3d)"/><polyline points="424,238 30,136" class="dm-drive dm-out" marker-end="url(#m3d)"/></g><text x="200" y="276" class="dm-roadlab dm-lab" transform="rotate(-5.7 200 276)">中山路</text><g class="dm-lab"><text x="398" y="590" class="dm-roadlab">文</text><text x="398" y="605" class="dm-roadlab">化</text><text x="398" y="620" class="dm-roadlab">路</text></g><text x="696" y="258" class="dm-roadlab dm-lab">公明路</text><rect x="85" y="290" width="10" height="10" transform="rotate(45 90 295)" class="dm-mark"/><text x="60" y="319" class="dm-lm">嘉義車站</text><rect x="374" y="261" width="10" height="10" transform="rotate(45 379 266)" class="dm-mark"/><text x="310" y="253" class="dm-lm">噴水圓環</text><text x="24" y="117" class="dm-lm dm-lm-out">往鹿港（彰化）</text><g class="dm-lab"><rect x="100" y="176" width="303" height="21" rx="10.5" class="dm-chip-drive"/><text x="109" y="191" class="dm-chip-t dm-chip-t-drive">往國道 1 號嘉義交流道 · 直線約 6.3 km（在圖外）</text></g><g class="dm-lab"><rect x="480" y="424" width="71" height="21" rx="10.5" class="dm-chip-drive"/><text x="489" y="439" class="dm-chip-t dm-chip-t-drive">約 900 m</text></g><g class="dm-lab"><rect x="566" y="338" width="138" height="21" rx="10.5" class="dm-chip-drive"/><text x="575" y="353" class="dm-chip-t dm-chip-t-drive">約 900 m · 5–10 分</text></g><g><rect x="358" y="360" width="36" height="36" rx="11" class="dm-pin dm-pin-home"/><text x="376" y="378" class="dm-pin-t dm-pin-t-cjk">宿</text></g><g><circle cx="670" cy="454" r="18" class="dm-pin"/><text x="670" y="454" class="dm-pin-t">1</text></g><g><circle cx="440" cy="242" r="18" class="dm-pin"/><text x="440" y="242" class="dm-pin-t">2</text></g><g class="dm-lab"><rect x="300" y="402" width="174" height="46" rx="10" class="dm-labbox"/><text x="310" y="420" class="dm-lab-t">08:00 早餐 · Check-out</text><text x="310" y="439" class="dm-lab-n">蘭桂坊花園酒店</text></g><g class="dm-lab"><rect x="600" y="478" width="123" height="46" rx="10" class="dm-labbox"/><text x="610" y="496" class="dm-lab-t">09:05 門口好停車</text><text x="610" y="515" class="dm-lab-n">日日好農脆蛋捲</text></g><g class="dm-lab"><rect x="420" y="170" width="160" height="46" rx="10" class="dm-labbox"/><text x="430" y="188" class="dm-lab-t">09:35 · 09:30 才開門</text><text x="430" y="207" class="dm-lab-n">老楊方塊酥（中山店）</text></g><g transform="translate(708 24)"><path d="M10 0L18 26L10 20L2 26Z" class="dm-north"/><text x="10" y="42" class="dm-north-t">N</text></g><g><path d="M28 636 V644 H194 V636" fill="none" class="dm-scale"/><text x="28" y="662" class="dm-scale-t">0 — 500 m（直線）</text></g></svg>
+        </div>
+        <figcaption class="daymap__side">
+          <p class="eyebrow">MAP · 相對位置</p>
+          <h3 id="day3-map-title">伴手禮掃貨＋出城</h3>
+          <p>日日好農在飯店東南方約 900 m，老楊在噴水圓環旁約 450 m，兩家相距約 900 m。買完往西北接國道 1 號。</p>
+          <ol class="daymap__list">
+            <li><span class="dm-dot dm-dot--home">宿</span><span class="dm-t">08:00</span><span class="dm-n">早餐、Check-out</span><span class="dm-d">—</span></li>
+            <li><span class="dm-dot">1</span><span class="dm-t">09:05</span><span class="dm-n">日日好農（垂楊店）</span><span class="dm-d">910 m</span></li>
+            <li><span class="dm-dot">2</span><span class="dm-t">09:35</span><span class="dm-n">老楊方塊酥（中山店）</span><span class="dm-d">450 m</span></li>
+            <li><span class="dm-dot dm-dot--go"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10 6H2M5 3 2 6l3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="dm-t">09:50</span><span class="dm-n">上國道 1 號往鹿港</span><span class="dm-d">約 6 km</span></li>
+          </ol>
+          <div class="daymap__legend"><span><svg width="26" height="6" aria-hidden="true"><line x1="1" y1="3" x2="25" y2="3" class="dm-walk"></line></svg>步行</span><span><svg width="26" height="6" aria-hidden="true"><line x1="1" y1="3" x2="25" y2="3" class="dm-drive"></line></svg>開車</span></div>
+          <p class="daymap__note">店家座標取自 Google Maps（2026/09/26 查詢）。路線為直線示意，距離為離飯店的直線距離，實際路程會再長一些。</p>
+        </figcaption>
+      </figure>
 
       <div class="stops">
 
